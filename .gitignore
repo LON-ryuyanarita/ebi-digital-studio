@@ -1,0 +1,13 @@
+node_modules
+bower_components
+dist
+deploy_tree
+vendor
+.sass-cache
+.idea
+dusts
+*.DS_Store
+*.ftppass
+*.iml
+*.log
+*.db
