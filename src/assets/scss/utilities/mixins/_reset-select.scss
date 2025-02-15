@@ -1,0 +1,16 @@
+/* ==========================================================================
+ *
+ * Utility: Mixin - reset-select
+ * select 要素をリセット
+ *
+========================================================================== */
+
+@mixin reset-select() {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}

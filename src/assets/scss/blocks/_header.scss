@@ -1,0 +1,57 @@
+/* ==========================================================================
+ *
+ * Blocks - header
+ *
+========================================================================== */
+
+@use './variables' as *;
+@use './_utils' as *;
+
+.header {
+  & {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  @at-root {
+    .header__news {
+      display: none;
+    }
+
+    .header__inner {
+      width: 100%;
+      height: 75px;
+      padding: 10px 20px;
+      background-color: var(--color-white-1);
+      border-bottom: 1px solid rgba($color-black-1, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .header__logo {
+      width: 152px;
+    }
+
+    .header__nav {
+    }
+
+    .header__contact {
+    }
+  }
+
+  // SP 以上 (768 +1 -)
+  @media #{$mq-gt-sp} {
+    & {
+    }
+  }
+
+  // PC Max 以上 (1280 +1 - )
+  @media #{$mq-gt-pcmax} {
+    & {
+    }
+  }
+}

@@ -1,0 +1,179 @@
+/* ==========================================================================
+ *
+ * Variables
+ *
+========================================================================== */
+// font
+@font-face {
+  font-family: 'PorscheNextJPTP';
+  src: url('../font/PorscheNextJPTP.woff') format('woff');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'PorscheNextJPTP';
+  src: url('../font/PorscheNextJPTP-Thin.woff') format('woff');
+  font-weight: thin;
+}
+@font-face {
+  font-family: 'PorscheNextJPTP';
+  src: url('../font/PorscheNextJPTP-Bold.woff') format('woff');
+  font-weight: bold;
+}
+// @font-face {
+//   font-family: 'Panchang';
+//   src: url('../font/Panchang-Variable.woff') format('woff'),
+//     url('../font/Panchang-Variable.woff2') format('woff2');
+//   font-weight: 100 900;
+//   font-style: normal;
+// }
+@font-face {
+  font-family: 'Panchang';
+  src: url('../font/Panchang-Extralight.woff2') format('woff2'),
+    url('../font/Panchang-Extralight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang';
+  src: url('../font/Panchang-Light.woff2') format('woff2'),
+    url('../font/Panchang-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang';
+  src: url('../font/Panchang-Regular.woff2') format('woff2'),
+    url('../font/Panchang-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang';
+  src: url('../font/Panchang-Medium.woff2') format('woff2'),
+    url('../font/Panchang-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang';
+  src: url('../font/Panchang-Semibold.woff2') format('woff2'),
+    url('../font/Panchang-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang';
+  src: url('../font/Panchang-Bold.woff2') format('woff2'),
+    url('../font/Panchang-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Panchang';
+  src: url('../font/Panchang-Extrabold.woff2') format('woff2'),
+    url('../font/Panchang-Extrabold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+$font-default: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN',
+  'Hiragino Sans', Meiryo, sans-serif;
+$font-porsche: 'PorscheNextJPTP'; // normal, thin, bold
+$font-panchang: 'Panchang';
+$font-zenKakuGothic: 'Zen Kaku Gothic New'; // 400, 500, 700
+// $font-family-base: 'YakuHanJP', $font-zenKakuGothic;
+$font-family-base: $font-zenKakuGothic, sans-serif;
+$font-family-porsche: $font-porsche, sans-serif;
+$font-family-panchang: $font-panchang, sans-serif;
+$font-family-zenKakuGothic: $font-zenKakuGothic, sans-serif;
+
+// layout
+$pc-base-width: 1280px;
+
+$vw-base-width: 750px;
+$sp-width: 768px;
+
+// media queries
+//
+// SP 以下 (- 768)
+$mq-lte-sp: '(max-width: #{$sp-width})';
+// SP 以上 (768 +1 -)
+$mq-gt-sp: '(min-width: #{$sp-width + 1})';
+// PC Max 以上 (1280 +1 -)
+$mq-gt-pcmax: '(min-width: #{$pc-base-width + 1})';
+
+//
+// media queries MEMO
+//
+// SP 以下 (- 768)
+// @media #{$mq-lte-sp} {
+//   & {}
+// }
+//
+// SP 以上 (768 +1 -)
+// @media #{$mq-gt-sp} {
+//   & {}
+// }
+//
+// PC Max 以上 (1280 +1 - )
+// @media #{$mq-gt-pcmax} {
+//   & {}
+// }
+//
+
+$color-black-1: #000;
+$color-white-1: #fff;
+$color-gray-1: #666666;
+$color-gray-2: #dddddd;
+$color-gray-3: #999999;
+$color-gray-4: #f2f2f2;
+$color-red-1: #d5001c;
+$color-line-1: #07c856;
+$color-facebook-1: #0866ff;
+
+:root {
+  // font
+  --font-family-base: #{$font-family-base};
+
+  // color
+  --color-black-1: #{$color-black-1};
+  --color-white-1: #{$color-white-1};
+  --color-gray-1: #{$color-gray-1};
+  --color-gray-2: #{$color-gray-2};
+  --color-gray-3: #{$color-gray-3};
+  --color-gray-4: #{$color-gray-4};
+  --color-red-1: #{$color-red-1};
+  --color-line-1: #{$color-line-1};
+  --color-facebook-1: #{$color-facebook-1};
+
+  --color-text: #{$color-black-1};
+  --color-bg: #{$color-white-1};
+
+  // easeing
+  --ease-in-sine: cubic-bezier(0.47, 0, 0.745, 0.715);
+  --ease-out-sine: cubic-bezier(0.39, 0.575, 0.565, 1);
+  --ease-in-out-sine: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  --ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+  --ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  --ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+  --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  --ease-in-back: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  --ease-out-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-linear-out-slow-in: cubic-bezier(0, 0, 0.2, 1);
+  --ease-fast-out-slow-in: cubic-bezier(0.4, 0, 0.2, 1);
+}

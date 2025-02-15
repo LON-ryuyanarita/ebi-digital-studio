@@ -1,0 +1,101 @@
+/* ==========================================================================
+ *
+ * Blocks - ebiButton
+ *
+========================================================================== */
+
+@use './variables' as *;
+@use './_utils' as *;
+
+.ebiButton {
+  & {
+    a,
+    button,
+    input {
+      height: 72px;
+      padding: 10px 40px;
+      font-size: 17px;
+      font-weight: bold;
+      line-height: 1;
+      border-radius: 36px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--color-black-1);
+
+      span {
+      }
+    }
+
+    &.-full {
+      a,
+      button,
+      input {
+        width: 100%;
+      }
+    }
+
+    &.-small {
+      a,
+      button,
+      input {
+        height: 36px;
+        padding: 10px 40px;
+        font-size: 11px;
+        border-radius: 18px;
+
+        .fontPanchang {
+          font-weight: 400;
+        }
+      }
+
+      i {
+        width: 10px;
+        margin-left: 10px;
+        display: block;
+      }
+    }
+
+    &.-transparent {
+      a,
+      button,
+      input {
+        color: var(--color-white-1);
+        border-color: var(--color-white-1);
+        background-color: transparent;
+      }
+    }
+    &.-black {
+      a,
+      button,
+      input {
+        color: var(--color-white-1);
+        background-color: var(--color-black-1);
+      }
+    }
+    &.-line {
+      a,
+      button,
+      input {
+        color: var(--color-white-1);
+        background-color: var(--color-line-1);
+      }
+    }
+  }
+
+  @at-root {
+  }
+
+  // SP 以上 (768 +1 -)
+  @media #{$mq-gt-sp} {
+    & {
+    }
+  }
+
+  // PC Max 以上 (1280 +1 - )
+  @media #{$mq-gt-pcmax} {
+    & {
+    }
+  }
+}

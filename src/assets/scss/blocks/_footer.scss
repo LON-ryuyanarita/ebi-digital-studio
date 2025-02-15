@@ -1,0 +1,230 @@
+/* ==========================================================================
+ *
+ * Blocks - footer
+ *
+========================================================================== */
+
+@use './variables' as *;
+@use './_utils' as *;
+
+.footer {
+  & {
+    color: var(--color-white-1);
+    background-color: var(--color-black-1);
+  }
+
+  @at-root {
+    .footer__inner {
+      height: 328px;
+      padding: 30px 20px 20px;
+      position: relative;
+    }
+
+    .footer__upper {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      > div {
+        &.-c1 {
+          width: 100%;
+          padding-right: 40px;
+        }
+
+        &.-c2 {
+          width: 314px;
+          padding-top: 12px;
+          flex-shrink: 0;
+        }
+
+        &.-c3 {
+          width: 446px;
+          padding-top: 12px;
+          flex-shrink: 0;
+        }
+
+        &.-c4 {
+          width: 168px;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    .footer__logo {
+      width: 152px;
+    }
+
+    .footer__nav,
+    .footer__contents {
+      width: 100%;
+      font-family: $font-family-panchang;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .footer__nav {
+      a {
+        font-size: 11px;
+      }
+    }
+
+    .footer__nav__items {
+      li {
+        & + li {
+          margin-top: 20px;
+        }
+      }
+
+      a {
+        display: block;
+      }
+    }
+
+    .footer__contents {
+    }
+
+    .footer__contents__title {
+      font-size: 11px;
+    }
+
+    .footer__contents__items {
+      margin-top: 20px;
+      padding-left: 20px;
+      font-size: 9px;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      column-gap: 40px;
+      row-gap: 6px;
+      justify-content: start;
+      align-items: start;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 1px;
+        background-color: rgba(#e5e5e5, 0.3);
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    .footer__lower {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+
+      > div {
+        &.-c1 {
+          width: 100%;
+          padding-right: 40px;
+        }
+
+        &.-c2 {
+          width: 314px;
+          flex-shrink: 0;
+        }
+
+        &.-c3 {
+          width: 446px;
+          flex-shrink: 0;
+        }
+
+        &.-c4 {
+          width: 168px;
+          flex-shrink: 0;
+        }
+      }
+    }
+
+    .footer__contact {
+      a {
+        border: 1px solid rgba(#00ff32, 0.75);
+      }
+    }
+
+    .footer__lineLink {
+      margin-top: 20px;
+      display: block;
+
+      a {
+        width: 156px;
+        height: 156px;
+        text-align: center;
+        border: 1px solid var(--color-white-1);
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        > i {
+          width: 36px;
+          margin-top: 10px;
+          display: block;
+        }
+      }
+
+      .-txt1 {
+        margin-top: 10px;
+        font-size: 11px;
+        line-height: 14px;
+      }
+
+      .-txt2 {
+        margin-top: 6px;
+        font-size: 11px;
+        line-height: 13px;
+
+        i {
+          width: 4px;
+          margin-left: 4px;
+          display: inline-block;
+        }
+      }
+    }
+
+    .footer__copyright {
+      color: rgba($color-white-1, 0.5);
+      font-size: 9px;
+      line-height: 1;
+    }
+
+    .footer__stockLink {
+      display: block;
+      line-height: 1;
+
+      a {
+        font-size: 10px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        i {
+          width: 8px;
+          margin-left: 2px;
+          display: block;
+        }
+      }
+    }
+  }
+
+  // SP 以上 (768 +1 -)
+  @media #{$mq-gt-sp} {
+    & {
+    }
+  }
+
+  // PC Max 以上 (1280 +1 - )
+  @media #{$mq-gt-pcmax} {
+    & {
+    }
+  }
+}

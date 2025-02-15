@@ -1,0 +1,97 @@
+/* ==========================================================================
+ *
+ * Blocks - newsList
+ *
+========================================================================== */
+
+@use './variables' as *;
+@use './_utils' as *;
+
+.newsList {
+  & {
+  }
+
+  @at-root {
+    .newsList__list {
+      border-top: 1px solid var(--color-black-1);
+    }
+
+    .newsList__item {
+      border-bottom: 1px solid var(--color-black-1);
+
+      a {
+        width: 100%;
+        padding: 19px 20px 21px;
+        font-size: 14px;
+        line-height: 1.5;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .-title,
+      .-date,
+      .-i {
+        position: relative;
+
+        &::before {
+          content: '';
+          width: 1px;
+          height: 23px;
+          background-color: rgba($color-black-1, 0.1);
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+        }
+      }
+
+      .-title {
+        width: 100%;
+        padding-right: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .-date {
+        width: 144px;
+        font-size: 8px;
+        color: rgba($color-black-1, 0.5);
+        text-align: center;
+        flex-direction: 0;
+      }
+
+      .-i {
+        width: 44px;
+        padding-left: 20px;
+        flex-direction: 0;
+
+        i {
+          width: 24px;
+          height: 24px;
+          background-color: var(--color-black-1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        img {
+          width: 10px;
+        }
+      }
+    }
+  }
+
+  // SP 以上 (768 +1 -)
+  @media #{$mq-gt-sp} {
+    & {
+    }
+  }
+
+  // PC Max 以上 (1280 +1 - )
+  @media #{$mq-gt-pcmax} {
+    & {
+    }
+  }
+}

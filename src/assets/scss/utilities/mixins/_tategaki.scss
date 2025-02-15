@@ -1,0 +1,26 @@
+/* ==========================================================================
+ *
+ * Utility: Mixin - tategaki
+ *
+========================================================================== */
+
+@mixin tategaki() {
+  font-feature-settings: normal;
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+
+  text-align: left;
+  display: inline-block;
+  // temp::
+  white-space: nowrap;
+  // ::temp
+}
+
+@mixin unset-tategaki() {
+  writing-mode: inherit;
+  writing-mode: initial;
+  // temp::
+  white-space: normal;
+  // ::temp
+}

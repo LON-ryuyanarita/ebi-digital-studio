@@ -1,0 +1,66 @@
+/* ==========================================================================
+ *
+ * Blocks - tags
+ *
+========================================================================== */
+
+@use './variables' as *;
+@use './_utils' as *;
+
+.tags {
+  & {
+    margin-top: 30px;
+    padding-left: 25.322581%;
+    border-left: 1px solid rgba($color-white-1, 0.3);
+    position: relative;
+
+    h3 {
+      width: 25.322581%;
+      padding-left: 20px;
+      font-size: 22px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+    }
+  }
+
+  @at-root {
+    .tags__items {
+      padding: 30px 0 20px;
+
+      ul {
+        display: flex;
+        flex-flow: row wrap;
+      }
+
+      li {
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+
+      a {
+        height: 32px;
+        padding: 0 30px 2px;
+        font-size: 14px;
+        line-height: 1.286;
+        border: 1px solid var(--color-white-1);
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  // SP 以上 (768 +1 -)
+  @media #{$mq-gt-sp} {
+    & {
+    }
+  }
+
+  // PC Max 以上 (1280 +1 - )
+  @media #{$mq-gt-pcmax} {
+    & {
+    }
+  }
+}

@@ -1,0 +1,29 @@
+/* ==========================================================================
+ *
+ * Blocks - fontPanchang
+ *
+========================================================================== */
+
+@use './variables' as *;
+@use './_utils' as *;
+
+.fontPanchang {
+  & {
+    font-family: $font-family-panchang;
+  }
+
+  @at-root {
+  }
+
+  // SP 以上 (768 +1 -)
+  @media #{$mq-gt-sp} {
+    & {
+    }
+  }
+
+  // PC Max 以上 (1280 +1 - )
+  @media #{$mq-gt-pcmax} {
+    & {
+    }
+  }
+}

@@ -1,0 +1,145 @@
+/* ==========================================================================
+ *
+ * Blocks - latast
+ *
+========================================================================== */
+
+@use './variables' as *;
+@use './_utils' as *;
+
+.latast {
+  & {
+    margin-top: 90px;
+    color: var(--color-white-1);
+    background-color: var(--color-black-1);
+
+    .tags {
+      & {
+        margin-top: 0;
+        padding-left: 314px;
+
+        h3 {
+          width: 314px;
+        }
+      }
+    }
+  }
+
+  @at-root {
+    .latast__inner {
+      padding: 30px 20px 0;
+    }
+
+    .latast__title {
+      font-size: 48px;
+      line-height: 1;
+    }
+
+    .latast__rows {
+      margin: 10px -20px 0;
+    }
+
+    .latest__row {
+      height: 288px + 60px;
+      padding: 30px 20px;
+      overflow: hidden;
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+
+      &:nth-child(2n) {
+        background-color: rgba($color-white-1, 0.12);
+      }
+
+      &.-tag {
+        height: auto;
+      }
+    }
+
+    .latest__row__title {
+      width: 314px;
+      height: 100%;
+      padding-left: 20px;
+      border-left: 1px solid rgba($color-white-1, 0.3);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      .-inner {
+      }
+
+      .-en {
+        font-size: 22px;
+        line-height: 1;
+        display: block;
+      }
+
+      .-ja {
+        margin-top: 6px;
+        font-size: 11px;
+        line-height: 1;
+        display: block;
+      }
+    }
+
+    .latast__items {
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+
+    .latast__item {
+      width: 300px;
+      height: auto;
+      aspect-ratio: 3 / 2;
+
+      > a {
+        display: block;
+      }
+
+      .-date {
+        color: rgba($color-white-1, 0.5);
+        font-size: 8px;
+        line-height: 1;
+        display: block;
+      }
+
+      .-title {
+        margin-top: 6px;
+        font-size: 14px;
+        line-height: 1.214;
+      }
+
+      .-tags {
+        margin-top: 6px;
+        line-height: 1;
+
+        a {
+          font-size: 10px;
+          line-height: 1.6;
+          border-bottom: 1px solid var(--color-red-1);
+        }
+      }
+    }
+
+    .latast__item__img {
+    }
+
+    .latast__item__body {
+      padding-top: 12px;
+    }
+  }
+
+  // SP 以上 (768 +1 -)
+  @media #{$mq-gt-sp} {
+    & {
+    }
+  }
+
+  // PC Max 以上 (1280 +1 - )
+  @media #{$mq-gt-pcmax} {
+    & {
+    }
+  }
+}

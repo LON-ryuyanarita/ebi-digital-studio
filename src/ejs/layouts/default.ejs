@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <%- include(`../modules/docs-header`) %>
+  </head>
+
+  <body>
+    <div class="wrapper -<%- meta.page %>" data-ebi-wrapper="<%- meta.page %>">
+      <%- include(`../modules/c-header`); %>
+      <main class="main" role="main">
+        <% content(__append) %>
+      </main>
+      <%- include(`../modules/c-footer`); %>
+    </div>
+
+    <%- include(`../modules/docs-footer`) %>
+  </body>
+</html>

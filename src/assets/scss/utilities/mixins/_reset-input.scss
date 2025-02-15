@@ -1,0 +1,19 @@
+/* ==========================================================================
+ *
+ * Utility: Mixin - reset-input
+ * input 要素をリセット
+ *
+========================================================================== */
+
+@mixin reset-input() {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  border: none;
+  border-radius: 0;
+  background: none;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
