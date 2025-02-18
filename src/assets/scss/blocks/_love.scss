@@ -124,15 +124,133 @@
     }
   }
 
-  // SP 以上 (768 +1 -)
-  @media #{$mq-gt-sp} {
+  // SP 以下 (- 768)
+  @media #{$mq-lte-sp} {
     & {
+      padding: cvws(70) 0;
+    }
+
+    @at-root {
+      .love__imgs {
+        width: auto;
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
+
+        > div {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+
+        .-left {
+          left: cvws(-90);
+          top: cvws(424);
+        }
+
+        .-right {
+          right: auto;
+          left: cvws(-45);
+          top: auto;
+          bottom: cvws(20);
+        }
+
+        img {
+          width: cvws(180);
+          border-radius: cvws(8);
+
+          & + img {
+            margin: 0 0 0 cvws(8);
+          }
+        }
+      }
+
+      .love__inner {
+        max-width: none;
+        text-align: center;
+        flex-flow: column nowrap;
+      }
+
+      .love__summary {
+        width: auto;
+      }
+
+      .love__title {
+        em {
+          margin-top: 0;
+          font-size: cvws(58);
+          line-height: 1;
+
+          br {
+            display: none;
+          }
+        }
+
+        span {
+          margin-top: cvws(8);
+          font-size: cvws(18);
+          line-height: 1;
+        }
+      }
+
+      .love__description {
+        margin-top: cvws(36);
+        font-size: cvws(24);
+        line-height: cvws(28);
+      }
+
+      .love__btn {
+        margin-top: cvws(48);
+      }
+
+      .love__latest {
+        width: cvws(396);
+        margin: cvws(210) auto cvws(120);
+      }
+
+      .love__article {
+        text-align: left;
+
+        a {
+        }
+
+        .-tags {
+          margin-top: cvws(6);
+
+          a {
+            font-size: cvws(15);
+          }
+        }
+      }
+
+      .love__article__img {
+      }
+
+      .love__article__body {
+        margin-top: cvws(16);
+
+        .-date {
+          color: rgba($color-white-1, 0.5);
+          font-size: cvws(13);
+          display: block;
+        }
+
+        .-title {
+          margin-top: cvws(14);
+          font-size: cvws(24);
+          line-height: cvws(28);
+        }
+      }
     }
   }
 
   // PC Max 以上 (1280 +1 - )
   @media #{$mq-gt-pcmax} {
     & {
+    }
+
+    @at-root {
     }
   }
 }

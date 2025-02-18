@@ -208,15 +208,155 @@
     }
   }
 
-  // SP 以上 (768 +1 -)
-  @media #{$mq-gt-sp} {
+  // SP 以下 (- 768)
+  @media #{$mq-lte-sp} {
     & {
+    }
+
+    @at-root {
+      .article__header {
+      }
+
+      .article__header__inner {
+        max-width: none;
+        padding: cvws(22) cvws(20) cvws(42);
+      }
+
+      .article__header__img {
+        padding: 0;
+
+        .-bg {
+          display: none;
+        }
+
+        .-img {
+          width: 100%;
+          max-width: none;
+        }
+      }
+
+      .article__header__category {
+        font-size: cvws(20);
+      }
+
+      .article__header__title {
+        margin-top: cvws(2);
+        font-size: cvws(46);
+        line-height: cvws(60);
+      }
+
+      .article__header__info {
+        margin-top: cvws(42);
+
+        .-upper,
+        .-lower {
+        }
+
+        .-lower {
+          margin-top: cvws(18);
+        }
+
+        .article__info {
+          &.-share {
+            margin-top: cvws(60);
+            position: relative;
+            bottom: auto;
+            right: auto;
+          }
+        }
+      }
+
+      .article__info {
+        font-size: cvws(18);
+        line-height: 1.2;
+
+        & + dl {
+          &::before {
+            margin: 0 cvws(20);
+          }
+        }
+
+        &.-share {
+          dd {
+            a {
+              & + a {
+                margin-left: cvws(30);
+              }
+
+              &.-facebook {
+                width: cvws(41);
+              }
+
+              &.-x {
+                width: cvws(39);
+              }
+
+              &.-line {
+                width: cvws(45);
+              }
+            }
+          }
+        }
+
+        &.-tags {
+          dd {
+            a {
+              font-size: cvws(20);
+              margin-right: cvws(18);
+            }
+          }
+        }
+
+        dt {
+          &::after {
+            margin: 0 cvws(8);
+          }
+        }
+      }
+
+      .article__contents {
+        margin: cvws(65) auto 0;
+      }
+
+      .article__share {
+        margin: 0 cvws(20);
+        padding: cvws(60) 0;
+
+        .article__info {
+          font-size: cvws(22);
+
+          dd {
+            margin-left: cvws(10);
+
+            a {
+              & + a {
+                margin-left: cvws(25);
+              }
+
+              &.-facebook {
+                width: cvws(48);
+              }
+
+              &.-x {
+                width: cvws(44);
+              }
+
+              &.-line {
+                width: cvws(53);
+              }
+            }
+          }
+        }
+      }
     }
   }
 
   // PC Max 以上 (1280 +1 - )
   @media #{$mq-gt-pcmax} {
     & {
+    }
+
+    @at-root {
     }
   }
 }

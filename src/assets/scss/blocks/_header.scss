@@ -19,6 +19,81 @@
   @at-root {
     .header__news {
       display: none;
+
+      .wrapper.-top & {
+        width: 100%;
+        background-color: var(--color-red-1);
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+
+        &:hover {
+          .-enabledHover & {
+            ul {
+              animation-play-state: paused;
+            }
+          }
+        }
+
+        ul {
+          display: flex;
+          align-items: center;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          animation: ticker 80s linear infinite;
+          animation-delay: -80s;
+
+          &:nth-child(2) {
+            animation-name: ticker2;
+            animation-delay: -40s;
+          }
+
+          li {
+            padding: 0 20px;
+            color: var(--color-white-1);
+            font-size: 12px;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            position: relative;
+
+            &::before {
+              content: '';
+              width: 1px;
+              background-color: rgba($color-white-1, 0.5);
+              position: absolute;
+              left: 0;
+              top: 4px;
+              bottom: 4px;
+            }
+          }
+
+          time {
+            padding-top: 2px;
+            font-size: 9px;
+            line-height: 1;
+          }
+
+          span {
+            margin-left: 10px;
+            padding: 6px 0;
+            display: block;
+          }
+
+          a {
+            text-decoration: underline;
+
+            &:hover {
+              .-enabledHover & {
+                &:nth-child(1) {
+                  text-decoration: none;
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
     .header__inner {
@@ -43,15 +118,106 @@
     }
   }
 
-  // SP 以上 (768 +1 -)
-  @media #{$mq-gt-sp} {
+  // SP 以下 (- 768)
+  @media #{$mq-lte-sp} {
     & {
+    }
+
+    @at-root {
+      .header__news {
+        .wrapper.-top & {
+          ul {
+            // animation: ticker 80s linear infinite;
+            // animation-delay: -80s;
+
+            &:nth-child(2) {
+              // animation-delay: -40s;
+            }
+
+            li {
+              padding: 0 cvws(20);
+              font-size: cvws(18);
+
+              &::before {
+                top: cvws(6);
+                bottom: cvws(6);
+              }
+            }
+
+            time {
+              padding-top: cvws(2);
+              font-size: cvws(13);
+            }
+
+            span {
+              margin-left: cvws(28);
+              padding: cvws(11) 0 cvws(10);
+            }
+
+            a {
+            }
+          }
+        }
+      }
+
+      .header__inner {
+        height: cvws(88);
+        padding: cvws(14) cvws(126) cvws(14) cvws(20);
+        position: relative;
+      }
+
+      .header__logo {
+        width: cvws(220);
+      }
+
+      .header__nav {
+        display: none;
+      }
+
+      .header__contact {
+      }
+
+      .header__toggle {
+        width: cvws(56);
+        height: cvws(30);
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: cvws(20);
+        transform: translateY(-50%);
+
+        span {
+          height: 1px;
+          background-color: var(--color-black-1);
+          display: block;
+          position: absolute;
+          left: 0;
+
+          &:nth-child(1) {
+            width: 100%;
+            top: 0;
+          }
+
+          &:nth-child(2) {
+            width: cvws(28);
+            top: cvws(15);
+          }
+
+          &:nth-child(3) {
+            width: cvws(42);
+            top: cvws(30);
+          }
+        }
+      }
     }
   }
 
   // PC Max 以上 (1280 +1 - )
   @media #{$mq-gt-pcmax} {
     & {
+    }
+
+    @at-root {
     }
   }
 }

@@ -52,15 +52,52 @@
     }
   }
 
-  // SP 以上 (768 +1 -)
-  @media #{$mq-gt-sp} {
+  // SP 以下 (- 768)
+  @media #{$mq-lte-sp} {
     & {
+      margin-top: cvws(30);
+      padding-left: 0;
+      border-left: none;
+
+      h3 {
+        width: auto;
+        padding-left: 0;
+        font-size: cvws(34);
+        position: relative;
+        top: auto;
+        left: auto;
+      }
+    }
+
+    @at-root {
+      .tags__items {
+        padding: cvws(20) 0 0;
+
+        ul {
+        }
+
+        li {
+          margin-right: cvws(20);
+          margin-bottom: cvws(30);
+        }
+
+        a {
+          height: cvws(48);
+          padding: 0 cvws(40) cvws(4);
+          font-size: cvws(20);
+          line-height: 1;
+          border-radius: cvws(24);
+        }
+      }
     }
   }
 
   // PC Max 以上 (1280 +1 - )
   @media #{$mq-gt-pcmax} {
     & {
+    }
+
+    @at-root {
     }
   }
 }

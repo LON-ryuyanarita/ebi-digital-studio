@@ -80,15 +80,72 @@
     }
   }
 
-  // SP 以上 (768 +1 -)
-  @media #{$mq-gt-sp} {
+  // SP 以下 (- 768)
+  @media #{$mq-lte-sp} {
     & {
+      padding: cvws(70) cvws(20) 0;
+    }
+
+    @at-root {
+      .lineFriends__inner {
+        max-width: none;
+        flex-flow: column nowrap;
+        overflow: hidden;
+
+        .ebiButton {
+          margin-top: cvws(40);
+        }
+      }
+
+      .lineFriends__contents {
+        ol {
+          margin-top: cvws(60);
+
+          li {
+            min-height: cvws(157);
+            padding: 0;
+            align-items: center;
+
+            > span {
+              width: cvws(100);
+              font-size: cvws(32);
+              justify-content: flex-start;
+            }
+
+            p {
+              font-size: cvws(24);
+              line-height: cvws(32);
+            }
+
+            small {
+              margin-top: cvws(8);
+              font-size: cvws(18);
+              line-height: cvws(24);
+            }
+          }
+        }
+      }
+
+      .lineFriends__title {
+        margin-top: 0;
+        font-size: cvws(36);
+        line-height: cvws(42);
+        text-align: center;
+      }
+
+      .lineFriends__img {
+        width: cvws(456);
+        margin: cvws(40) auto cvws(-320);
+      }
     }
   }
 
   // PC Max 以上 (1280 +1 - )
   @media #{$mq-gt-pcmax} {
     & {
+    }
+
+    @at-root {
     }
   }
 }

@@ -73,15 +73,74 @@
     }
   }
 
-  // SP 以上 (768 +1 -)
-  @media #{$mq-gt-sp} {
+  // SP 以下 (- 768)
+  @media #{$mq-lte-sp} {
     & {
+      margin-top: cvws(80);
+
+      .section__inner {
+        padding: cvws(30) cvws(20);
+      }
+    }
+
+    @at-root {
+      .related__title {
+        font-size: cvws(64);
+      }
+
+      .related__items {
+        margin: cvws(20) cvws(-20) 0;
+        padding: 0 cvws(10);
+        overflow: auto;
+      }
+
+      .related__item {
+        width: cvws(630);
+        flex-shrink: 0;
+
+        &,
+        & + & {
+          margin: 0 cvws(10);
+        }
+
+        > a {
+        }
+
+        .-date {
+          font-size: cvws(13);
+        }
+
+        .-title {
+          margin-top: cvws(12);
+          font-size: cvws(24);
+          line-height: cvws(28);
+        }
+
+        .-tags {
+          margin-top: cvws(10);
+
+          a {
+            font-size: cvws(15);
+            line-height: cvws(23);
+          }
+        }
+      }
+
+      .related__item__img {
+      }
+
+      .related__item__body {
+        padding-top: cvws(18);
+      }
     }
   }
 
   // PC Max 以上 (1280 +1 - )
   @media #{$mq-gt-pcmax} {
     & {
+    }
+
+    @at-root {
     }
   }
 }
