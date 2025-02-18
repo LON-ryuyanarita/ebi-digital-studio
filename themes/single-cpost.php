@@ -385,7 +385,7 @@ $top_page = get_page_by_path('home');
                 <li>
                   <span class="-num fontPanchang">01.</span>
                   <p>
-                    最新記事やEBI GROUP実施のイベント情報など最速でご案内<br>
+                    最新記事やEBI GROUP実施のイベント情報など<br class="sp">最速でご案内<br>
                     <small>※グループ拠点すべてのイベント情報が通知されるわけではありません</small>
                   </p>
                 </li>

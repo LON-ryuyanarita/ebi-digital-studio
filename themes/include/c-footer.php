@@ -105,7 +105,9 @@ $themeUri = get_template_directory_uri();
               公式アカウント<br>
               友だち登録募集中!
             </span>
-            <i><img src="<?php echo $themeUri; ?>/assets/img/icon-line.svg" alt="LINE"></i>
+            <i>
+              <?php echo file_get_contents(get_template_directory() . '/include/svg/icon-line.svg'); ?>
+            </i>
             <span class="-txt2">
               公式アカウント<br>
               を見る<i><img src="<?php echo $themeUri; ?>/assets/img/icon-arrow-3.svg" alt=""></i>

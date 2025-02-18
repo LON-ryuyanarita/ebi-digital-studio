@@ -6,15 +6,29 @@ $themeUri = get_template_directory_uri();
   <div class="header__news">
     <ul>
       <li>
-        <time>2024/00/00</time>
+        <time class="fontPanchang">2024/00/00</time>
+        <span><a href="#TBD" target="_blank">重要なお知らせの際の告知情報ダミーテキスト重要なお知らせの際の告知情報ダミーテキスト</a></span>
+      </li>
+      <li>
+        <time class="fontPanchang">2024/00/00</time>
         <span>重要なお知らせの際の告知情報ダミーテキスト重要なお知らせの際の告知情報ダミーテキスト</span>
       </li>
       <li>
-        <time>2024/00/00</time>
+        <time class="fontPanchang">2024/00/00</time>
+        <span>重要なお知らせの際の告知情報ダミーテキスト重要なお知らせの際の告知情報ダミーテキスト</span>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <time class="fontPanchang">2024/00/00</time>
+        <span><a href="#TBD" target="_blank">重要なお知らせの際の告知情報ダミーテキスト重要なお知らせの際の告知情報ダミーテキスト</a></span>
+      </li>
+      <li>
+        <time class="fontPanchang">2024/00/00</time>
         <span>重要なお知らせの際の告知情報ダミーテキスト重要なお知らせの際の告知情報ダミーテキスト</span>
       </li>
       <li>
-        <time>2024/00/00</time>
+        <time class="fontPanchang">2024/00/00</time>
         <span>重要なお知らせの際の告知情報ダミーテキスト重要なお知らせの際の告知情報ダミーテキスト</span>
       </li>
     </ul>
@@ -114,6 +128,14 @@ $themeUri = get_template_directory_uri();
         <img src="<?php echo $themeUri; ?>/assets/img/contact-txt.png" alt="CONTACT">
         <img src="<?php echo $themeUri; ?>/assets/img/contact-txt.png" alt="CONTACT">
       </a>
+    </div>
+
+    <div class="sp header__toggle">
+      <button type="button" data-ebi-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </div>
 </header>

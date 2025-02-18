@@ -255,8 +255,8 @@ $top_page = get_page_by_path('home');
                     <img src="<?php echo $themeUri; ?>/assets/img/top-se-img-3.jpg" alt="">
                   </div>
                   <div class="-name fontPanchang">
-                    03.<br>
-                    Test Drive Counter
+                    03.<br class="pc">
+                    Test <br class="sp">Drive Counter
                   </div>
                   <i><span></span><span></span></i>
                 </a>
@@ -267,8 +267,8 @@ $top_page = get_page_by_path('home');
                     <img src="<?php echo $themeUri; ?>/assets/img/top-se-img-4.jpg" alt="">
                   </div>
                   <div class="-name fontPanchang">
-                    04.<br>
-                    Sales & Connection
+                    04.<br class="pc">
+                    Sales & <br class="sp">Connection
                   </div>
                   <i><span></span><span></span></i>
                 </a>
@@ -281,8 +281,8 @@ $top_page = get_page_by_path('home');
                     <img src="<?php echo $themeUri; ?>/assets/img/top-se-img-5.jpg" alt="">
                   </div>
                   <div class="-name fontPanchang">
-                    05.<br>
-                    Drive Simulator
+                    05.<br class="pc">
+                    Drive <br class="sp">Simulator
                   </div>
                   <i><span></span><span></span></i>
                 </a>
@@ -293,8 +293,8 @@ $top_page = get_page_by_path('home');
                     <img src="<?php echo $themeUri; ?>/assets/img/top-se-img-6.jpg" alt="">
                   </div>
                   <div class="-name fontPanchang">
-                    06.<br>
-                    Event Information
+                    06.<br class="pc">
+                    Event <br class="sp">Information
                   </div>
                   <i><span></span><span></span></i>
                 </a>
@@ -305,8 +305,8 @@ $top_page = get_page_by_path('home');
                     <img src="<?php echo $themeUri; ?>/assets/img/top-se-img-7.jpg" alt="">
                   </div>
                   <div class="-name fontPanchang">
-                    07.<br>
-                    Drive Journey
+                    07.<br class="pc">
+                    Drive <br class="sp">Journey
                   </div>
                   <i><span></span><span></span></i>
                 </a>
@@ -329,8 +329,8 @@ $top_page = get_page_by_path('home');
                     <img src="<?php echo $themeUri; ?>/assets/img/top-se-img-9.jpg" alt="">
                   </div>
                   <div class="-name fontPanchang">
-                    09.<br>
-                    Books & Academy
+                    09.<br class="pc">
+                    Books <br class="sp">& Academy
                   </div>
                   <i><span></span><span></span></i>
                 </a>
@@ -362,14 +362,14 @@ $top_page = get_page_by_path('home');
           </h2>
           <div class="top__group__text">
             <p>
-              日本最大のポルシェセンターとして、<br>
-              お客様にポルシェの魅力をお伝えできるようおもてなしを追求しています。
+              日本最大のポルシェセンターとして、<br class="pc">お客様にポルシェの魅力をお伝えできるようおもてなしを追求しています。
             </p>
             <p>
               EBIグループはポルシェジャパンの発足と共に、国内最大市場である東京で20年以上にわたりポルシェビジネスを展開しています。「お客様の歓びの創造者」をモットーに、経験豊富なスタッフによる丁寧な接客と、迅速で質の高いアフターサービスを提供し続けています。全社員がブランドアンバサダーとして積極的に取り組み、将来にわたりかけがえのない信頼関係を築いていきます。
             </p>
             <p>
-              日本最大級のポルシェセンターの役割として、オーナー様の「ポルシェのある生活」がより豊かになるよう、様々な提案を図っていきます。プロダクトや季節にちなんだイベントをはじめ、店舗スタッフが自ら企画したイベントなどを開催し、オーナー様同士やスタッフとの繋がりを大切にしています。EBIグループだけのエクスクルーシブな体験をこれからもお楽しみください。
+              <span>日本最大級のポルシェセンターの役割として、オーナー様の「ポルシェのある生活」がより豊かになるよう、様々な提案を図っていきます。プロダクトや季節にちなんだイベントをはじめ、店舗スタッフが自ら企画したイベントなどを開催し、オーナー様同士やスタッフとの繋がりを大切にしています。EBIグループだけのエクスクルーシブな体験をこれからもお楽しみください。</span>
+              <img class="sp" src="<?php echo $themeUri; ?>/assets/img/top-group-img.jpg" alt="">
             </p>
           </div>
           <div class="top__group__btn ebiButton -small">
@@ -378,7 +378,7 @@ $top_page = get_page_by_path('home');
             </a>
           </div>
         </div>
-        <div class="top__group__img">
+        <div class="top__group__img pc">
           <img src="<?php echo $themeUri; ?>/assets/img/top-group-img.jpg" alt="">
         </div>
       </div>
