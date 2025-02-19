@@ -43,21 +43,47 @@ $themeUri = get_template_directory_uri();
 
     <div class="love__latest">
       <article class="love__article">
-        <a href="#TBD">
-          <div class="love__article__img">
-            <img src="<?php echo $themeUri; ?>/assets/img/_dummy/love-img-1.jpg" alt="">
-          </div>
-          <div class="love__article__body">
-            <time class="-date fontPanchang">2024/03/03</time>
-            <h3 class="-title">
-              ポルシェのある生活。<br>日常の街乗りを楽しめるポルシェ911カレラT
-            </h3>
-          </div>
-        </a>
-        <div class="-tags">
-          <a href="#TBD">#LOVE PORSCHE</a>
-          <a href="#TBD">#ポルシェ911</a>
-        </div>
+        <?php
+        $args = array(
+          'post_type' => 'cpost',
+          'posts_per_page' => 1,
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'cpost-cat',
+              'field' => 'slug',
+              'terms' => 'love',
+            ),
+          ),
+        );
+        $query = new WP_Query($args);
+        if ($query->have_posts()) :
+          while ($query->have_posts()) : $query->the_post();
+            $title = get_field('title');
+            $thumb = get_field('thumbnail') ?? null;
+            $thumb_src = wp_get_attachment_image_url($thumb, 'full'); ?>
+            <a href="<?php echo get_permalink(); ?>">
+              <div class="love__article__img">
+                <?php if ($thumb_src) : ?>
+                  <img src="<?php echo $thumb_src; ?>" alt="">
+                <?php endif; ?>
+              </div>
+              <div class="love__article__body">
+                <time class="-date fontPanchang" datetime="<?php echo get_the_date('c', $post_id); ?>"><?php echo get_the_date('Y/m/d', $post_id); ?></time>
+                <h3 class="-title"><?php echo $title; ?></h3>
+              </div>
+            </a>
+            <div class="-tags">
+              <?php if (!empty($terms) && !is_wp_error($terms)) :
+                foreach ($terms as $term) : ?>
+                  <a href="<?php echo get_term_link($term); ?>">#<?php echo esc_html($term->name); ?></a>
+              <?php endforeach;
+              endif; ?>
+            </div>
+        <?php
+          endwhile;
+          wp_reset_postdata();
+        endif;
+        ?>
       </article>
     </div>
   </div>

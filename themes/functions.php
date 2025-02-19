@@ -75,18 +75,51 @@ function create_post_type()
   );
 }
 
+function add_custom_query_vars($vars)
+{
+  $vars[] = 'paged';
+  return $vars;
+}
+add_filter('query_vars', 'add_custom_query_vars');
+
 function custom_cpost_rewrite_rules()
 {
+  // 記事個別ページ（例: /articles/123/）
   add_rewrite_rule(
     '^articles/([0-9]+)/?$',
     'index.php?post_type=cpost&p=$matches[1]',
     'top'
   );
+
+  // 記事一覧のページネーション対応（例: /articles/page/2/）
+  add_rewrite_rule(
+    '^articles/page/([0-9]+)/?$',
+    'index.php?post_type=cpost&paged=$matches[1]',
+    'top'
+  );
+
+  // タグアーカイブ（例: /tags/testdrive/）
   add_rewrite_rule(
     '^tags/([^/]+)/?$',
     'index.php?cpost-tag=$matches[1]',
     'top'
   );
+
+  // タグアーカイブのページネーション対応（例: /tags/testdrive/page/3/）
+  add_rewrite_rule(
+    '^tags/([^/]+)/page/([0-9]+)/?$',
+    'index.php?cpost-tag=$matches[1]&paged=$matches[2]',
+    'top'
+  );
+
+  // カテゴリーアーカイブのページネーション対応（例: /reviews/page/2/）
+  add_rewrite_rule(
+    '^([^/]+)/page/([0-9]+)/?$',
+    'index.php?cpost-cat=$matches[1]&paged=$matches[2]',
+    'top'
+  );
+
+  // カテゴリーアーカイブ（例: /reviews/）
   add_rewrite_rule(
     '^([^/]+)/?$',
     'index.php?cpost-cat=$matches[1]',
@@ -94,6 +127,7 @@ function custom_cpost_rewrite_rules()
   );
 }
 add_action('init', 'custom_cpost_rewrite_rules');
+
 
 function custom_cpost_permalinks($post_link, $post)
 {

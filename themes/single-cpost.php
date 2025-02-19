@@ -436,9 +436,9 @@ $top_page = get_page_by_path('home');
     endif;
     ?>
 
-    <?php get_template_part('/include/m-related'); ?>
-    <?php get_template_part('/include/m-categories'); ?>
-    <?php get_template_part('/include/m-love'); ?>
+    <?php get_template_part('include/m-related'); ?>
+    <?php get_template_part('include/m-categories'); ?>
+    <?php get_template_part('include/m-love'); ?>
   </article>
 </main>
 

@@ -16,56 +16,27 @@ $themeUri = get_template_directory_uri();
           </div>
         </div>
         <div class="latast__items">
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-4.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  銀座〜湾岸エリアの<br>ダイナミックな試乗コースを体験
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#REVIEWS</a>
-              <a href="#TBD">#porschepro</a>
-              <a href="#TBD">#testdrive</a>
-            </div>
-          </article>
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-5.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  大学生の頃からの憧れ<br>ポルシェ911ターボでドライブインタビュー
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#ドライブインタビュー</a>
-            </div>
-          </article>
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-6.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  サーキット場でポルシェ試乗<br>ポルシェ・エクスペリエンスセンター東京
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#コラム</a>
-            </div>
-          </article>
+          <?php
+          $args = array(
+            'post_type' => 'cpost',
+            'posts_per_page' => 5,
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'cpost-cat',
+                'field' => 'slug',
+                'terms' => 'reviews',
+              ),
+            ),
+          );
+          $query = new WP_Query($args);
+          if ($query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post();
+              set_query_var('post_id', get_the_ID());
+              get_template_part('include/m-latest-article');
+            endwhile;
+            wp_reset_postdata();
+          endif;
+          ?>
         </div>
       </div>
       <div class="latest__row">
@@ -76,74 +47,27 @@ $themeUri = get_template_directory_uri();
           </div>
         </div>
         <div class="latast__items">
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-4.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  銀座〜湾岸エリアの<br>ダイナミックな試乗コースを体験
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#REVIEWS</a>
-              <a href="#TBD">#porschepro</a>
-              <a href="#TBD">#testdrive</a>
-            </div>
-          </article>
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-5.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  大学生の頃からの憧れ<br>ポルシェ911ターボでドライブインタビュー
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#ドライブインタビュー</a>
-            </div>
-          </article>
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-6.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  サーキット場でポルシェ試乗<br>ポルシェ・エクスペリエンスセンター東京
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#コラム</a>
-            </div>
-          </article>
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-4.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  銀座〜湾岸エリアの<br>ダイナミックな試乗コースを体験
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#REVIEWS</a>
-              <a href="#TBD">#porschepro</a>
-              <a href="#TBD">#testdrive</a>
-            </div>
-          </article>
+          <?php
+          $args = array(
+            'post_type' => 'cpost',
+            'posts_per_page' => 5,
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'cpost-cat',
+                'field' => 'slug',
+                'terms' => 'customize',
+              ),
+            ),
+          );
+          $query = new WP_Query($args);
+          if ($query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post();
+              set_query_var('post_id', get_the_ID());
+              get_template_part('include/m-latest-article');
+            endwhile;
+            wp_reset_postdata();
+          endif;
+          ?>
         </div>
       </div>
       <div class="latest__row">
@@ -154,40 +78,27 @@ $themeUri = get_template_directory_uri();
           </div>
         </div>
         <div class="latast__items">
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-4.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  銀座〜湾岸エリアの<br>ダイナミックな試乗コースを体験
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#REVIEWS</a>
-              <a href="#TBD">#porschepro</a>
-              <a href="#TBD">#testdrive</a>
-            </div>
-          </article>
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-5.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  大学生の頃からの憧れ<br>ポルシェ911ターボでドライブインタビュー
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#ドライブインタビュー</a>
-            </div>
-          </article>
+          <?php
+          $args = array(
+            'post_type' => 'cpost',
+            'posts_per_page' => 5,
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'cpost-cat',
+                'field' => 'slug',
+                'terms' => 'heritage',
+              ),
+            ),
+          );
+          $query = new WP_Query($args);
+          if ($query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post();
+              set_query_var('post_id', get_the_ID());
+              get_template_part('include/m-latest-article');
+            endwhile;
+            wp_reset_postdata();
+          endif;
+          ?>
         </div>
       </div>
       <div class="latest__row">
@@ -198,56 +109,27 @@ $themeUri = get_template_directory_uri();
           </div>
         </div>
         <div class="latast__items">
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-4.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  銀座〜湾岸エリアの<br>ダイナミックな試乗コースを体験
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#REVIEWS</a>
-              <a href="#TBD">#porschepro</a>
-              <a href="#TBD">#testdrive</a>
-            </div>
-          </article>
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-5.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  大学生の頃からの憧れ<br>ポルシェ911ターボでドライブインタビュー
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#ドライブインタビュー</a>
-            </div>
-          </article>
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-6.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  サーキット場でポルシェ試乗<br>ポルシェ・エクスペリエンスセンター東京
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#コラム</a>
-            </div>
-          </article>
+          <?php
+          $args = array(
+            'post_type' => 'cpost',
+            'posts_per_page' => 5,
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'cpost-cat',
+                'field' => 'slug',
+                'terms' => 'race',
+              ),
+            ),
+          );
+          $query = new WP_Query($args);
+          if ($query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post();
+              set_query_var('post_id', get_the_ID());
+              get_template_part('include/m-latest-article');
+            endwhile;
+            wp_reset_postdata();
+          endif;
+          ?>
         </div>
       </div>
       <div class="latest__row">
@@ -258,56 +140,27 @@ $themeUri = get_template_directory_uri();
           </div>
         </div>
         <div class="latast__items">
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-4.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  銀座〜湾岸エリアの<br>ダイナミックな試乗コースを体験
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#REVIEWS</a>
-              <a href="#TBD">#porschepro</a>
-              <a href="#TBD">#testdrive</a>
-            </div>
-          </article>
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-5.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  大学生の頃からの憧れ<br>ポルシェ911ターボでドライブインタビュー
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#ドライブインタビュー</a>
-            </div>
-          </article>
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-6.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  サーキット場でポルシェ試乗<br>ポルシェ・エクスペリエンスセンター東京
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#コラム</a>
-            </div>
-          </article>
+          <?php
+          $args = array(
+            'post_type' => 'cpost',
+            'posts_per_page' => 5,
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'cpost-cat',
+                'field' => 'slug',
+                'terms' => 'lifestyle',
+              ),
+            ),
+          );
+          $query = new WP_Query($args);
+          if ($query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post();
+              set_query_var('post_id', get_the_ID());
+              get_template_part('include/m-latest-article');
+            endwhile;
+            wp_reset_postdata();
+          endif;
+          ?>
         </div>
       </div>
       <div class="latest__row">
@@ -318,60 +171,31 @@ $themeUri = get_template_directory_uri();
           </div>
         </div>
         <div class="latast__items">
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-4.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  銀座〜湾岸エリアの<br>ダイナミックな試乗コースを体験
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#REVIEWS</a>
-              <a href="#TBD">#porschepro</a>
-              <a href="#TBD">#testdrive</a>
-            </div>
-          </article>
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-5.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  大学生の頃からの憧れ<br>ポルシェ911ターボでドライブインタビュー
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#ドライブインタビュー</a>
-            </div>
-          </article>
-          <article class="latast__item">
-            <a href="#TBD">
-              <div class="latast__item__img">
-                <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-img-6.jpg" alt="">
-              </div>
-              <div class="latast__item__body">
-                <time class="-date fontPanchang">2024/03/03</time>
-                <h3 class="-title">
-                  サーキット場でポルシェ試乗<br>ポルシェ・エクスペリエンスセンター東京
-                </h3>
-              </div>
-            </a>
-            <div class="-tags">
-              <a href="#TBD">#コラム</a>
-            </div>
-          </article>
+          <?php
+          $args = array(
+            'post_type' => 'cpost',
+            'posts_per_page' => 5,
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'cpost-cat',
+                'field' => 'slug',
+                'terms' => 'event',
+              ),
+            ),
+          );
+          $query = new WP_Query($args);
+          if ($query->have_posts()) :
+            while ($query->have_posts()) : $query->the_post();
+              set_query_var('post_id', get_the_ID());
+              get_template_part('include/m-latest-article');
+            endwhile;
+            wp_reset_postdata();
+          endif;
+          ?>
         </div>
       </div>
       <div class="latest__row -tag">
-        <%- include(`./m-tags.ejs`) %>
+        <?php get_template_part('include/m-tags'); ?>
       </div>
     </div>
   </div>
