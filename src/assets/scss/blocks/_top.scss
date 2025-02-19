@@ -87,6 +87,7 @@
         }
 
         .-title {
+          height: 36px;
           margin-top: 10px;
           font-size: 18px;
         }
@@ -108,6 +109,7 @@
 
       .-tags {
         line-height: 1;
+        display: flex;
         position: absolute;
         bottom: 80px;
         left: 155px;
@@ -118,6 +120,10 @@
           line-height: 1.6;
           border-bottom: 1px solid var(--color-red-1);
           text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.004);
+
+          & + a {
+            margin-left: 1em;
+          }
         }
       }
     }
@@ -151,10 +157,18 @@
       }
 
       .-title {
+        height: 48px;
         margin-top: 10px;
         font-size: 24px;
         line-height: 1;
         text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.004);
+
+        text-overflow: ellipsis;
+        overflow: hidden;
+        word-break: break-word;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
       }
     }
 
@@ -709,6 +723,7 @@
           }
 
           .-title {
+            height: cvws(26 * 2);
             margin-top: cvws(20);
             font-size: cvws(24);
             line-height: cvws(26);
@@ -746,6 +761,7 @@
         }
 
         .-title {
+          height: cvws(36 * 2);
           margin-top: cvws(10);
           font-size: cvws(32);
           line-height: cvws(36);

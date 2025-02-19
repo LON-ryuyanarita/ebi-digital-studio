@@ -1,0 +1,49 @@
+<%_
+  const meta = {
+    page: 'archive',
+  };
+-%>
+<%_ function content (__append) { -%>
+  <div class="archive">
+    <div class="archive__top -tag">
+      <header class="archive__tag__header">
+        <div class="-title">
+          <span class="fontPanchang">TAGS</span>
+          <span class="fontPanchang">:</span>
+          <span>#ポルシェスタジオ銀座</span>
+        </div>
+      </header>
+    </div>
+    <div class="archive__contents section__inner">
+      <div class="archive__list">
+        <%- include(`${ejsRelativePath}modules/m-articles.ejs`) %>
+      </div>
+
+      <div class="archive__pager pager">
+        <div class="pager__nav -btn -prev">
+          <a class="fontPanchang" href="#TBD">
+            Prev
+          </a>
+        </div>
+        <div class="pager__nav -link">
+          <a class="fontPanchang" href="#TBD">1</a>
+          <a class="-current fontPanchang" href="#TBD">2</a>
+          <a class="fontPanchang" href="#TBD">3</a>
+          <a class="fontPanchang" href="#TBD">4</a>
+          <span>...</span>
+          <a class="fontPanchang" href="#TBD">5</a>
+        </div>
+        <div class="pager__nav -btn -next">
+          <a class="fontPanchang" href="#TBD">
+            Next
+          </a>
+        </div>
+      </div>
+    </div>
+      
+    <%- include(`${ejsRelativePath}modules/m-categories.ejs`) %>
+
+    <%- include(`${ejsRelativePath}modules/m-love.ejs`) %>
+  </div>
+<%_ }; -%>
+<%- include(`${ejsRelativePath}layouts/default`, { meta, content }) %>

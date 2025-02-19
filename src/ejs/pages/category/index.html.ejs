@@ -1,0 +1,69 @@
+<%_
+  const meta = {
+    page: 'archive',
+  };
+-%>
+<%_ function content (__append) { -%>
+  <div class="archive">
+    <div class="archive__top">
+      <header class="archive__header">
+        <div class="-title">
+          <span class="-en fontPanchang">REVIEWS</span>
+          <span class="-ja">レビュー</span>
+        </div>
+        <div class="-description">
+          <p>レビュー記事一覧です。ポルシェの車種に関する試乗記事。新型車、モデルチェンジ、注目車種について、車好き、購入検討者が気になるポイントを徹底的にレポートした情報をお届けします。</p>
+        </div>
+      </header>
+      <div class="archive__top__article">
+        <article class="archive__top__article__item">
+          <a href="#TBD">
+            <div class="archive__top__article__img">
+              <img src="/assets/img/_dummy/top-img-5.jpg" alt="">
+            </div>
+            <div class="archive__top__article__body">
+              <time class="-date fontPanchang">2024/03/03</time>
+              <h3 class="-title">
+                都市型コンセプトストア<br>ポルシェスタジオ銀座オープン
+              </h3>
+            </div>
+          </a>
+          <div class="-tags">
+            <a href="#TBD">##ポルシェスタジオ銀座</a>
+          </div>
+        </article>
+      </div>
+    </div>
+    <div class="archive__contents section__inner">
+      <div class="archive__list">
+        <%- include(`${ejsRelativePath}modules/m-articles.ejs`) %>
+      </div>
+
+      <div class="archive__pager pager">
+        <div class="pager__nav -btn -prev">
+          <a class="fontPanchang" href="#TBD">
+            Prev
+          </a>
+        </div>
+        <div class="pager__nav -link">
+          <a class="fontPanchang" href="#TBD">1</a>
+          <a class="-current fontPanchang" href="#TBD">2</a>
+          <a class="fontPanchang" href="#TBD">3</a>
+          <a class="fontPanchang" href="#TBD">4</a>
+          <span>...</span>
+          <a class="fontPanchang" href="#TBD">5</a>
+        </div>
+        <div class="pager__nav -btn -next">
+          <a class="fontPanchang" href="#TBD">
+            Next
+          </a>
+        </div>
+      </div>
+    </div>
+      
+    <%- include(`${ejsRelativePath}modules/m-categories.ejs`) %>
+
+    <%- include(`${ejsRelativePath}modules/m-love.ejs`) %>
+  </div>
+<%_ }; -%>
+<%- include(`${ejsRelativePath}layouts/default`, { meta, content }) %>
