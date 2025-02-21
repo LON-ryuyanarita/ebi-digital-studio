@@ -30,22 +30,20 @@ $top_page = get_page_by_path('home');
   $list_posts_query = new WP_Query($list_posts_args);
   ?>
   <div class="archive">
-    <div class="archive__top -tag">
-      <header class="archive__tag__header">
+    <div class="archive__top -news">
+      <header class="archive__news__header">
         <div class="-title">
-          <span class="fontPanchang">TAGS</span>
-          <span class="fontPanchang">:</span>
-          <span>#<?php echo esc_html($term_name); ?></span>
+          <span class="fontPanchang">NEWS</span>
         </div>
       </header>
     </div>
     <div class="archive__contents section__inner">
-      <div class="archive__list">
-        <div class="articles">
+      <div class="newsList">
+        <div class="newsList__list">
           <?php if ($list_posts_query->have_posts()) :
             while ($list_posts_query->have_posts()) : $list_posts_query->the_post();
               set_query_var('post_id', get_the_ID());
-              get_template_part('include/m-article');
+              get_template_part('include/m-news-article');
             endwhile;
             wp_reset_postdata();
           endif;

@@ -18,7 +18,8 @@
       background-color: var(--color-black-1);
       display: flex;
 
-      &.-tag {
+      &.-tag,
+      &.-news {
         color: var(--color-text);
         background-color: transparent;
       }
@@ -80,6 +81,17 @@
             font-size: 44px;
             line-height: 1;
           }
+        }
+      }
+    }
+
+    .archive__news__header {
+      padding: 108px 0;
+
+      .-title {
+        span {
+          font-size: 48px;
+          line-height: 1;
         }
       }
     }
@@ -243,6 +255,16 @@
               font-size: cvws(50);
               display: inline-block;
             }
+          }
+        }
+      }
+
+      .archive__news__header {
+        padding: cvws(108) 0;
+
+        .-title {
+          span {
+            font-size: cvws(52);
           }
         }
       }
