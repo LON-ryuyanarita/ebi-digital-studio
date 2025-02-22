@@ -3,36 +3,51 @@ $themeUri = get_template_directory_uri();
 ?>
 
 <header class="header" data-ebi-header>
-  <div class="header__news">
-    <ul>
-      <li>
-        <time class="fontPanchang">2024/00/00</time>
-        <span><a href="#TBD" target="_blank">重要なお知らせの際の告知情報ダミーテキスト重要なお知らせの際の告知情報ダミーテキスト</a></span>
-      </li>
-      <li>
-        <time class="fontPanchang">2024/00/00</time>
-        <span>重要なお知らせの際の告知情報ダミーテキスト重要なお知らせの際の告知情報ダミーテキスト</span>
-      </li>
-      <li>
-        <time class="fontPanchang">2024/00/00</time>
-        <span>重要なお知らせの際の告知情報ダミーテキスト重要なお知らせの際の告知情報ダミーテキスト</span>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <time class="fontPanchang">2024/00/00</time>
-        <span><a href="#TBD" target="_blank">重要なお知らせの際の告知情報ダミーテキスト重要なお知らせの際の告知情報ダミーテキスト</a></span>
-      </li>
-      <li>
-        <time class="fontPanchang">2024/00/00</time>
-        <span>重要なお知らせの際の告知情報ダミーテキスト重要なお知らせの際の告知情報ダミーテキスト</span>
-      </li>
-      <li>
-        <time class="fontPanchang">2024/00/00</time>
-        <span>重要なお知らせの際の告知情報ダミーテキスト重要なお知らせの際の告知情報ダミーテキスト</span>
-      </li>
-    </ul>
-  </div>
+  <?php
+  if (is_page('top')):
+    $news_list = get_field('header_news');
+    if ($news_list) : ?>
+      <div class="header__news">
+        <ul>
+          <?php
+          foreach ($news_list as $news_id):
+            $post_id = $news_id;
+            $post = get_post($post_id);
+            $title = get_field('title', $post_id);
+          ?>
+            <li>
+              <time class="-date fontPanchang" datetime="<?php echo get_the_date('c', $post_id); ?>"><?php echo get_the_date('Y/m/d', $post_id); ?></time>
+              <span>
+                <a href="<?php echo get_permalink($post_id); ?>">
+                  <?php echo $title; ?>
+                </a>
+              </span>
+            </li>
+          <?php
+          endforeach; ?>
+        </ul>
+        <ul>
+          <?php
+          foreach ($news_list as $news):
+            $post_id = $news;
+            $post = get_post($post_id);
+            $title = get_field('title', $post_id);
+          ?>
+            <li>
+              <time class="-date fontPanchang" datetime="<?php echo get_the_date('c', $post_id); ?>"><?php echo get_the_date('Y/m/d', $post_id); ?></time>
+              <span>
+                <a href="<?php echo get_permalink($post_id); ?>">
+                  <?php echo $title; ?>
+                </a>
+              </span>
+            </li>
+          <?php
+          endforeach; ?>
+        </ul>
+      </div>
+  <?php
+    endif;
+  endif; ?>
 
   <div class="header__inner">
     <h1 class="header__logo">

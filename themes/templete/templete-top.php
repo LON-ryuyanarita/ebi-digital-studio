@@ -153,38 +153,31 @@ $top_page = get_page_by_path('home');
             <div class="top__news__content">
               <div class="newsList">
                 <div class="newsList__list">
-                  <div class="newsList__item">
-                    <a href="$$TBD">
-                      <div class="-title">Porsche × Dai Tamura Special ART exhibition 田村大 スペシャルコラボレーション</div>
-                      <time class="-date fontPanchang">2024/03/03</time>
-                      <div class="-i"><i><img src="<?php echo $themeUri; ?>/assets/img/icon-arrow-4.svg" alt=""></i></div>
-                    </a>
-                  </div>
-                  <div class="newsList__item">
-                    <a href="$$TBD">
-                      <div class="-title">PUMAｘPORSCHE 911ターボ 50Y ジャパンリミテッドエディション販売</div>
-                      <time class="-date fontPanchang">2024/03/03</time>
-                      <div class="-i"><i><img src="<?php echo $themeUri; ?>/assets/img/icon-arrow-4.svg" alt=""></i></div>
-                    </a>
-                  </div>
-                  <div class="newsList__item">
-                    <a href="$$TBD">
-                      <div class="-title">911 Targa 4S Heritage Design Editionがポルシェスタジオ銀座で展示</div>
-                      <time class="-date fontPanchang">2024/03/03</time>
-                      <div class="-i"><i><img src="<?php echo $themeUri; ?>/assets/img/icon-arrow-4.svg" alt=""></i></div>
-                    </a>
-                  </div>
-                  <div class="newsList__item">
-                    <a href="$$TBD">
-                      <div class="-title">911 に着想を得た「ポルシェデザイン・トローリーケース」とどこへ行く？</div>
-                      <time class="-date fontPanchang">2024/03/03</time>
-                      <div class="-i"><i><img src="<?php echo $themeUri; ?>/assets/img/icon-arrow-4.svg" alt=""></i></div>
-                    </a>
-                  </div>
+                  <?php
+                  $args = array(
+                    'post_type' => 'cpost',
+                    'posts_per_page' => 4,
+                    'tax_query' => array(
+                      array(
+                        'taxonomy' => 'cpost-cat',
+                        'field' => 'slug',
+                        'terms' => 'news',
+                      ),
+                    ),
+                  );
+                  $query = new WP_Query($args);
+                  if ($query->have_posts()) :
+                    while ($query->have_posts()) : $query->the_post();
+                      set_query_var('post_id', get_the_ID());
+                      get_template_part('include/m-news-article');
+                    endwhile;
+                    wp_reset_postdata();
+                  endif;
+                  ?>
                 </div>
               </div>
               <div class="top__news__btn ebiButton -small">
-                <a href="#TBD" target="_blank">
+                <a href="/news/">
                   <span class="fontPanchang">VIEW ALL</span>
                 </a>
               </div>
