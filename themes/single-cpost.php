@@ -12,12 +12,15 @@ $top_page = get_page_by_path('home');
       while (have_posts()) : the_post();
         $permalink = get_permalink();
         $title = get_field('title');
+        $share_title = str_replace(["\r", "\n"], '', strip_tags($title)) . '｜EBI DIGITAL STUDIO';
         $kv = get_field('kv');
         $kv_src = wp_get_attachment_image_url($kv, 'full') ?? null;
         $taxonomy_cat = 'cpost-cat';
         $terms_cats = get_the_terms(get_the_ID(), $taxonomy_cat);
         $taxonomy_tag = 'cpost-tag';
         $terms_tags = get_the_terms(get_the_ID(), $taxonomy_tag);
+        $updated = get_field('updated') ?? get_the_modified_date('Y/m/d');
+        $updated_date = DateTime::createFromFormat('Y/m/d', $updated);
     ?>
         <header class="article__header">
           <div class="article__header__img">
@@ -51,7 +54,7 @@ $top_page = get_page_by_path('home');
                 <dl class="article__info -updated">
                   <dt>Updated</dt>
                   <dd>
-                    <time datetime="<?php echo get_the_modified_date('c'); ?>"><?php echo get_the_modified_date('Y.m.d'); ?></time>
+                    <time datetime="<?php echo $updated_date->format('c'); ?>"><?php echo $updated_date->format('Y.m.d'); ?></time>
                   </dd>
                 </dl>
               </div>
@@ -73,13 +76,13 @@ $top_page = get_page_by_path('home');
               <dl class="article__info -share">
                 <dt>この記事をシェアする</dt>
                 <dd>
-                  <a class="-facebook" data-ebi-share="facebook" data-ebi-share-url="<?php echo esc_url($permalink); ?>">
+                  <a class="-facebook" target="_blank" data-ebi-share="facebook" data-ebi-share-url="<?php echo esc_url($permalink); ?>" data-ebi-share-text="<?php echo $share_title; ?>">
                     <?php echo file_get_contents(get_template_directory() . '/include/svg/icon-facebook.svg'); ?>
                   </a>
-                  <a class="-x" data-ebi-share="x" data-ebi-share-url="<?php echo esc_url($permalink); ?>">
+                  <a class="-x" target="_blank" data-ebi-share="x" data-ebi-share-url="<?php echo esc_url($permalink); ?>" data-ebi-share-text="<?php echo $share_title; ?>">
                     <?php echo file_get_contents(get_template_directory() . '/include/svg/icon-x.svg'); ?>
                   </a>
-                  <a class="-line" data-ebi-share="line" data-ebi-share-url="<?php echo esc_url($permalink); ?>">
+                  <a class="-line" target="_blank" data-ebi-share="line" data-ebi-share-url="<?php echo esc_url($permalink); ?>" data-ebi-share-text="<?php echo $share_title; ?>">
                     <?php echo file_get_contents(get_template_directory() . '/include/svg/icon-line.svg'); ?>
                   </a>
                 </dd>
@@ -89,14 +92,33 @@ $top_page = get_page_by_path('home');
         </header>
         <div class="article__contents">
           <div class="body">
+            <?php
+            $section_counter = 0;
+            $section_titles = [];
+            ?>
             <?php if (have_rows('body')): ?>
               <?php while (have_rows('body')): the_row(); ?>
                 <?php
                 $type = get_sub_field('type');
-                if ($type === 'h2'):
+                if ($type === 'h2') {
+                  $section_counter++;
+                  $h2_text = get_sub_field('h2');
+                  $section_titles[] = [
+                    'id' => "section-$section_counter",
+                    'title' => strip_tags($h2_text),
+                  ];
+                }
+                ?>
+              <?php endwhile; ?>
+              <?php
+              $section_counter = 0;
+              while (have_rows('body')): the_row();
+                $type = get_sub_field('type'); ?>
+                <?php if ($type === 'h2'):
+                  $section_counter++;
                   $h2 = wrap_with_span(get_sub_field('h2'));
                 ?>
-                  <h2><?php echo $h2; ?></h2>
+                  <h2 id="section-<?php echo $section_counter; ?>"><?php echo $h2; ?></h2>
                 <?php elseif ($type === 'h3'):
                   $h3 = get_sub_field('h3');
                 ?>
@@ -104,7 +126,7 @@ $top_page = get_page_by_path('home');
                 <?php elseif ($type === 'h4'):
                   $h4 = get_sub_field('h4');
                 ?>
-                  <h4><?php echo nl2br($title); ?></h4>
+                  <h4><?php echo nl2br($h4); ?></h4>
                 <?php elseif ($type === 'p'):
                   $p = get_sub_field('p');
                 ?>
@@ -283,17 +305,22 @@ $top_page = get_page_by_path('home');
                   </div>
                 <?php elseif ($type === 'ogp'):
                   $ogp = get_sub_field('ogp');
-                  $ogp_data = get_ogp_data($ogp);
+                  $ogp_link = $ogp['url'];
+                  $ogp_data = get_ogp_data($ogp_link);
+                  $ogp_img_file = $ogp['img'];
+                  $ogp_img_src = wp_get_attachment_image_url($ogp_img_file, 'full') ?? null;
                 ?>
                   <div class="body__link">
                     <article class="-ogp">
-                      <div class="-img">
-                        <img src="<?php echo $ogp_data['image']; ?>" alt="">
-                      </div>
-                      <div class="-txt">
-                        <h2><?php echo $ogp_data['title']; ?></h2>
-                        <p><?php echo $ogp_data['description']; ?></p>
-                      </div>
+                      <a href="<?php echo esc_url($ogp_link); ?>" target="_blank">
+                        <div class="-img">
+                          <img src="<?php echo $ogp_img_src; ?>" alt="">
+                        </div>
+                        <div class="-txt">
+                          <h2><?php echo $ogp_data['title']; ?></h2>
+                          <p><?php echo $ogp_data['description']; ?></p>
+                        </div>
+                      </a>
                     </article>
                   </div>
                 <?php elseif ($type === 'dialogue'): ?>
@@ -345,7 +372,6 @@ $top_page = get_page_by_path('home');
                   $profile_text = $profile_group['text'];
                   $profile_img = $profile_group['img'];
                   $profile_img_src = wp_get_attachment_image_url($profile_img, 'full') ?? null;
-
                 ?>
                   <div class="body__profile">
                     <div class="-txt">
@@ -360,16 +386,54 @@ $top_page = get_page_by_path('home');
                       <img src="<?php echo $profile_img_src; ?>" alt="">
                     </div>
                   </div>
+                <?php elseif ($type === 'index'): ?>
+                  <!-- <div class="body__index">
+                    <div class="-title fontPanchang">
+                      INDEX
+                    </div>
+                    <ul class="-list">
+                      <li>
+                        <a href="#section1" data-ebi-scroller>自分好みを見つけることのできる理由</a>
+                      </li>
+                      <li>
+                        <a href="#section2" data-ebi-scroller>鮮やかだけれども濃い</a>
+                      </li>
+                      <li>
+                        <a href="#section3" data-ebi-scroller>久しぶりに991.2を駆る</a>
+                      </li>
+                      <li>
+                        <a href="#section4" data-ebi-scroller>スペック</a>
+                      </li>
+                      <li>
+                        <a href="#section5" data-ebi-scroller>写真を一覧で見る</a>
+                      </li>
+                    </ul>
+                  </div> -->
+                  <div class="body__index">
+                    <div class="-title fontPanchang">
+                      INDEX
+                    </div>
+                    <ul class="-list">
+                      <?php foreach ($section_titles as $section): ?>
+                        <li>
+                          <a href="#<?php echo $section['id']; ?>" data-ebi-scroller>
+                            <?php echo $section['title']; ?>
+                          </a>
+                        </li>
+                      <?php endforeach; ?>
+                    </ul>
+                  </div>
                 <?php elseif ($type === 'credit'):
                   $credits = get_sub_field('credits');
                 ?>
                   <div class="body__credit">
                     <div class="-title fontPanchang">Credit</div>
                     <div class="-body">
-                      <?php echo strip_tags($credits, '<a><em><br>'); ?>
+                      <?php echo $credits; ?>
                     </div>
                   </div>
                 <?php endif; ?>
+
               <?php endwhile; ?>
             <?php endif; ?>
           </div>
@@ -405,7 +469,7 @@ $top_page = get_page_by_path('home');
                 </li>
               </ol>
               <div class="ebiButton -full -line">
-                <a href="#TBD">
+                <a href="https://lin.ee/P29MAc9" target="_blank">
                   <span>公式LINEを登録する</span>
                 </a>
               </div>
@@ -419,13 +483,13 @@ $top_page = get_page_by_path('home');
           <dl class="article__info -share">
             <dt>この記事をシェアする</dt>
             <dd>
-              <a class="-facebook" data-ebi-share="facebook" data-ebi-share-url="#TBD">
+              <a class="-facebook" target="_blank" data-ebi-share="facebook" data-ebi-share-url="<?php echo esc_url($permalink); ?>" data-ebi-share-text="<?php echo $share_title; ?>">
                 <?php echo file_get_contents(get_template_directory() . '/include/svg/icon-facebook.svg'); ?>
               </a>
-              <a class="-x" data-ebi-share="x" data-ebi-share-url="#TBD">
+              <a class="-x" target="_blank" data-ebi-share="x" data-ebi-share-url="<?php echo esc_url($permalink); ?>" data-ebi-share-text="<?php echo $share_title; ?>">
                 <?php echo file_get_contents(get_template_directory() . '/include/svg/icon-x.svg'); ?>
               </a>
-              <a class="-line" data-ebi-share="line" data-ebi-share-url="#TBD">
+              <a class="-line" target="_blank" data-ebi-share="line" data-ebi-share-url="<?php echo esc_url($permalink); ?>" data-ebi-share-text="<?php echo $share_title; ?>">
                 <?php echo file_get_contents(get_template_directory() . '/include/svg/icon-line.svg'); ?>
               </a>
             </dd>

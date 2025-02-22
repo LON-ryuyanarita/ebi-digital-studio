@@ -21,7 +21,7 @@ $top_page = get_page_by_path('home');
     'offset' => $offset,
     'tax_query' => array(
       array(
-        'taxonomy' => 'cpost-tag',
+        'taxonomy' => 'cpost-cat',
         'field' => 'slug',
         'terms' => $term_slug,
       ),

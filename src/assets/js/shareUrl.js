@@ -6,7 +6,7 @@ export default class shareUrl {
 
     this.$shareBtns = $('[data-ebi-share]');
     this.links = {
-      x: 'https://x.com/intent/tweet?url={{URL}}&text={{TEXT}}&hashtags={{HASHTAGS}}',
+      x: 'https://x.com/intent/tweet?text={{TEXT}}&url={{URL}}&hashtags={{HASHTAGS}}',
       facebook: 'http://www.facebook.com/share.php?u={{URL}}',
       line: 'http://line.me/R/msg/text/?{{TEXT}} {{URL}}',
     };

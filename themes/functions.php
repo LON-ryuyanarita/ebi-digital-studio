@@ -45,7 +45,7 @@ function create_post_type()
       'public' => true,
       'has_archive' => true,
       'supports' => array(
-        'title'
+        'title',
       ),
       'menu_position' => 5,
       'menu_icon' => 'dashicons-welcome-write-blog',
@@ -202,6 +202,17 @@ function custom_admin_inline_styles()
           margin-right: 1em;
         }
       }
+      .mce-menu .mce-menu-item.mce-active.mce-menu-item-normal,
+      .mce-menu .mce-menu-item.mce-active.mce-menu-item-preview,
+      .mce-menu .mce-menu-item.mce-selected {
+        color: inherit !important;
+        background: #d7e9f9 !important;
+      }
+      .mce-menu .mce-menu-item:focus,
+      .mce-menu .mce-menu-item:hover {
+        color: white !important;
+        background: #359cfa !important;
+      }
   </style>';
 }
 //スタイルセレクトボタンを追加
@@ -229,14 +240,17 @@ function customize_tinymce_settings($mceInit)
       'exact' => true,
     ),
     array(
-      'title' => '赤背景 強調',
+      'title' => '太字アンダーライン 強調',
       'inline' => 'em',
       'classes' => '-em2',
       'styles' => array(
-        'color' => 'white',
-        'background-color' => '#d5001c',
         'font-style' => 'normal',
-        'font-weight' => 'bold'
+        'font-weight' => 'bold',
+        'text-decoration' => 'underline',
+        'text-decoration-thickness' => '4px',
+        'text-decoration-style' => 'solid',
+        'text-decoration-color' => '#ddd  ',
+        'text-underline-offset' => '-2px',
       ),
       'exact' => true,
     ),
@@ -282,13 +296,17 @@ function get_youtube_id($url)
 /* 改行で区切って span でラップ */
 function wrap_with_span($text)
 {
-  // ✅ 改行（\n）を <br> に変換
+  // 改行（\n）を <br> に変換
   $text = nl2br($text);
 
-  // ✅ `<br>` の前後を `<span>` で囲む
+  // `<br>` の前後を `<span>` で囲む
   $text = preg_replace('/([^<]+)(<br\s*\/?>)/i', '<span>$1</span>$2', $text);
   $text = preg_replace('/(<br\s*\/?>)([^<]+)/i', '$1<span>$2</span>', $text);
 
+  // もし <span> タグが存在しなければ（＝1行のみの場合）全体を囲む
+  if (strpos($text, '<span>') === false) {
+    $text = '<span>' . $text . '</span>';
+  }
   return $text;
 }
 
@@ -318,22 +336,20 @@ function wrap_with_li($text)
 /* OGP 取得 */
 function get_ogp_data($url)
 {
-  require_once get_template_directory() . '/include/OpenGraph.php'; // ① 直接配置した場合
+  require_once get_template_directory() . '/include/OpenGraph.php';
 
   $ogp_data = [
     'title'       => '',
     'description' => '',
-    'image'       => ''
   ];
 
   $graph = OpenGraph::fetch($url);
   if ($graph) {
     $detects = ['ASCII', 'EUC-JP', 'SJIS', 'JIS', 'CP51932', 'UTF-16', 'ISO-8859-1'];
     $post_title = esc_attr($graph->title);
-    $post_thumbnail = esc_url($graph->image);
     $site_name = esc_attr($graph->site_name);
 
-    $title_check = utf8_decode($post_title);
+    $title_check = mb_convert_encoding($post_title, 'ISO-8859-1', 'UTF-8');
     if (mb_detect_encoding($title_check) == 'UTF-8') {
       $post_title = $title_check;
     }
@@ -341,15 +357,7 @@ function get_ogp_data($url)
       $post_title = mb_convert_encoding($post_title, 'UTF-8', mb_detect_encoding($post_title, $detects, true));
     }
 
-    $thumbnail_check = utf8_decode($post_thumbnail);
-    if (mb_detect_encoding($thumbnail_check) == 'UTF-8') {
-      $post_thumbnail = $thumbnail_check;
-    }
-    if (mb_detect_encoding($post_thumbnail) != 'UTF-8') {
-      $post_thumbnail = mb_convert_encoding($post_thumbnail, 'UTF-8', mb_detect_encoding($post_thumbnail, $detects, true));
-    }
-
-    $site_name_check = utf8_decode($site_name);
+    $site_name_check = mb_convert_encoding($site_name, 'ISO-8859-1', 'UTF-8');
     if (mb_detect_encoding($site_name_check) == 'UTF-8') {
       $site_name = $site_name_check;
     }
@@ -360,7 +368,6 @@ function get_ogp_data($url)
 
   $ogp_data['title'] = $graph->title;
   $ogp_data['description'] = $graph->description;
-  $ogp_data['image'] = $graph->image;
 
   return $ogp_data;
 }

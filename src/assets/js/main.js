@@ -3,7 +3,7 @@ import 'scroll-behavior-polyfill';
 // import Cookies from 'js-cookie';
 import CreateCss from './createCss.js';
 // import Top from './top.js';
-// import ShareUrl from './shareUrl.js';
+import ShareUrl from './shareUrl.js';
 
 // DOMContentLoaded
 const DOMContentLoadedCallback = () => {
@@ -68,6 +68,9 @@ const DOMContentLoadedCallback = () => {
     });
   }
   // ::debug
+
+  const shareUrl = new ShareUrl();
+  shareUrl.init();
 
   const handleScroll = () => {
     windowInfo.scrollX = window.scrollX;
