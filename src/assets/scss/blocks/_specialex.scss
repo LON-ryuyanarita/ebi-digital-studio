@@ -8,7 +8,7 @@
 @use './_utils' as *;
 
 .specialex {
-
+  overflow: hidden;
 
   // mv
   .specialex__mv {
@@ -34,7 +34,7 @@
       left: 0;  
       width: 100%;    
       color: #fff;
-      padding: 0 52px 30px;
+      padding: 0 36px 30px;
     }
 
     &__titleMain {
@@ -44,11 +44,25 @@
     }
 
     &__titleSub {
+      position: relative;
       display: block;
       font-size: 16px;
       line-height: 1;
       margin-top: 13px;
       font-weight: 700;
+      padding-left: 10px;
+
+      &::before {
+        content: "";
+        width: 1px;
+        height: 13px;
+        background-color: #fff;
+        box-shadow: 0 0 5px #60ff00;
+        position: absolute;
+        top: 60%;
+        left: 0;
+        transform: translateY(-50%);
+      }
     }
   }
 
@@ -60,7 +74,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 52px;
+      padding-left: 36px;
+      padding-right: 78px;
     }
 
     &__text {      
@@ -86,18 +101,18 @@
       font-size: 48px;
       font-weight: 700;
       line-height: 1;
-      margin-top: 18px;
+      margin-top: 13px;
     }
 
     &__desc {
       display: block;
       font-size: 15px;
-      line-height: 26 / 15;
+      line-height: calc(26 / 15);
       font-weight: 500;
-      margin-top: 24px;
+      margin-top: 32px;
 
       p + p {
-        margin-top: 1.2em;
+        margin-top: 1.5em;
       }
     }
   }  
@@ -127,19 +142,24 @@
 
   // feature
   .specialex__feature {
+    padding-bottom: 130px;
 
     &__item {
-      padding: 80px 0;      
+      padding: 72px 0;      
+
+      & + & {
+        padding-top: 64px;        
+      }
     }
 
     &__itemCol2 {
       display: grid;            
-      padding: 0 52px;
+      padding: 0 36px;
 
       &.__is1 {
         grid-template-columns: 500px 1fr;
         align-items: center;
-        gap: 64px;
+        gap: 75px;
       }
 
       &.__is2 {
@@ -179,13 +199,14 @@
     }
 
     &__itemDesc {
+      display: block;
       font-size: 15px;
-      line-height: 26 / 15;
+      line-height: calc(26 / 15);
       font-weight: 500;
-      margin-top: 24px;
+      margin-top: 32px;
 
       p + p {
-        margin-top: 1.2em;
+        margin-top: 1.5em;
       }
     }
 
@@ -199,7 +220,14 @@
 
     &__itemLinkFig {
       width: 258px;
-      aspect-ratio: 258 / 162;
+      aspect-ratio: calc(258 / 164);
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
     &__itemLinkText {
@@ -210,7 +238,7 @@
     &__itemLinkTitle {
       display: block;
       font-size: 18px;
-      line-height: 24 / 18;
+      line-height: calc(24 / 18);
       font-weight: 700;
     }
 
@@ -219,12 +247,13 @@
       font-size: 15px;
       color: #ff0000;
       text-decoration: underline;
-      margin-top: 12px;
+      margin-top: 7px;
     }
 
     &__deco {
       width: 100%;
       height: 480px;
+      margin-top: 30px;
 
       img {
         display: block;
@@ -235,13 +264,42 @@
     }    
 
     &__gallery {
+      width: 100%;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 10px;
       margin-top: 56px;
+      padding: 0 40px;
     }
 
   }
 
+  .specialex__feature__cta {
+    padding: 90px 0;
+    background-color: #000;
+
+    &__heading {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    &__link {
+      display: block;
+      width: 700px;
+      background-color: #07c856;      
+      padding: 28px;
+      border-radius: 10rem;
+      text-align: center;
+      color: #fff;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 24px;
+      font-size: 17px;
+      font-weight: 700;
+    }
+  }
 
 }
