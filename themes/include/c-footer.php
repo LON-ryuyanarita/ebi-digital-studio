@@ -91,7 +91,7 @@ $themeUri = get_template_directory_uri();
 
       <div class="-c4">
         <div class="footer__contact contactBanner">
-          <a href="#TBD">
+          <a href="https://ginza.ebi-group.tokyo/digital-s" target="_blank">
             <img src="<?php echo $themeUri; ?>/assets/img/contact-txt.png" alt="CONTACT">
             <img src="<?php echo $themeUri; ?>/assets/img/contact-txt.png" alt="CONTACT">
             <img src="<?php echo $themeUri; ?>/assets/img/contact-txt.png" alt="CONTACT">
@@ -99,7 +99,7 @@ $themeUri = get_template_directory_uri();
         </div>
 
         <div class="footer__lineLink">
-          <a href="#TBD">
+          <a href="https://lin.ee/P29MAc9" target="_blank">
             <span class="-txt1">
               EBI DIGITAL STUDIO<br>
               公式アカウント<br>
@@ -123,7 +123,7 @@ $themeUri = get_template_directory_uri();
 
       <div class="-c2">
         <div class="footer__copyright">
-          <small>&copy; 2024 EBI Marketing Co., Ltd.</small>
+          <small>&copy; 2025 EBI Marketing Co., Ltd.</small>
         </div>
       </div>
 

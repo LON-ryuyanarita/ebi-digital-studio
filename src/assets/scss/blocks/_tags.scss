@@ -9,6 +9,7 @@
 
 .tags {
   & {
+    min-height: 150px;
     margin-top: 30px;
     padding-left: 25.322581%;
     border-left: 1px solid rgba($color-white-1, 0.3);
@@ -21,6 +22,7 @@
       position: absolute;
       top: 50%;
       left: 0;
+      transform: translateY(-50%);
     }
   }
 
@@ -55,6 +57,7 @@
   // SP 以下 (- 768)
   @media #{$mq-lte-sp} {
     & {
+      min-height: auto;
       margin-top: cvws(30);
       padding-left: 0;
       border-left: none;
@@ -66,6 +69,7 @@
         position: relative;
         top: auto;
         left: auto;
+        transform: none;
       }
     }
 

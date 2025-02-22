@@ -16,7 +16,7 @@ $terms = wp_get_post_terms($post_id, 'cpost-tag');
     </div>
     <div class="articles__item__body">
       <time class="-date fontPanchang" datetime="<?php echo get_the_date('c', $post_id); ?>"><?php echo get_the_date('Y/m/d', $post_id); ?></time>
-      <h3 class="-title"><?php echo $title; ?></h3>
+      <h3 class="-title"><?php echo nl2br($title); ?></h3>
     </div>
   </a>
   <div class="-tags">

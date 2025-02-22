@@ -26,64 +26,93 @@ $top_page = get_page_by_path('home');
 
         <div class="top__mv">
           <?php
-          $top_mv = get_field('top_mv');
-          if (!empty($top_mv) && is_array($top_mv)) :
-            $top_mv_articles = array_slice($top_mv, 0, 3);
+          $top_mv_top = get_field('top_mv_top');
+          if (!empty($top_mv_top)) :
+            // 1個目の記事
+            $post_id = $top_mv_top;
+            $post = get_post($post_id);
+            setup_postdata($post);
+            $title = get_field('title', $post->ID);
+            $top_mv = get_field('top_mv');
+            $top_mv_type = $top_mv['top_mv_type'];
+            $top_mv_file = $top_mv_type == 'img' ? $top_mv['top_mv_img'] : $top_mv['top_mv_mov'];
+            $top_mv_src = wp_get_attachment_url($top_mv_file, 'full') ?? null;
           ?>
             <div class="top__mv__upper">
               <?php
-              // 1個目の記事
-              if (!empty($top_mv_articles[0])) :
-                $post_id = $top_mv_articles[0];
-                $post = get_post($post_id);
-                setup_postdata($post);
-                $title = get_field('title', $post->ID);
-                $mv = get_field('top_mv', $post->ID) ?? null;
-                $mv_src = wp_get_attachment_image_url($mv, 'full');
               ?>
-                <article class="top__mv__item">
-                  <a href="<?php echo get_permalink($post_id); ?>">
-                    <div class="top__mv__item__item__img">
-                      <?php if ($mv_src) : ?>
-                        <img src="<?php echo $mv_src; ?>" alt="">
-                      <?php endif; ?>
-                    </div>
-                    <div class="top__mv__item__body">
-                      <time class="-date fontPanchang" datetime="<?php echo get_the_date('c', $post_id); ?>"><?php echo get_the_date('Y/m/d', $post_id); ?></time>
-                      <h3 class="-title"><?php echo $title; ?></h3>
-                    </div>
-                  </a>
-                  <div class="-tags">
-                    <?php
-                    $terms = wp_get_post_terms($post_id, 'cpost-tag');
-                    if (!empty($terms) && !is_wp_error($terms)) :
-                      foreach ($terms as $term) :
-                    ?>
-                        <a href="<?php echo get_term_link($term); ?>">#<?php echo esc_html($term->name); ?></a>
-                    <?php
-                      endforeach;
-                    endif;
-                    ?>
+              <article class="top__mv__item">
+                <a href="<?php echo get_permalink($post_id); ?>">
+                  <div class="top__mv__item__item__img">
+                    <?php if ($top_mv_type == 'img') : ?>
+                      <img src="<?php echo esc_url($top_mv_src); ?>" alt="">
+                    <?php else : ?>
+                      <video
+                        src="<?php echo esc_url($top_mv_src); ?>"
+                        muted
+                        autoplay
+                        playsinline
+                        loop>
+                      </video>
+                    <?php endif; ?>
+                    <?php if ($mv_src) : ?>
+                      <img src="<?php echo $mv_src; ?>" alt="">
+                    <?php endif; ?>
                   </div>
-                </article>
-              <?php wp_reset_postdata();
-              endif; ?>
+                  <div class="top__mv__item__body">
+                    <time class="-date fontPanchang" datetime="<?php echo get_the_date('c', $post_id); ?>"><?php echo get_the_date('Y/m/d', $post_id); ?></time>
+                    <h3 class="-title"><?php echo $title; ?></h3>
+                  </div>
+                </a>
+                <div class="-tags">
+                  <?php
+                  $terms = wp_get_post_terms($post_id, 'cpost-tag');
+                  if (!empty($terms) && !is_wp_error($terms)) :
+                    foreach ($terms as $term) :
+                  ?>
+                      <a href="<?php echo get_term_link($term); ?>">#<?php echo esc_html($term->name); ?></a>
+                  <?php
+                    endforeach;
+                  endif;
+                  ?>
+                </div>
+              </article>
+              <?php wp_reset_postdata(); ?>
             </div>
+          <?php endif; ?>
+          <?php
+          $top_mv_lowers = get_field('top_mv_lowers');
+          if (!empty($top_mv_lowers) && is_array($top_mv_lowers)) :
+            $top_mv_articles = array_slice($top_mv_lowers, 0, 2);
+          ?>
             <div class="top__mv__lower">
               <?php
               // 2, 3個目の記事
-              for ($i = 1; $i < 3; $i++) :
+              for ($i = 0; $i < 2; $i++) :
                 if (!empty($top_mv_articles[$i])) :
                   $post_id = $top_mv_articles[$i];
                   $post = get_post($post_id);
                   setup_postdata($post);
                   $title = get_field('title', $post->ID);
-                  $mv = get_field('top_mv', $post->ID) ?? null;
-                  $mv_src = wp_get_attachment_image_url($mv, 'full');
+                  $top_mv = get_field('top_mv');
+                  $top_mv_type = $top_mv['top_mv_type'];
+                  $top_mv_file = $top_mv_type == 'img' ? $top_mv['top_mv_img'] : $top_mv['top_mv_mov'];
+                  $top_mv_src = wp_get_attachment_url($top_mv_file, 'full') ?? null;
               ?>
                   <article class="top__mv__item">
                     <a href="<?php echo get_permalink($post_id); ?>">
                       <div class="top__mv__item__item__img">
+                        <?php if ($top_mv_type == 'img') : ?>
+                          <img src="<?php echo esc_url($top_mv_src); ?>" alt="">
+                        <?php else : ?>
+                          <video
+                            src="<?php echo esc_url($top_mv_src); ?>"
+                            muted
+                            autoplay
+                            playsinline
+                            loop>
+                          </video>
+                        <?php endif; ?>
                         <?php if ($mv_src) : ?>
                           <img src="<?php echo $mv_src; ?>" alt="">
                         <?php endif; ?>
@@ -442,7 +471,7 @@ $top_page = get_page_by_path('home');
               </p>
             </div>
             <div class="top__contact__btn ebiButton -full -black">
-              <a href="#TBD">
+              <a href="https://ginza.ebi-group.tokyo/digital-s" target="_blank">
                 <span>お問い合わせ</span>
               </a>
             </div>

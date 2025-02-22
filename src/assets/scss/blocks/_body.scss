@@ -9,7 +9,7 @@
 
 @mixin link($color-inherit: false) {
   @if ($color-inherit == false) {
-    color: var(--color-red-1);
+    color: var(--color-blue-1);
   }
   text-decoration: underline;
 
@@ -25,6 +25,19 @@
     padding-bottom: 85px;
     font-weight: 400;
 
+    .-em1 {
+      font-weight: bold;
+    }
+
+    .-em2 {
+      font-weight: bold !important;
+      text-decoration: underline !important;
+      text-decoration-thickness: 4px !important;
+      text-decoration-style: solid !important;
+      text-decoration-color: var(--color-gray-2) !important;
+      text-underline-offset: -2px !important;
+    }
+
     > *:not(.-full) {
       width: 820px;
       margin-left: auto;
@@ -32,6 +45,7 @@
     }
 
     > h2 {
+      padding-top: 90px;
       font-size: 40px;
       font-weight: bold;
       line-height: 1.15;
@@ -43,7 +57,7 @@
         height: 1px;
         background-color: var(--color-black-1);
         position: absolute;
-        top: 30px;
+        top: 30px + 90px;
         left: -126px;
       }
 
@@ -99,14 +113,6 @@
         display: block;
       }
 
-      .-em1 {
-        font-weight: bold;
-      }
-
-      .-em2 {
-        font-weight: bold;
-      }
-
       a {
         @include link;
       }
@@ -144,6 +150,10 @@
 
       em {
         font-weight: bold;
+      }
+
+      a {
+        @include link;
       }
     }
 
@@ -280,6 +290,10 @@
       em {
         font-weight: bold;
       }
+
+      a {
+        @include link;
+      }
     }
 
     .body__img {
@@ -297,7 +311,7 @@
         font-size: 14px;
         line-height: 1.286;
         font-weight: 400;
-        text-align: center;
+        text-align: left;
         display: block;
       }
     }
@@ -331,7 +345,7 @@
         margin-top: 4px;
         font-size: 14px;
         line-height: 1.286;
-        text-align: center;
+        text-align: left;
       }
     }
 
@@ -383,7 +397,7 @@
               font-size: 14px;
               line-height: 1.286;
               font-weight: 400;
-              text-align: center;
+              text-align: left;
               display: block;
             }
           }
@@ -727,6 +741,16 @@
         margin-top: 6px;
         font-size: 14px;
         line-height: 1.571;
+
+        p {
+          & + p {
+            margin-top: 14px;
+          }
+        }
+
+        a {
+          @include link;
+        }
       }
     }
   }
@@ -743,6 +767,7 @@
       }
 
       > h2 {
+        padding-top: cvws(65);
         font-size: cvws(44);
         line-height: cvws(54);
 
@@ -1157,6 +1182,12 @@
           margin-top: cvws(10);
           font-size: cvws(24);
           line-height: cvws(32);
+
+          p {
+            & + p {
+              margin-top: cvws(20);
+            }
+          }
         }
       }
     }

@@ -5,45 +5,22 @@ $themeUri = get_template_directory_uri();
 <header class="header" data-ebi-header>
   <?php
   if (is_page('top')):
-    $news_list = get_field('header_news');
-    if ($news_list) : ?>
+    $news_id = get_field('header_news');
+    if (!empty($news_id)) :
+      $post_id = $news_id;
+      $post = get_post($post_id);
+      $title = get_field('title', $post_id); ?>
       <div class="header__news">
-        <ul>
-          <?php
-          foreach ($news_list as $news_id):
-            $post_id = $news_id;
-            $post = get_post($post_id);
-            $title = get_field('title', $post_id);
-          ?>
-            <li>
-              <time class="-date fontPanchang" datetime="<?php echo get_the_date('c', $post_id); ?>"><?php echo get_the_date('Y/m/d', $post_id); ?></time>
-              <span>
-                <a href="<?php echo get_permalink($post_id); ?>">
-                  <?php echo $title; ?>
-                </a>
-              </span>
-            </li>
-          <?php
-          endforeach; ?>
-        </ul>
-        <ul>
-          <?php
-          foreach ($news_list as $news):
-            $post_id = $news;
-            $post = get_post($post_id);
-            $title = get_field('title', $post_id);
-          ?>
-            <li>
-              <time class="-date fontPanchang" datetime="<?php echo get_the_date('c', $post_id); ?>"><?php echo get_the_date('Y/m/d', $post_id); ?></time>
-              <span>
-                <a href="<?php echo get_permalink($post_id); ?>">
-                  <?php echo $title; ?>
-                </a>
-              </span>
-            </li>
-          <?php
-          endforeach; ?>
-        </ul>
+        <div data-ebi-header-news-wrapper>
+          <div data-ebi-header-news-item>
+            <time class="-date fontPanchang" datetime="<?php echo get_the_date('c', $post_id); ?>"><?php echo get_the_date('Y/m/d', $post_id); ?></time>
+            <span>
+              <a href="<?php echo get_permalink($post_id); ?>">
+                <?php echo $title; ?>
+              </a>
+            </span>
+          </div>
+        </div>
       </div>
   <?php
     endif;
@@ -51,7 +28,9 @@ $themeUri = get_template_directory_uri();
 
   <div class="header__inner">
     <h1 class="header__logo">
-      <img src="<?php echo $themeUri; ?>/assets/img/logo.svg" alt="EBI DIGITAL STUDIO">
+      <a href="/">
+        <img src="<?php echo $themeUri; ?>/assets/img/logo.svg" alt="EBI DIGITAL STUDIO">
+      </a>
     </h1>
 
     <div class="header__nav">
@@ -138,7 +117,7 @@ $themeUri = get_template_directory_uri();
     </div>
 
     <div class="header__contact contactBanner">
-      <a href="#TBD">
+      <a href="https://ginza.ebi-group.tokyo/digital-s" target="_blank">
         <img src="<?php echo $themeUri; ?>/assets/img/contact-txt.png" alt="CONTACT">
         <img src="<?php echo $themeUri; ?>/assets/img/contact-txt.png" alt="CONTACT">
         <img src="<?php echo $themeUri; ?>/assets/img/contact-txt.png" alt="CONTACT">

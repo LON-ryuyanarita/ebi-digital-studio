@@ -37,6 +37,11 @@ $themeUri = get_template_directory_uri();
             wp_reset_postdata();
           endif;
           ?>
+          <div class="latast__item -viewall">
+            <a href="/reviews/">
+              <span class="fontPanchang">VIEW ALL</span>
+            </a>
+          </div>
         </div>
       </div>
       <div class="latest__row">
@@ -68,6 +73,11 @@ $themeUri = get_template_directory_uri();
             wp_reset_postdata();
           endif;
           ?>
+          <div class="latast__item -viewall">
+            <a href="/customize/">
+              <span class="fontPanchang">VIEW ALL</span>
+            </a>
+          </div>
         </div>
       </div>
       <div class="latest__row">
@@ -99,6 +109,11 @@ $themeUri = get_template_directory_uri();
             wp_reset_postdata();
           endif;
           ?>
+          <div class="latast__item -viewall">
+            <a href="/heritage/">
+              <span class="fontPanchang">VIEW ALL</span>
+            </a>
+          </div>
         </div>
       </div>
       <div class="latest__row">
@@ -130,6 +145,11 @@ $themeUri = get_template_directory_uri();
             wp_reset_postdata();
           endif;
           ?>
+          <div class="latast__item -viewall">
+            <a href="/race/">
+              <span class="fontPanchang">VIEW ALL</span>
+            </a>
+          </div>
         </div>
       </div>
       <div class="latest__row">
@@ -161,6 +181,11 @@ $themeUri = get_template_directory_uri();
             wp_reset_postdata();
           endif;
           ?>
+          <div class="latast__item -viewall">
+            <a href="/lifestyle/">
+              <span class="fontPanchang">VIEW ALL</span>
+            </a>
+          </div>
         </div>
       </div>
       <div class="latest__row">
@@ -192,11 +217,16 @@ $themeUri = get_template_directory_uri();
             wp_reset_postdata();
           endif;
           ?>
+          <div class="latast__item -viewall">
+            <a href="/event/">
+              <span class="fontPanchang">VIEW ALL</span>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="latest__row -tag">
-        <?php get_template_part('include/m-tags'); ?>
-      </div>
+    </div>
+    <div class="latest__row -tag">
+      <?php get_template_part('include/m-tags'); ?>
     </div>
   </div>
 </section>
