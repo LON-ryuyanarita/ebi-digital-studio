@@ -523,6 +523,15 @@
       margin-top: 15px;
       font-size: 17px;
       font-weight: 700;
+      border: 1px solid #07c856;
+      transition: 
+        background-color .3s,
+        color .3s;
+
+      &:hover {
+        background-color: rgba(#60ff00,.0);
+        color: #07c856;
+      }
 
       @media #{$mq-lte-sp} {
         font-size: 14px;
