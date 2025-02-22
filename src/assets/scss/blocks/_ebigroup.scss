@@ -16,6 +16,10 @@
     width: 100%;
     height: calc(var(--vh)* 100 - 75px);    
 
+    @media #{$mq-lte-sp} {
+      height: calc(var(--vh)* 50 - 11.7333333333vw);
+    }
+
     &__bg {
       width: 100%;
       height: 100%;
@@ -35,12 +39,19 @@
       width: 100%;    
       color: #fff;
       padding: 0 36px 30px;
+
+      @media #{$mq-lte-sp} {
+        padding: 0 20px 20px;
+      }         
     }
 
     &__titleMain {
       display: block;
       font-size: 48px;
       line-height: 1;      
+      @media #{$mq-lte-sp} {
+        font-size: 32px;
+      }       
     }
 
     &__titleSub {
@@ -49,6 +60,10 @@
       line-height: 1;
       margin-top: 13px;
       font-weight: 700;
+
+      @media #{$mq-lte-sp} {
+        font-size: 12px;
+      }
     }
   }
 
