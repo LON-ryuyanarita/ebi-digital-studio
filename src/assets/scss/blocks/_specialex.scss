@@ -219,6 +219,10 @@
       display: grid;            
       padding: 0 36px;
 
+      @media #{$mq-lte-sp} {
+        padding: 0 20px;
+      }
+
       &.__is1 {
         grid-template-columns: 500px 1fr;
         align-items: center;
@@ -361,7 +365,7 @@
     &__itemLinkTag {
       display: block;
       font-size: 15px;
-      color: #ff0000;
+      color: #0066c0;
       text-decoration: underline;
       margin-top: 7px;
 
