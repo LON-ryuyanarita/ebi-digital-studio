@@ -50,6 +50,10 @@ function create_post_type()
       'menu_position' => 5,
       'menu_icon' => 'dashicons-welcome-write-blog',
       'show_in_rest' => true, /* API で利用可能にする */
+      'rewrite' => array(
+        'slug' => 'articles',
+        'with_front' => false,
+      ),
     )
   );
   register_taxonomy(
@@ -119,7 +123,28 @@ function custom_cpost_rewrite_rules()
     'top'
   );
 
-  // カテゴリーアーカイブ（例: /reviews/）
+  global $wp;
+  $all_pages = get_pages();
+  $page_slugs = array_map(function ($page) {
+    return $page->post_name;
+  }, $all_pages);
+
+  // 固定ページのスラッグと一致するカテゴリーは `cpost-cat` として扱わない
+  add_rewrite_rule(
+    '^([^/]+)/page/([0-9]+)/?$',
+    'index.php?cpost-cat=$matches[1]&paged=$matches[2]',
+    'top'
+  );
+
+  foreach ($page_slugs as $slug) {
+    add_rewrite_rule(
+      '^' . $slug . '/?$',
+      'index.php?pagename=' . $slug,
+      'top'
+    );
+  }
+
+  // カテゴリーアーカイブ（例: /reviews/）のルールを変更
   add_rewrite_rule(
     '^([^/]+)/?$',
     'index.php?cpost-cat=$matches[1]',
