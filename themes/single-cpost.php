@@ -19,7 +19,7 @@ $top_page = get_page_by_path('home');
         $terms_cats = get_the_terms(get_the_ID(), $taxonomy_cat);
         $taxonomy_tag = 'cpost-tag';
         $terms_tags = get_the_terms(get_the_ID(), $taxonomy_tag);
-        $updated = get_field('updated') ?? get_the_modified_date('Y/m/d');
+        $updated = get_field('updated') ?: get_the_modified_date('Y/m/d') ?: get_the_date('Y/m/d');
         $updated_date = DateTime::createFromFormat('Y/m/d', $updated);
     ?>
         <header class="article__header">
@@ -116,9 +116,9 @@ $top_page = get_page_by_path('home');
                 $type = get_sub_field('type'); ?>
                 <?php if ($type === 'h2'):
                   $section_counter++;
-                  $h2 = wrap_with_span(get_sub_field('h2'));
+                  $h2 = get_sub_field('h2');
                 ?>
-                  <h2 id="section-<?php echo $section_counter; ?>"><?php echo $h2; ?></h2>
+                  <h2 id="section-<?php echo $section_counter; ?>"><?php echo nl2br($h2); ?></h2>
                 <?php elseif ($type === 'h3'):
                   $h3 = get_sub_field('h3');
                 ?>

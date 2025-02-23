@@ -81,6 +81,7 @@
       .top__mv__item__body {
         bottom: 12px;
         left: 12px;
+        right: 12px;
 
         .-date {
           font-size: 9px;
@@ -151,6 +152,7 @@
       position: absolute;
       bottom: 20px;
       left: 20px;
+      right: 20px;
       z-index: 1;
 
       .-date {
@@ -722,6 +724,7 @@
         .top__mv__item__body {
           bottom: cvws(20);
           left: cvws(20);
+          right: cvws(20);
 
           .-date {
             font-size: cvws(13);
@@ -758,6 +761,7 @@
       .top__mv__item__body {
         bottom: cvws(20);
         left: cvws(20);
+        right: cvws(20);
 
         .-date {
           font-size: cvws(13);
