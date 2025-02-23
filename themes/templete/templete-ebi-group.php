@@ -79,7 +79,7 @@ $themeUri = get_template_directory_uri();
         <source type="image/webp" media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/about_sp.webp">
         <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/about_sp.png">
         <source type="image/webp" srcset="<?= $themeUri ?>/assets/img/ebigroup/about.webp">
-        <img src="<?= $themeUri ?>/assets/img/ebigroup/about.png" alt="">
+        <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/about.png" alt="" loading="lazy">
       </picture>
     </figure>
   </div>  
@@ -171,7 +171,7 @@ $themeUri = get_template_directory_uri();
           <source type="image/webp" media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/mission_sp.webp">
           <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/mission_sp.png">
           <source type="image/webp" srcset="<?= $themeUri ?>/assets/img/ebigroup/mission.webp">
-          <img src="<?= $themeUri ?>/assets/img/ebigroup/mission.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/mission.png" alt="" loading="lazy">
         </picture>
       </figure>
 
@@ -230,7 +230,7 @@ $themeUri = get_template_directory_uri();
             <div class="ebigroup__feature__secFigImg">
               <picture>
                 <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/feature_1_sp.png">
-                <img src="<?= $themeUri ?>/assets/img/ebigroup/feature_1.png" alt="">
+                <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/feature_1.png" alt="" >
               </picture>
             </div>
             <figcaption class="ebigroup__feature__secFigCaption __right">
@@ -248,7 +248,7 @@ $themeUri = get_template_directory_uri();
         <figure class="ebigroup__feature__secDeco">
           <picture>
             <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/feature_1_deco_sp.png">
-            <img src="<?= $themeUri ?>/assets/img/ebigroup/feature_1_deco.png" alt="">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/feature_1_deco.png" alt="">
           </picture>
         </figure>            
         <div class="ebigroup__feature__sec">
@@ -260,7 +260,7 @@ $themeUri = get_template_directory_uri();
             <div class="ebigroup__feature__secFigImg">
               <picture>
                 <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/feature_2_sp.png">
-                <img src="<?= $themeUri ?>/assets/img/ebigroup/feature_2.png" alt="">
+                <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/feature_2.png" alt="">
               </picture>
             </div>
             <figcaption class="ebigroup__feature__secFigCaption">
@@ -280,7 +280,7 @@ $themeUri = get_template_directory_uri();
         <figure class="ebigroup__feature__secDeco">
           <picture>
             <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/feature_2_deco_sp.png">
-            <img src="<?= $themeUri ?>/assets/img/ebigroup/feature_2_deco.png" alt="">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/feature_2_deco.png" alt="">
           </picture>
         </figure>            
       </div>
@@ -304,7 +304,7 @@ $themeUri = get_template_directory_uri();
     <ul class="ebigroup__stores__list">
       <li class="ebigroup__stores__item">
         <figure class="ebigroup__stores__itemFig">
-          <img src="<?= $themeUri ?>/assets/img/ebigroup/store_1.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_1.png" alt="">
         </figure>
         <h3 class="ebigroup__stores__itemTitle">
           ポルシェスタジオ銀座
@@ -323,26 +323,26 @@ $themeUri = get_template_directory_uri();
           <a href="" class="ebigroup__stores__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__stores__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__stores__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>
           <a href="" class="ebigroup__stores__itemLink fontPanchang">
             <span>ONLINE CONNECTION</span>
             <span class="ebigroup__stores__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__stores__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>
         </div>
       </li>
       <li class="ebigroup__stores__item">
         <figure class="ebigroup__stores__itemFig">
-          <img src="<?= $themeUri ?>/assets/img/ebigroup/store_2.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_2.png" alt="">
         </figure>
         <h3 class="ebigroup__stores__itemTitle">
           ポルシェサービスセンター東京ベイ辰巳              
@@ -357,24 +357,24 @@ $themeUri = get_template_directory_uri();
             TEL：03-6457-0911
           </p>
           <p class="ebigroup__stores__itemInfoTag">
-            <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_tag.png" alt="サービスセンター併設">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_tag.png" alt="サービスセンター併設">
           </p>
         </div>
         <div class="ebigroup__stores__itemLinks">
           <a href="" class="ebigroup__stores__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__stores__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__stores__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span> 
           </a>
         </div>
       </li>
       <li class="ebigroup__stores__item">
         <figure class="ebigroup__stores__itemFig">
-          <img src="<?= $themeUri ?>/assets/img/ebigroup/store_3.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_3.png" alt="">
         </figure>
         <h3 class="ebigroup__stores__itemTitle">
           ポルシェセンター青山              
@@ -394,26 +394,26 @@ $themeUri = get_template_directory_uri();
           <a href="" class="ebigroup__stores__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__stores__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__stores__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>              
           <a href="" class="ebigroup__stores__itemLink __ja">
             <span>試乗車一覧</span>
             <span class="ebigroup__stores__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__stores__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>              
         </div>
       </li>
       <li class="ebigroup__stores__item">
         <figure class="ebigroup__stores__itemFig">
-          <img src="<?= $themeUri ?>/assets/img/ebigroup/store_4.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_4.png" alt="">
         </figure>
         <h3 class="ebigroup__stores__itemTitle">
           <span>ポルシェセンター青山</span> 世田谷認定中古車センター              
@@ -429,33 +429,33 @@ $themeUri = get_template_directory_uri();
             TEL：03-5426-2111
           </p>
           <p class="ebigroup__stores__itemInfoTag">
-            <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_tag.png" alt="サービスセンター併設">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_tag.png" alt="サービスセンター併設">
           </p>
         </div>
         <div class="ebigroup__stores__itemLinks">
           <a href="" class="ebigroup__stores__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__stores__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__stores__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>
           </a>              
           <a href="" class="ebigroup__stores__itemLink __ja">
             <span>認定中古車在庫一覧</span>
             <span class="ebigroup__stores__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__stores__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>              
         </div>
       </li>
       <li class="ebigroup__stores__item">
         <figure class="ebigroup__stores__itemFig">
-          <img src="<?= $themeUri ?>/assets/img/ebigroup/store_5.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_5.png" alt="">
         </figure>
         <h3 class="ebigroup__stores__itemTitle">
           ポルシェセンター目黒
@@ -470,33 +470,33 @@ $themeUri = get_template_directory_uri();
             TEL：03-3719-6221
           </p>
           <p class="ebigroup__stores__itemInfoTag">
-            <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_tag.png" alt="サービスセンター併設">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_tag.png" alt="サービスセンター併設">
           </p>
         </div>
         <div class="ebigroup__stores__itemLinks">
           <a href="" class="ebigroup__stores__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__stores__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__stores__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span> 
           </a>              
           <a href="" class="ebigroup__stores__itemLink __ja">
             <span>試乗車一覧</span>
             <span class="ebigroup__stores__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__stores__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>              
         </div>
       </li>
       <li class="ebigroup__stores__item">
         <figure class="ebigroup__stores__itemFig">
-          <img src="<?= $themeUri ?>/assets/img/ebigroup/store_6.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_6.png" alt="">
         </figure>
         <h3 class="ebigroup__stores__itemTitle">
           <span>ポルシェセンター目黒</span> 六本木認定中古車センター
@@ -515,26 +515,26 @@ $themeUri = get_template_directory_uri();
           <a href="" class="ebigroup__stores__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__stores__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__stores__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>              
           <a href="" class="ebigroup__stores__itemLink __ja">
             <span>認定中古車在庫一覧</span>
             <span class="ebigroup__stores__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__stores__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>              
         </div>
       </li>
       <li class="ebigroup__stores__item">
         <figure class="ebigroup__stores__itemFig">
-          <img src="<?= $themeUri ?>/assets/img/ebigroup/store_7.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_7.png" alt="">
         </figure>
         <h3 class="ebigroup__stores__itemTitle">
           ポルシェセンター高輪
@@ -549,33 +549,33 @@ $themeUri = get_template_directory_uri();
             TEL：03-5791-0911
           </p>
           <p class="ebigroup__stores__itemInfoTag">
-            <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_tag.png" alt="サービスセンター併設">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_tag.png" alt="サービスセンター併設">
           </p>              
         </div>
         <div class="ebigroup__stores__itemLinks">
           <a href="" class="ebigroup__stores__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__stores__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__stores__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>              
           <a href="" class="ebigroup__stores__itemLink">
             <span>試乗車一覧</span>
             <span class="ebigroup__stores__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__stores__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span> 
           </a>              
         </div>
       </li>
       <li class="ebigroup__stores__item">
         <figure class="ebigroup__stores__itemFig">
-          <img src="<?= $themeUri ?>/assets/img/ebigroup/store_8.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_8.png" alt="">
         </figure>
         <h3 class="ebigroup__stores__itemTitle">
           <span>ポルシェセンター高輪</span>
@@ -591,26 +591,26 @@ $themeUri = get_template_directory_uri();
             TEL：03-5803-9711
           </p>
           <p class="ebigroup__stores__itemInfoTag">
-            <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_tag.png" alt="サービスセンター併設">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_tag.png" alt="サービスセンター併設">
           </p> 
         </div>
         <div class="ebigroup__stores__itemLinks">
           <a href="" class="ebigroup__stores__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__stores__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__stores__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>              
           <a href="" class="ebigroup__stores__itemLink">
             <span>認定中古車在庫一覧</span>
             <span class="ebigroup__stores__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__stores__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>
           </a>              
         </div>
@@ -630,7 +630,7 @@ $themeUri = get_template_directory_uri();
     <ul class="ebigroup__restaurant__list">
       <li class="ebigroup__restaurant__item">
         <figure class="ebigroup__restaurant__itemFig">
-          <img src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_1.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_1.png" alt="">
         </figure>
         <div class="ebigroup__restaurant__itemTitleWrap">
           <h3 class="ebigroup__restaurant__itemTitle">
@@ -638,7 +638,7 @@ $themeUri = get_template_directory_uri();
             <span class="ebigroup__restaurant__itemTitleSub">ザ モメンタム バイ ポルシェ</span>
           </h3>
           <figure class="ebigroup__restaurant__itemLogo">
-            <img src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_1_logo.png" alt="">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_1_logo.png" alt="">
           </figure>
         </div>
         <p class="ebigroup__restaurant__itemDesc">
@@ -655,17 +655,17 @@ $themeUri = get_template_directory_uri();
           <a href="" class="ebigroup__restaurant__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__restaurant__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__restaurant__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>
         </div>
       </li>
       <li class="ebigroup__restaurant__item">
         <figure class="ebigroup__restaurant__itemFig">
-          <img src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_2.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_2.png" alt="">
         </figure>
         <div class="ebigroup__restaurant__itemTitleWrap">
           <h3 class="ebigroup__restaurant__itemTitle">
@@ -673,7 +673,7 @@ $themeUri = get_template_directory_uri();
             <span class="ebigroup__restaurant__itemTitleSub">タンタローバ</span>
           </h3>
           <figure class="ebigroup__restaurant__itemLogo">
-            <img src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_2_logo.png" alt="">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_2_logo.png" alt="">
           </figure>
         </div>
         <p class="ebigroup__restaurant__itemDesc">
@@ -690,17 +690,17 @@ $themeUri = get_template_directory_uri();
           <a href="" class="ebigroup__restaurant__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__restaurant__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__restaurant__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span> 
           </a>
         </div>
       </li>
       <li class="ebigroup__restaurant__item">
         <figure class="ebigroup__restaurant__itemFig">
-          <img src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_3.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_3.png" alt="">
         </figure>
         <div class="ebigroup__restaurant__itemTitleWrap">
           <h3 class="ebigroup__restaurant__itemTitle">
@@ -708,7 +708,7 @@ $themeUri = get_template_directory_uri();
             <span class="ebigroup__restaurant__itemTitleSub">リストランテ 桜鏡</span>
           </h3>
           <figure class="ebigroup__restaurant__itemLogo">
-            <img src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_3_logo.png" alt="">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_3_logo.png" alt="">
           </figure>
         </div>
         <p class="ebigroup__restaurant__itemDesc">
@@ -725,17 +725,17 @@ $themeUri = get_template_directory_uri();
           <a href="" class="ebigroup__restaurant__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__restaurant__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__restaurant__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>
         </div>
       </li>
       <li class="ebigroup__restaurant__item">
         <figure class="ebigroup__restaurant__itemFig">
-          <img src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_4.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_4.png" alt="">
         </figure>
         <div class="ebigroup__restaurant__itemTitleWrap">
           <h3 class="ebigroup__restaurant__itemTitle">
@@ -743,7 +743,7 @@ $themeUri = get_template_directory_uri();
             <span class="ebigroup__restaurant__itemTitleSub">キッチンモトテック</span>
           </h3>
           <figure class="ebigroup__restaurant__itemLogo">
-            <img src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_4_logo.png" alt="">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_4_logo.png" alt="">
           </figure>
         </div>
         <p class="ebigroup__restaurant__itemDesc">
@@ -762,10 +762,10 @@ $themeUri = get_template_directory_uri();
           <a href="" class="ebigroup__restaurant__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__restaurant__itemLinkIcon">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
             </span>
             <span class="ebigroup__restaurant__itemLinkIconHv">
-              <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>
           </a>
         </div>
@@ -781,11 +781,11 @@ $themeUri = get_template_directory_uri();
   <div class="section__inner">
     <div class="ebigroup__kokusai__ctt">
       <figure class="ebigroup__kokusai__pic">
-        <img src="<?= $themeUri ?>/assets/img/ebigroup/group.png" alt="">
+        <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/group.png" alt="">
       </figure>
       <div class="ebigroup__kokusai__text">
         <h2 class="ebigroup__kokusai__head">
-          <img src="<?= $themeUri ?>/assets/img/ebigroup/group_logo.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/group_logo.png" alt="">
         </h2>
         <h3 class="ebigroup__kokusai__heading">
           スマートモビリティ社会の実現をリードし、
@@ -802,10 +802,10 @@ $themeUri = get_template_directory_uri();
         <a href="" class="ebigroup__kokusai__link">
           <span>ABOUT KOKUSAI GROUP</span>
           <span class="ebigroup__kokusai__linkIcon">
-            <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
           </span>
           <span class="ebigroup__kokusai__linkIconHv">
-            <img src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
           </span>
         </a>            
 

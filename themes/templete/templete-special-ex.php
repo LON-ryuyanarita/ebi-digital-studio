@@ -18,7 +18,7 @@ $themeUri = get_template_directory_uri();
     <picture>      
       <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/mv_sp.webp" type="image/webp">
       <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/mv_sp.png">
-      <source srcset="<?= $themeUri ?>/assets/img/specialex/mv.png" type="image/webp">      
+      <source srcset="<?= $themeUri ?>/assets/img/specialex/mv.webp" type="image/webp">      
       <img src="<?= $themeUri ?>/assets/img/specialex/mv.png" alt="">
     </picture>  
   </figure>
@@ -67,7 +67,7 @@ $themeUri = get_template_directory_uri();
       <figure class="specialex__about__pic">
         <picture>
           <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/about_sp.png">
-          <img src="<?= $themeUri ?>/assets/img/specialex/about.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/about.png" alt="">
         </picture>
       </figure>
     </div>
@@ -78,19 +78,19 @@ $themeUri = get_template_directory_uri();
   <figure class="specialex__deco__item">
     <picture>
       <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/deco_1_sp.png">
-      <img src="<?= $themeUri ?>/assets/img/specialex/deco_1.png" alt="">
+      <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/deco_1.png" alt="">
     </picture>
   </figure>
   <figure class="specialex__deco__item">
     <picture>
       <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/deco_2_sp.png">
-      <img src="<?= $themeUri ?>/assets/img/specialex/deco_2.png" alt="">
+      <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/deco_2.png" alt="">
     </picture>
   </figure>
   <figure class="specialex__deco__item">
     <picture>
       <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/deco_3_sp.png">
-      <img src="<?= $themeUri ?>/assets/img/specialex/deco_3.png" alt="">
+      <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/deco_3.png" alt="">
     </picture>
   </figure>
 </div>
@@ -129,7 +129,7 @@ $themeUri = get_template_directory_uri();
         </div>
         <a href="#" class="specialex__feature__itemLink">
           <figure class="specialex__feature__itemLinkFig">
-            <img src="<?= $themeUri ?>/assets/img/specialex/feature_1.png" alt="">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_link_thumb.png" alt="">
           </figure>              
           <div class="specialex__feature__itemLinkText">
             <span class="specialex__feature__itemLinkTitle">
@@ -151,7 +151,7 @@ $themeUri = get_template_directory_uri();
       <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/deco_4_sp.webp" type="image/webp">
       <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/deco_4_sp.png">
       <source srcset="<?= $themeUri ?>/assets/img/specialex/deco_4.png" type="image/webp">
-      <img src="<?= $themeUri ?>/assets/img/specialex/deco_4.png" alt="">
+      <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/deco_4.png" alt="">
     </picture>
   </figure>
 
@@ -162,13 +162,13 @@ $themeUri = get_template_directory_uri();
           <figure class="specialex__feature__itemPicItem">
             <picture>
               <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/feature_1_sp.png">
-              <img src="<?= $themeUri ?>/assets/img/specialex/feature_1.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_1.png" alt="">
             </picture>
           </figure>
           <figure class="specialex__feature__itemPicItem">
             <picture>
               <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/feature_2_sp.png">
-              <img src="<?= $themeUri ?>/assets/img/specialex/feature_2.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_2.png" alt="">
             </picture>
           </figure>
         </div>
@@ -245,7 +245,7 @@ $themeUri = get_template_directory_uri();
         </div>
         <div class="specialex__feature__itemPic __is2">
           <figure class="specialex__feature__itemPicItem">
-            <img src="<?= $themeUri ?>/assets/img/specialex/feature_3.png" alt="">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_3.png" alt="">
           </figure>
         </div>            
       </div>
@@ -253,13 +253,13 @@ $themeUri = get_template_directory_uri();
         <figure class="specialex__feature__galleryItem">
           <picture>
               <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/feature_4_sp.png">
-              <img src="<?= $themeUri ?>/assets/img/specialex/feature_4.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_4.png" alt="">
           </picture>
         </figure>
         <figure class="specialex__feature__galleryItem">
           <picture>
               <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/feature_5_sp.png">
-              <img src="<?= $themeUri ?>/assets/img/specialex/feature_5.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_5.png" alt="">
           </picture>
         </figure>
       </div>

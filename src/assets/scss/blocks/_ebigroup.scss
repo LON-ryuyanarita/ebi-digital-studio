@@ -665,7 +665,7 @@
 
     &__itemAddress {
       font-size: 14px;
-      line-height: 20 / 14;      
+      line-height: calc(20 / 14);
       font-weight: 700;
 
       @media #{$mq-lte-sp} {
@@ -768,6 +768,12 @@
       transform: translateY(-50%);
       opacity: 0;
       transition: opacity 0.3s;
+
+      @media #{$mq-lte-sp} {
+        width: 7px;
+        aspect-ratio: 7 / 6;
+        right: 8px;
+      }      
     }
   }
 
@@ -893,8 +899,13 @@
 
     &__itemAddress {
       font-size: 14px;
-      line-height: 20 / 14;      
+      line-height: calc(20 / 14);
       font-weight: 700;
+
+      @media #{$mq-lte-sp} {
+        font-size: 12px;
+        line-height: calc(30 / 24);
+      }      
 
       a {
         color: #0066c0;
@@ -931,6 +942,11 @@
       border-radius: 10rem;
       transition: background-color 0.3s, color 0.3s;
 
+      @media #{$mq-lte-sp} {
+        font-size: 8px;        
+        padding-right: 8px;
+      }      
+
       &:hover {
         background-color: #000;
         color: #fff;
@@ -953,6 +969,12 @@
       right: 17px;
       transform: translateY(-50%);
       transition: opacity 0.3s;
+
+      @media #{$mq-lte-sp} {
+        width: 7px;
+        aspect-ratio: 7 / 6;
+        right: 8px;
+      }      
     }
 
     &__itemLinkIconHv {
@@ -964,6 +986,12 @@
       transform: translateY(-50%);
       opacity: 0;
       transition: opacity 0.3s;
+
+      @media #{$mq-lte-sp} {
+        width: 7px;
+        aspect-ratio: 7 / 6;
+        right: 8px;
+      }      
     }
   }
 
