@@ -6,6 +6,7 @@
 
 @use './variables' as *;
 @use './_utils' as *;
+@use '../utilities/mixins/__img-hover' as *;
 
 .categories {
   & {
@@ -43,8 +44,7 @@
           &:hover {
             &::before {
               opacity: 0.75;
-              transform: translate3d(-50%, -50%, 0) scale(1.045);
-              transition-duration: 400ms, 400ms;
+              @include img-hover-on;
             }
           }
         }
@@ -53,16 +53,14 @@
           content: '';
           width: 100%;
           height: 100%;
-          opacity: 0.5;
           background: none no-repeat center center transparent;
           background-size: cover;
           position: absolute;
           top: 50%;
           left: 50%;
-          transform: translate3d(-50%, -50%, 0);
           z-index: 0;
-          transition: opacity 300ms var(--ease-linear-out-slow-in),
-            transform 300ms var(--ease-linear-out-slow-in);
+          opacity: 0.5;
+          @include img-hover-off;
         }
 
         &.-reviews {

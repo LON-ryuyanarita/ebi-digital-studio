@@ -50,6 +50,16 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: color 400ms var(--ease-linear-out-slow-in),
+          background-color 400ms var(--ease-linear-out-slow-in);
+
+        .-enabledHover & {
+          &:hover {
+            color: var(--color-black-1);
+            background-color: var(--color-white-1);
+            transition-duration: 200ms, 200ms;
+          }
+        }
       }
     }
   }

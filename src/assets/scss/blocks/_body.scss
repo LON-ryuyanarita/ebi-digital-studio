@@ -22,6 +22,7 @@
 
 .body {
   & {
+    padding-top: 30px;
     padding-bottom: 85px;
     font-weight: 400;
 
@@ -57,6 +58,10 @@
       text-decoration-skip-ink: none;
       position: relative;
 
+      &:nth-child(1) {
+        margin-top: -30px;
+      }
+
       &::before {
         content: '';
         width: 96px;
@@ -69,17 +74,25 @@
     }
 
     > h3 {
-      margin-top: 50px;
+      padding-top: 50px;
       font-size: 32px;
       font-weight: bold;
       line-height: 1.188;
+
+      &:nth-child(1) {
+        margin-top: -30px;
+      }
     }
 
     > h4 {
-      margin-top: 35px;
+      padding-top: 35px;
       font-size: 20px;
       font-weight: bold;
       line-height: 1.3;
+
+      &:nth-child(1) {
+        margin-top: -30px;
+      }
     }
 
     > h5 {
@@ -647,6 +660,16 @@
         justify-content: center;
         position: relative;
 
+        .-enabledHover & {
+          &:hover {
+            &::before {
+              color: var(--color-white-1);
+              background-color: var(--color-red-1);
+              transition-duration: 200ms, 200ms;
+            }
+          }
+        }
+
         &::before {
           content: '';
           width: 100%;
@@ -658,22 +681,14 @@
           top: 50%;
           left: 50%;
           z-index: 0;
-          transform: translate3d(-50%, -50%, 0) scale(1);
-          transition: transform 150ms var(--ease-linear-out-slow-in);
+          transform: translate3d(-50%, -50%, 0);
+          transition: color 400ms var(--ease-linear-out-slow-in),
+            background-color 400ms var(--ease-linear-out-slow-in);
         }
 
         span {
           position: relative;
           z-index: 1;
-        }
-
-        .-enabledHover & {
-          &:hover {
-            &::before {
-              transform: translate3d(-50%, -50%, 0) scale(1.025);
-              transition-duration: 200ms;
-            }
-          }
         }
       }
     }
@@ -750,7 +765,7 @@
     & {
       font-size: cvws(30);
       line-height: cvws(50);
-      padding: 0 cvws(20) cvws(100);
+      padding: cvws(20) cvws(20) cvws(100);
 
       > *:not(.-full) {
         width: 100%;
@@ -760,6 +775,10 @@
         padding-top: cvws(65);
         font-size: cvws(44);
         line-height: cvws(54);
+
+        &:nth-child(1) {
+          margin-top: cvws(-20);
+        }
 
         &::before {
           display: none;
@@ -773,15 +792,21 @@
       }
 
       > h3 {
-        margin-top: cvws(75);
+        padding-top: cvws(75);
         font-size: cvws(36);
         line-height: cvws(42);
+        &:nth-child(1) {
+          margin-top: cvws(-20);
+        }
       }
 
       > h4 {
-        margin-top: cvws(50);
+        padding-top: cvws(50);
         font-size: cvws(32);
         line-height: cvws(38);
+        &:nth-child(1) {
+          margin-top: cvws(-20);
+        }
       }
 
       > p {

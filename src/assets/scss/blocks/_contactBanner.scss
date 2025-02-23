@@ -17,6 +17,15 @@
       overflow: hidden;
       background-color: var(--color-black-1);
 
+      transition: filter 600ms var(--ease-linear-out-slow-in);
+
+      .-enabledHover & {
+        &:hover {
+          filter: drop-shadow(0 0 10px rgba(#00ff32, 0.5)) brightness(1.5);
+          transition-duration: 400ms;
+        }
+      }
+
       img {
         width: auto;
         height: 100%;

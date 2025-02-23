@@ -120,6 +120,15 @@
 
           a {
             display: block;
+            cursor: pointer;
+            transition: transform 400ms var(--ease-linear-out-slow-in);
+
+            .-enabledHover & {
+              &:hover {
+                transform: scale(1.25);
+                transition-duration: 200ms;
+              }
+            }
 
             & + a {
               margin-left: 12px;
@@ -151,6 +160,12 @@
             margin-right: 10px;
             border-bottom: 1px solid var(--color-red-1);
             white-space: nowrap;
+
+            .-enabledHover & {
+              &:hover {
+                border-bottom-color: transparent;
+              }
+            }
           }
         }
       }
@@ -188,6 +203,12 @@
 
         dd {
           a {
+            .-enabledHover & {
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
+
             & + a {
               margin-left: 20px;
             }

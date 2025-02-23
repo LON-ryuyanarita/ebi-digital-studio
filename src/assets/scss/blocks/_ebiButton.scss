@@ -24,6 +24,17 @@
       justify-content: center;
       border: 1px solid var(--color-black-1);
 
+      transition: color 400ms var(--ease-linear-out-slow-in),
+        background-color 400ms var(--ease-linear-out-slow-in);
+
+      .-enabledHover & {
+        &:hover {
+          color: var(--color-white-1);
+          background-color: var(--color-black-1);
+          transition-duration: 200ms, 200ms;
+        }
+      }
+
       span {
       }
     }
@@ -64,6 +75,13 @@
         color: var(--color-white-1);
         border-color: var(--color-white-1);
         background-color: transparent;
+
+        .-enabledHover & {
+          &:hover {
+            color: var(--color-black-1);
+            background-color: var(--color-white-1);
+          }
+        }
       }
     }
     &.-black {
@@ -72,6 +90,14 @@
       input {
         color: var(--color-white-1);
         background-color: var(--color-black-1);
+
+        .-enabledHover & {
+          &:hover {
+            color: var(--color-white-1);
+            background-color: var(--color-red-1);
+            border-color: var(--color-red-1);
+          }
+        }
       }
     }
     &.-line {
@@ -80,6 +106,13 @@
       input {
         color: var(--color-white-1);
         background-color: var(--color-line-1);
+
+        .-enabledHover & {
+          &:hover {
+            color: var(--color-line-1);
+            background-color: var(--color-white-1);
+          }
+        }
       }
     }
   }

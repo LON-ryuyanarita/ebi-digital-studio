@@ -7,6 +7,7 @@
 @use 'sass:math';
 @use './variables' as *;
 @use './_utils' as *;
+@use '../utilities/mixins/__img-hover' as *;
 
 .love {
   & {
@@ -86,6 +87,15 @@
 
     .love__btn {
       margin-top: 28px;
+
+      a {
+        .-enabledHover & {
+          &:hover {
+            color: var(--color-red-1);
+            transition-duration: 200ms, 200ms;
+          }
+        }
+      }
     }
 
     .love__latest {
@@ -94,6 +104,15 @@
 
     .love__article {
       a {
+        .-enabledHover & {
+          &:hover {
+            .love__article__img {
+              img {
+                @include img-hover-on($transform-center: false);
+              }
+            }
+          }
+        }
       }
 
       .-tags {
@@ -105,11 +124,23 @@
           line-height: 1.6;
           border-bottom: 1px solid var(--color-white-1);
           white-space: nowrap;
+
+          .-enabledHover & {
+            &:hover {
+              border-bottom-color: transparent;
+            }
+          }
         }
       }
     }
 
     .love__article__img {
+      overflow: hidden;
+      background-color: var(--color-black-1);
+
+      img {
+        @include img-hover-off($transform-center: false);
+      }
     }
 
     .love__article__body {

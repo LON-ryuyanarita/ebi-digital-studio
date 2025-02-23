@@ -43,7 +43,7 @@ $top_page = get_page_by_path('home');
               ?>
               <article class="top__mv__item">
                 <a href="<?php echo get_permalink($post_id); ?>">
-                  <div class="top__mv__item__item__img">
+                  <div class="top__mv__item__img">
                     <?php if ($top_mv_type == 'img') : ?>
                       <img src="<?php echo esc_url($top_mv_src); ?>" alt="">
                     <?php else : ?>
@@ -101,7 +101,7 @@ $top_page = get_page_by_path('home');
               ?>
                   <article class="top__mv__item">
                     <a href="<?php echo get_permalink($post_id); ?>">
-                      <div class="top__mv__item__item__img">
+                      <div class="top__mv__item__img">
                         <?php if ($top_mv_type == 'img') : ?>
                           <img src="<?php echo esc_url($top_mv_src); ?>" alt="">
                         <?php else : ?>
@@ -149,7 +149,7 @@ $top_page = get_page_by_path('home');
         <div class="top__links">
           <div class="top__links__inner">
             <div class="top__links__item -fest">
-              <a href="#TBD" target="_blank">
+              <a href="https://ebi.marketing/thefest2023/" target="_blank">
                 <div class="-bg"><img src="<?php echo $themeUri; ?>/assets/img/top-fest-img.jpg" alt=""></div>
                 <div class="-name fontPorsche">
                   <em>The Fest.</em>
@@ -160,7 +160,7 @@ $top_page = get_page_by_path('home');
               </a>
             </div>
             <div class="top__links__item -rally">
-              <a href="#TBD" target="_blank">
+              <a href="https://therally.jp/" target="_blank">
                 <div class="-bg"><img src="<?php echo $themeUri; ?>/assets/img/top-rally-img.jpg" alt=""></div>
                 <div class="-name fontPorsche">
                   <em>The Rally</em> <span>- Amazing Moment -</span>
@@ -247,8 +247,8 @@ $top_page = get_page_by_path('home');
                 E-Performanceセンター<br>
                 ポルシェスタジオ銀座
               </div>
-              <div class="top__se__btn ebiButton -small">
-                <a href="#TBD" target="_blank">
+              <div class="top__se__btn ebiButton -small -transparent">
+                <a href="/special-ex/" target="_blank">
                   <span class="fontPanchang">VIEW ALL</span>
                 </a>
               </div>
@@ -435,7 +435,7 @@ $top_page = get_page_by_path('home');
                 </p>
               </div>
               <div class="top__group__btn ebiButton -small">
-                <a href="#TBD" target="_blank">
+                <a href="/ebi-group/" target="_blank">
                   <span class="fontPanchang">VIEW ALL</span>
                 </a>
               </div>

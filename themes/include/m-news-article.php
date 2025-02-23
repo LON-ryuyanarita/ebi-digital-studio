@@ -12,7 +12,7 @@ $title = get_field('title');
   <a href="<?php echo get_permalink($post_id); ?>">
     <div class="-title"><?php echo nl2br($title); ?></div>
     <time class="-date fontPanchang" datetime="<?php echo get_the_date('c', $post_id); ?>"><?php echo get_the_date('Y/m/d', $post_id); ?></time>
-    <div class="-i"><i><img src="<?php echo $themeUri; ?>/assets/img/icon-arrow-4.svg" alt=""></i></div>
+    <div class="-i"><i><?php echo file_get_contents(get_template_directory() . '/include/svg/icon-arrow-4.svg'); ?></i></div>
   </a>
 </div>
 <?php wp_reset_postdata(); ?>

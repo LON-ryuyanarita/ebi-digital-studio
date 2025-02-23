@@ -1,0 +1,18 @@
+@mixin img-hover-off($transform-center: true) {
+  @if ($transform-center) {
+    transform: translate3d(-50%, -50%, 0);
+  } @else {
+    transform: scale(1);
+  }
+  transition: opacity 400ms var(--ease-linear-out-slow-in),
+    transform 400ms var(--ease-linear-out-slow-in);
+}
+
+@mixin img-hover-on($transform-center: true) {
+  @if ($transform-center) {
+    transform: translate3d(-50%, -50%, 0) scale(1.045);
+  } @else {
+    transform: scale(1.045);
+  }
+  transition-duration: 400ms, 400ms;
+}

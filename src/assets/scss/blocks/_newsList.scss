@@ -27,9 +27,42 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
+
+        transition: color 400ms var(--ease-linear-out-slow-in),
+          background-color 400ms var(--ease-linear-out-slow-in);
+
+        .-enabledHover & {
+          &:hover {
+            color: var(--color-white-1);
+            background-color: var(--color-red-1);
+            transition-duration: 200ms, 200ms;
+
+            .-date,
+            .-i {
+              &::before {
+                background-color: var(--color-white-1);
+              }
+            }
+
+            .-date {
+              color: var(--color-white-1);
+            }
+
+            .-i {
+              i {
+                background-color: var(--color-white-1);
+              }
+
+              svg {
+                path {
+                  fill: var(--color-red-1) !important;
+                }
+              }
+            }
+          }
+        }
       }
 
-      .-title,
       .-date,
       .-i {
         position: relative;
@@ -43,6 +76,8 @@
           top: 50%;
           left: 0;
           transform: translateY(-50%);
+
+          transition: background-color 400ms var(--ease-linear-out-slow-in);
         }
       }
 
@@ -52,6 +87,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        position: relative;
       }
 
       .-date {
@@ -60,6 +96,8 @@
         color: rgba($color-black-1, 0.5);
         text-align: center;
         flex-direction: 0;
+
+        transition: color 400ms var(--ease-linear-out-slow-in);
       }
 
       .-i {
@@ -74,10 +112,16 @@
           display: flex;
           align-items: center;
           justify-content: center;
+
+          transition: background-color 400ms var(--ease-linear-out-slow-in);
         }
 
-        img {
+        svg {
           width: 10px;
+
+          path {
+            transition: fill 400ms var(--ease-linear-out-slow-in);
+          }
         }
       }
     }
@@ -134,7 +178,7 @@
             height: cvws(31);
           }
 
-          img {
+          svg {
             width: cvws(17);
           }
         }

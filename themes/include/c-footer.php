@@ -99,20 +99,19 @@ $themeUri = get_template_directory_uri();
         </div>
 
         <div class="footer__lineLink">
-          <a href="https://lin.ee/P29MAc9" target="_blank">
-            <span class="-txt1">
-              EBI DIGITAL STUDIO<br>
-              公式アカウント<br>
-              友だち登録募集中!
-            </span>
-            <i>
-              <?php echo file_get_contents(get_template_directory() . '/include/svg/icon-line.svg'); ?>
-            </i>
-            <span class="-txt2">
-              公式アカウント<br>
-              を見る<i><img src="<?php echo $themeUri; ?>/assets/img/icon-arrow-3.svg" alt=""></i>
-            </span>
-          </a>
+          <div class="-txt">
+            EBI DIGITAL STUDIO<br>
+            LINE公式アカウント<br>
+            友だち登録募集中!
+          </div>
+          <div class="-qr">
+            <img src="<?php echo $themeUri; ?>/assets/img/line-qr.png" alt="">
+          </div>
+          <div class="-link">
+            <a href="https://lin.ee/P29MAc9" target="_blank">
+              友だち登録はこちら
+            </a>
+          </div>
         </div>
       </div>
     </div>

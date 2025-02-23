@@ -19,8 +19,8 @@ $top_page = get_page_by_path('home');
         $terms_cats = get_the_terms(get_the_ID(), $taxonomy_cat);
         $taxonomy_tag = 'cpost-tag';
         $terms_tags = get_the_terms(get_the_ID(), $taxonomy_tag);
-        $updated = get_field('updated') ?: get_the_modified_date('Y/m/d') ?: get_the_date('Y/m/d');
-        $updated_date = DateTime::createFromFormat('Y/m/d', $updated);
+        $updated = get_field('updated');
+        $updated_date = $updated ? DateTime::createFromFormat('Y/m/d', $updated) : false;
     ?>
         <header class="article__header">
           <div class="article__header__img">
@@ -51,12 +51,14 @@ $top_page = get_page_by_path('home');
                     <time datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
                   </dd>
                 </dl>
-                <dl class="article__info -updated">
-                  <dt>Updated</dt>
-                  <dd>
-                    <time datetime="<?php echo $updated_date->format('c'); ?>"><?php echo $updated_date->format('Y.m.d'); ?></time>
-                  </dd>
-                </dl>
+                <?php if ($updated_date) : ?>
+                  <dl class="article__info -updated">
+                    <dt>Updated</dt>
+                    <dd>
+                      <time datetime="<?php echo $updated_date->format('c'); ?>"><?php echo $updated_date->format('Y.m.d'); ?></time>
+                    </dd>
+                  </dl>
+                <?php endif; ?>
               </div>
               <div class="-lower">
                 <dl class="article__info -tags">

@@ -1,13 +1,14 @@
 /* ==========================================================================
  *
- * Blocks - latast
+ * Blocks - latest
  *
 ========================================================================== */
 
 @use './variables' as *;
 @use './_utils' as *;
+@use '../utilities/mixins/__img-hover' as *;
 
-.latast {
+.latest {
   & {
     margin-top: 90px;
     color: var(--color-white-1);
@@ -26,16 +27,16 @@
   }
 
   @at-root {
-    .latast__inner {
+    .latest__inner {
       padding: 30px 20px 0;
     }
 
-    .latast__title {
+    .latest__title {
       font-size: 48px;
       line-height: 1;
     }
 
-    .latast__rows {
+    .latest__rows {
       margin: 10px -20px 0;
     }
 
@@ -66,6 +67,7 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      position: relative;
 
       .-inner {
       }
@@ -85,7 +87,7 @@
       }
     }
 
-    .latast__items {
+    .latest__items {
       margin-bottom: -30px;
       display: flex;
       align-items: stretch;
@@ -93,22 +95,32 @@
       overflow: auto;
     }
 
-    .latast__item {
-      width: 300px;
+    .latest__item {
+      width: 300px !important;
       height: auto;
       flex-shrink: 0;
 
       &.-viewall {
         > a {
+          color: var(--color-white-1);
           aspect-ratio: 3 / 2;
           border: 1px solid rgba($color-white-1, 0.3);
           background-color: var(--color-black-1);
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: color 400ms var(--ease-linear-out-slow-in),
+            background-color 400ms var(--ease-linear-out-slow-in);
+
+          .-enabledHover & {
+            &:hover {
+              color: var(--color-black-1);
+              background-color: var(--color-white-1);
+              transition-duration: 200ms, 200ms;
+            }
+          }
 
           span {
-            color: var(--color-white-1);
             font-size: 12px;
           }
         }
@@ -116,6 +128,17 @@
 
       > a {
         display: block;
+
+        .-enabledHover & {
+          &:hover {
+            .latest__item__img {
+              img {
+                opacity: 0.8;
+                @include img-hover-on($transform-center: false);
+              }
+            }
+          }
+        }
       }
 
       .-date {
@@ -148,23 +171,115 @@
           line-height: 1.6;
           border-bottom: 1px solid var(--color-red-1);
           white-space: nowrap;
+
+          .-enabledHover & {
+            &:hover {
+              border-bottom-color: transparent;
+            }
+          }
         }
       }
     }
 
-    .latast__item__img {
+    .latest__item__img {
       aspect-ratio: 3 / 2;
+      overflow: hidden;
 
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center center;
+        @include img-hover-off($transform-center: false);
       }
     }
 
-    .latast__item__body {
+    .latest__item__body {
       padding: 12px 30px 0 0;
+    }
+
+    .latest__nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      position: absolute;
+      left: 20px;
+      bottom: 0;
+
+      .-btns {
+        display: flex;
+        align-items: center;
+
+        button {
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid rgba($color-white-1, 0.3);
+
+          transition: color 200ms var(--ease-linear-out-slow-in),
+            background-color 200ms var(--ease-linear-out-slow-in);
+
+          .-enabledHover & {
+            &:hover {
+              background-color: var(--color-white-1);
+              transition-duration: 100ms, 100ms;
+
+              i {
+                background-image: url(../img/icon-arrow-2-black.svg);
+              }
+            }
+          }
+
+          &.-prev {
+          }
+
+          &.-next {
+            margin-left: 2px;
+
+            i {
+              transform: scaleX(-1);
+            }
+          }
+
+          i {
+            width: 9px;
+            height: 6px;
+            background: url(../img/icon-arrow-2.svg) no-repeat center center
+              transparent;
+            background-size: contain;
+            display: block;
+            transition: background-image 400ms var(--ease-linear-out-slow-in);
+          }
+        }
+      }
+
+      .-indicator {
+        margin-left: 16px;
+        display: flex;
+        align-items: center;
+
+        span {
+          font-family: $font-family-panchang;
+          font-size: 8px;
+          font-weight: 600;
+          display: block;
+
+          &:nth-child(1) {
+            width: 1em;
+          }
+
+          &:nth-child(2) {
+            width: 2.5em;
+
+            &::before {
+              content: '/';
+              margin: 0 4px;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -185,15 +300,15 @@
     }
 
     @at-root {
-      .latast__inner {
+      .latest__inner {
         padding: cvws(60) cvws(20) 0;
       }
 
-      .latast__title {
+      .latest__title {
         font-size: cvws(64);
       }
 
-      .latast__rows {
+      .latest__rows {
         margin: 0 cvws(-20);
       }
 
@@ -227,13 +342,14 @@
         }
       }
 
-      .latast__items {
-        margin: cvws(30) 0 0 cvws(-20);
+      .latest__items {
+        margin: cvws(30) cvws(-10) 0 cvws(-30);
         padding: 0 cvws(20);
       }
 
-      .latast__item {
+      .latest__item {
         width: cvws(396);
+        margin: 0 cvws(10);
         padding-bottom: cvws(30);
         aspect-ratio: unset;
         flex-shrink: 0;
@@ -244,10 +360,6 @@
               font-size: cvws(24);
             }
           }
-        }
-
-        & + .latast__item {
-          margin-left: cvws(20);
         }
 
         > a {
@@ -279,13 +391,54 @@
         }
       }
 
-      .latast__item__img {
+      .latest__item__img {
         width: 100%;
         aspect-ratio: 3 / 2;
       }
 
-      .latast__item__body {
+      .latest__item__body {
         padding: cvws(18) cvws(30) 0 0;
+      }
+
+      .latest__nav {
+        right: cvws(20);
+        left: auto;
+        top: cvws(-10);
+        bottom: auto;
+
+        .-btns {
+          order: 2;
+
+          button {
+            width: cvws(48);
+            height: cvws(48);
+
+            &.-next {
+              margin-left: cvws(2);
+            }
+
+            i {
+              width: cvws(18);
+              height: cvws(12);
+            }
+          }
+        }
+
+        .-indicator {
+          margin-left: 0;
+          margin-right: cvws(30);
+          order: 1;
+
+          span {
+            font-size: cvws(16);
+
+            &:nth-child(2) {
+              &::before {
+                margin: 0 cvws(6) 0 cvws(4);
+              }
+            }
+          }
+        }
       }
     }
   }

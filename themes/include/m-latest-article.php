@@ -7,14 +7,14 @@ $thumb = get_field('thumbnail') ?? null;
 $thumb_src = wp_get_attachment_image_url($thumb, 'full');
 $terms = wp_get_post_terms($post_id, 'cpost-tag');
 ?>
-<article class="latast__item">
+<article class="latest__item">
   <a href="<?php echo get_permalink($post_id); ?>">
-    <div class="latast__item__img">
+    <div class="latest__item__img">
       <?php if ($thumb_src) : ?>
         <img src="<?php echo $thumb_src; ?>" alt="">
       <?php endif; ?>
     </div>
-    <div class="latast__item__body">
+    <div class="latest__item__body">
       <time class="-date fontPanchang" datetime="<?php echo get_the_date('c', $post_id); ?>"><?php echo get_the_date('Y/m/d', $post_id); ?></time>
       <h3 class="-title"><?php echo nl2br($title); ?></h3>
     </div>

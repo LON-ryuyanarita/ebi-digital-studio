@@ -3,6 +3,8 @@ import 'scroll-behavior-polyfill';
 // import Cookies from 'js-cookie';
 import CreateCss from './createCss.js';
 // import Top from './top.js';
+import Header from './header.js';
+import Carousel from './carousel.js';
 import ShareUrl from './shareUrl.js';
 
 // DOMContentLoaded
@@ -69,6 +71,10 @@ const DOMContentLoadedCallback = () => {
   }
   // ::debug
 
+  const header = new Header();
+  header.init();
+  const carousel = new Carousel();
+  carousel.init();
   const shareUrl = new ShareUrl();
   shareUrl.init();
 

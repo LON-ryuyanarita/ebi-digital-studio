@@ -7,6 +7,19 @@
 @use './variables' as *;
 @use './_utils' as *;
 
+@mixin _footer-link() {
+  a {
+    transition: opacity 400ms var(--ease-linear-out-slow-in);
+
+    .-enabledHover & {
+      &:hover {
+        opacity: 0.6;
+        transition-duration: 200ms;
+      }
+    }
+  }
+}
+
 .footer {
   & {
     color: var(--color-white-1);
@@ -15,7 +28,7 @@
 
   @at-root {
     .footer__inner {
-      height: 328px;
+      height: 340px;
       padding: 30px 20px 20px;
       position: relative;
       overflow: hidden;
@@ -53,6 +66,8 @@
 
     .footer__logo {
       width: 152px;
+
+      @include _footer-link;
     }
 
     .footer__nav,
@@ -61,6 +76,8 @@
       font-family: $font-family-panchang;
       font-weight: 500;
       line-height: 1.5;
+
+      @include _footer-link;
     }
 
     .footer__nav {
@@ -151,48 +168,48 @@
     }
 
     .footer__lineLink {
-      margin-top: 20px;
-      display: block;
+      width: 132px;
+      margin: 40px auto 0;
+      padding-bottom: 8px;
+      border: 1px solid var(--color-white-1);
+      background-color: var(--color-white-1);
 
-      a {
-        width: 156px;
-        height: 156px;
-        text-align: center;
-        border: 1px solid var(--color-white-1);
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-
-        > i {
-          width: 36px;
-          margin-top: 10px;
-          display: block;
-
-          svg {
-            path {
-              fill: var(--color-white-1) !important;
-            }
-          }
-        }
-      }
-
-      .-txt1 {
-        margin-top: 10px;
-        font-size: 11px;
-        line-height: 14px;
-      }
-
-      .-txt2 {
-        margin-top: 6px;
+      .-txt {
+        padding: 5px 0 7px;
+        color: var(--color-white-1);
         font-size: 11px;
         line-height: 13px;
+        text-align: center;
+        background-color: var(--color-black-1);
+      }
 
-        i {
-          width: 4px;
-          margin-left: 4px;
-          display: inline-block;
+      .-qr {
+        width: 80px;
+        margin: 5px auto;
+      }
+
+      .-link {
+        margin: 0 10px;
+        a {
+          height: 24px;
+          color: var(--color-black-1);
+          font-size: 10px;
+          border: 1px solid var(--color-black-1);
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          transition: color 400ms var(--ease-linear-out-slow-in),
+            background-color 400ms var(--ease-linear-out-slow-in);
+
+          .-enabledHover & {
+            &:hover {
+              color: var(--color-white-1);
+              background-color: var(--color-black-1);
+              transition-duration: 200ms, 200ms;
+            }
+          }
         }
       }
     }
@@ -206,13 +223,14 @@
     .footer__stockLink {
       display: block;
       line-height: 1;
+      @include _footer-link;
 
       a {
         font-size: 10px;
         font-weight: 500;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
 
         i {
           width: 8px;
@@ -342,32 +360,27 @@
       }
 
       .footer__lineLink {
-        margin-top: 0;
+        width: cvws(132 * 2);
+        margin: 0;
+        padding-bottom: cvws(8 * 2);
 
-        a {
-          width: cvws(234);
-          height: cvws(234);
-
-          > i {
-            width: cvws(55);
-            margin-top: cvws(12);
-          }
+        .-txt {
+          padding: cvws(5 * 2) 0 cvws(7 * 2);
+          font-size: cvws(11 * 2);
+          line-height: cvws(13 * 2);
         }
 
-        .-txt1 {
-          margin-top: cvws(12);
-          font-size: cvws(16.5);
-          line-height: cvws(21);
+        .-qr {
+          width: cvws(80 * 2);
+          margin: cvws(5 * 2) auto;
         }
 
-        .-txt2 {
-          margin-top: cvws(8);
-          font-size: cvws(16.5);
-          line-height: cvws(19);
-
-          i {
-            width: cvws(7);
-            margin-left: cvws(4px);
+        .-link {
+          margin: 0 cvws(10 * 2);
+          a {
+            height: cvws(24 * 2);
+            font-size: cvws(10 * 2);
+            border-radius: cvws(12 * 2);
           }
         }
       }
