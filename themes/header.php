@@ -1,6 +1,6 @@
 <?php
 $themeUri = get_template_directory_uri();
-$pageName = 'top';
+$pageName = 'page';
 if (is_front_page()) {
 	$pageName = 'top';
 } elseif (is_singular('cpost')) {
