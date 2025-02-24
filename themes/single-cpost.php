@@ -497,12 +497,13 @@ $top_page = get_page_by_path('home');
             </dd>
           </dl>
         </div>
+
+        <?php get_template_part('include/m-related'); ?>
     <?php
       endwhile;
     endif;
     ?>
 
-    <?php get_template_part('include/m-related'); ?>
     <?php get_template_part('include/m-categories'); ?>
     <?php get_template_part('include/m-love'); ?>
   </article>

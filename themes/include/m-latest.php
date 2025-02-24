@@ -32,7 +32,7 @@ $categories = [
               </div>
             </div>
           </div>
-          <div class="latest__items" data-ebi-carousel>
+          <div class="latest__items" data-ebi-carousel="latest">
             <?php
             $args = [
               'post_type' => 'cpost',

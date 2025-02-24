@@ -68,7 +68,7 @@ $themeUri = get_template_directory_uri();
                 <?php endif; ?>
               </div>
               <div class="love__article__body">
-                <time class="-date fontPanchang" datetime="<?php echo get_the_date('c', $post_id); ?>"><?php echo get_the_date('Y/m/d', $post_id); ?></time>
+                <time class="-date fontPanchang" datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date('Y/m/d'); ?></time>
                 <h3 class="-title"><?php echo $title; ?></h3>
               </div>
             </a>

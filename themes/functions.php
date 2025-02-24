@@ -43,9 +43,11 @@ function create_post_type()
         'add_new_item' => '新規投稿を追加'
       ),
       'public' => true,
+      'publicly_queryable' => true,
       'has_archive' => true,
       'supports' => array(
         'title',
+        'slug',
       ),
       'menu_position' => 5,
       'menu_icon' => 'dashicons-welcome-write-blog',
@@ -88,10 +90,10 @@ add_filter('query_vars', 'add_custom_query_vars');
 
 function custom_cpost_rewrite_rules()
 {
-  // 記事個別ページ（例: /articles/123/）
+  // 記事個別ページ（例: /articles/sample-post/）
   add_rewrite_rule(
-    '^articles/([0-9]+)/?$',
-    'index.php?post_type=cpost&p=$matches[1]',
+    '^articles/([^/]+)/?$',
+    'index.php?post_type=cpost&name=$matches[1]',
     'top'
   );
 
@@ -150,14 +152,23 @@ function custom_cpost_rewrite_rules()
     'index.php?cpost-cat=$matches[1]',
     'top'
   );
+
+  flush_rewrite_rules();
 }
 add_action('init', 'custom_cpost_rewrite_rules');
+
+function flush_cpost_rewrite_rules()
+{
+  flush_rewrite_rules();
+}
+add_action('save_post_cpost', 'flush_cpost_rewrite_rules');
 
 
 function custom_cpost_permalinks($post_link, $post)
 {
   if ($post->post_type === 'cpost') {
-    return home_url('/articles/' . $post->ID . '/');
+    $slug = get_post_field('post_name', $post);
+    return home_url('/articles/' . $slug . '/');
   }
   return $post_link;
 }
@@ -395,5 +406,35 @@ function get_ogp_data($url)
   $ogp_data['description'] = $graph->description;
 
   return $ogp_data;
+}
+
+
+/* 関連記事 */
+function get_related_cposts_by_tags($post_id)
+{
+  if (!$post_id) return [];
+
+  $tags = wp_get_post_terms($post_id, 'cpost-tag', ['fields' => 'ids']);
+
+  if (empty($tags)) return [];
+
+  $args = [
+    'post_type' => 'cpost',
+    'posts_per_page' => 6,
+    'post_status' => 'publish',
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'post__not_in' => [$post_id],
+    'tax_query' => [
+      [
+        'taxonomy' => 'cpost-tag',
+        'field' => 'id',
+        'terms' => $tags,
+        'operator' => 'IN',
+      ],
+    ],
+  ];
+
+  return new WP_Query($args);
 }
 ?>

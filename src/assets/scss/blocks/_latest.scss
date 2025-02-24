@@ -218,13 +218,12 @@
           justify-content: center;
           border: 1px solid rgba($color-white-1, 0.3);
 
-          transition: color 200ms var(--ease-linear-out-slow-in),
-            background-color 200ms var(--ease-linear-out-slow-in);
+          transition: background-color 200ms var(--ease-linear-out-slow-in);
 
           .-enabledHover & {
             &:hover {
               background-color: var(--color-white-1);
-              transition-duration: 100ms, 100ms;
+              transition-duration: 100ms;
 
               i {
                 background-image: url(../img/icon-arrow-2-black.svg);
@@ -348,7 +347,7 @@
       }
 
       .latest__item {
-        width: cvws(396);
+        width: cvws(396) !important;
         margin: 0 cvws(10);
         padding-bottom: cvws(30);
         aspect-ratio: unset;
