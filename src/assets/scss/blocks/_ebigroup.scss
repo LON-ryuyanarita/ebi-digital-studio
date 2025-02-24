@@ -251,22 +251,37 @@
 
     &__childrenBody {
       padding: 11px 9px;
-      border-top: 1px solid #ccc;
-      font-size: 13px;
+      border-top: 1px solid #ccc; 
       font-weight: 500;            
 
       @media #{$mq-lte-sp} {
-        font-size: 8.5px;
-        line-height: calc(24 / 18);
-        padding: 11px 4px;
+        padding: 8px 4px 13px;
+      }
+
+      ul {
+        @media #{$mq-lte-sp} {
+          display: grid;
+          gap: 3px;
+        } 
+      }
+
+      li {
+        font-size: 13px;
+        @media #{$mq-lte-sp} {
+          text-indent: -1.2em;
+          padding-left: 1.2em;
+          font-size: 9px;
+          line-height: calc(24 / 18);                  
+        }        
       }
 
       p {
         font-size: 12px;
-        font-weight: 700;
+        font-weight: 700;        
 
         @media #{$mq-lte-sp} {
-          font-size: 9px;          
+          font-size: 9px;                    
+          line-height: 2;
         }        
       }
 
@@ -281,6 +296,7 @@
 
       @media #{$mq-lte-sp} {
         margin-top: 5px;
+        padding: 16px 24px;
       }
     }    
 
@@ -302,7 +318,7 @@
 
       @media #{$mq-lte-sp} {
         font-size: 9px;
-        line-height: calc(24 / 18);
+        line-height: calc(26 / 18);
       }
     }
   }
@@ -482,6 +498,11 @@
       display: block;
       font-size: 14px;
       font-weight: 700;
+
+      @media #{$mq-lte-sp} {
+        font-size: 13px;
+        line-height: calc(34 / 26);        
+      }
     }
 
     &__secFig {
@@ -728,6 +749,7 @@
       @media #{$mq-lte-sp} {
         font-size: 8px;        
         padding-right: 8px;
+        padding: 13px 0;
       }
 
       &:hover {
@@ -745,9 +767,10 @@
 
       &.__ja {
         font-size: 11px;
+        font-weight: 700;
 
         @media #{$mq-lte-sp} {
-          font-size: 8px;
+          font-size: 10px;
         }
       }
     }
@@ -762,9 +785,9 @@
       transition: opacity 0.3s;
 
       @media #{$mq-lte-sp} {
-        width: 7px;
+        width: 13px;
         aspect-ratio: 7 / 6;
-        right: 8px;
+        right: 12px;
       }
     }
 
@@ -954,6 +977,7 @@
       @media #{$mq-lte-sp} {
         font-size: 8px;        
         padding-right: 8px;
+        padding: 13px 0;
       }      
 
       &:hover {
@@ -980,10 +1004,10 @@
       transition: opacity 0.3s;
 
       @media #{$mq-lte-sp} {
-        width: 7px;
+        width: 12px;
         aspect-ratio: 7 / 6;
-        right: 8px;
-      }      
+        right: 12px;
+      }
     }
 
     &__itemLinkIconHv {

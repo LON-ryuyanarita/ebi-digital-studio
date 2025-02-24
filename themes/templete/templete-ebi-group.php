@@ -102,7 +102,7 @@ $themeUri = get_template_directory_uri();
               <p>【運営店舗】</p>
               <ul>
                 <li>・ポルシェセンター青山</li>
-                <li>・ポルシェセンター青山 世田谷認定中古車センター</li>
+                <li>・ポルシェセンター青山 <br class="sp">世田谷認定中古車<br class="sp">センター</li>
               </ul>
             </div>
         </div>            
@@ -114,8 +114,8 @@ $themeUri = get_template_directory_uri();
               <p>【運営店舗】</p>
               <ul>
                 <li>・ポルシェセンター目黒</li>
-                <li>・ポルシェセンター目黒 六本木認定中古車センター</li>
-                <li>・ポルシェサービスセンター東京ベイ辰巳</li>
+                <li>・ポルシェセンター目黒 <br class="sp">六本木認定中古車<br class="sp">センター</li>
+                <li>・ポルシェサービス<br class="sp">センター東京ベイ辰巳</li>
               </ul>
             </div>
         </div>            
@@ -127,7 +127,7 @@ $themeUri = get_template_directory_uri();
               <p>【運営店舗】</p>
               <ul>
                 <li>・ポルシェセンター高輪</li>
-                <li>・ポルシェセンター高輪 小石川認定中古車センター</li>
+                <li>・ポルシェセンター高輪 <br class="sp">小石川認定中古車<br class="sp">センター</li>
                 <li>・ポルシェスタジオ銀座</li>
               </ul>
             </div>
@@ -135,7 +135,7 @@ $themeUri = get_template_directory_uri();
       </div>
       <div class="ebigroup__group__parent">
         <h3 class="ebigroup__group__parentHead">株式会社イー・ビー・アイ・マーケティング</h3>
-        <p class="ebigroup__group__parentDesc">EBI GROUP全体のポルシェビジネスサポート、マーケティング活動、人材開発、レストラン事業など</p>              
+        <p class="ebigroup__group__parentDesc">EBI GROUP全体のポルシェビジネスサポート、<br class="sp">マーケティング活動、人材開発、レストラン事業など</p>              
       </div>
     </div>
 
@@ -254,7 +254,7 @@ $themeUri = get_template_directory_uri();
         <div class="ebigroup__feature__sec">
           <h3 class="ebigroup__feature__secHead">
             <span class="ebigroup__feature__secHeadingMain fontPanchang">AFTER SALES</span>
-            <span class="ebigroup__feature__secHeadingSub">Porsche AGが定める資格認定プログラムZPT [ポルシェ認定テクニシャン]の比率</span>
+            <span class="ebigroup__feature__secHeadingSub">Porsche AGが定める資格認定プログラム<br class="sp">ZPT [ポルシェ認定テクニシャン]の比率</span>
           </h3>
           <figure class="ebigroup__feature__secFig __is2">
             <div class="ebigroup__feature__secFigImg">
@@ -562,7 +562,7 @@ $themeUri = get_template_directory_uri();
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>              
-          <a href="" class="ebigroup__stores__itemLink">
+          <a href="" class="ebigroup__stores__itemLink __ja">
             <span>試乗車一覧</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -604,7 +604,7 @@ $themeUri = get_template_directory_uri();
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>              
-          <a href="" class="ebigroup__stores__itemLink">
+          <a href="" class="ebigroup__stores__itemLink __ja">
             <span>認定中古車在庫一覧</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
