@@ -63,7 +63,7 @@
     &__heading {
       font-size: 18px;
       font-weight: 700;
-      line-height: (28 / 18);
+      line-height: calc(28 / 18);
       margin-top: 141px;
 
       @media #{$mq-lte-sp} {
@@ -92,7 +92,7 @@
 
     &__logo {
       width: 400px;
-      aspect-ratio: 400 / 110;
+      aspect-ratio: calc(400 / 110);
       margin-top: 40px;
       margin-left: auto;
 

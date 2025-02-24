@@ -77,7 +77,7 @@ const changed = require('gulp-changed');
 const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const mozjpeg = require('imagemin-mozjpeg');
-const imgExt = '{jpg,jpeg,png,gif,svg}';
+const imgExt = '{jpg,jpeg,png,gif,svg,webp}';
 
 // task: webpack
 const bundleJs = () => {
