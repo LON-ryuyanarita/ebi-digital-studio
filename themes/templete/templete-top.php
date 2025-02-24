@@ -55,9 +55,6 @@ $top_page = get_page_by_path('home');
                         loop>
                       </video>
                     <?php endif; ?>
-                    <?php if ($mv_src) : ?>
-                      <img src="<?php echo $mv_src; ?>" alt="">
-                    <?php endif; ?>
                   </div>
                   <div class="top__mv__item__body">
                     <time class="-date fontPanchang" datetime="<?php echo get_the_date('c', $post_id); ?>"><?php echo get_the_date('Y/m/d', $post_id); ?></time>
