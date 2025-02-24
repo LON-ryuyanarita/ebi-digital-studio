@@ -203,26 +203,38 @@ $top_page = get_page_by_path('home');
                   <hr class="<?php echo $hr_is_dashed == 1 ? "-dashed" : ""; ?>">
                 <?php elseif ($type === 'box'):
                   $box = get_sub_field('box');
+                  $box_body = $box['body'];
+                  $box_bg = $box['bg'] ?: null;
                 ?>
-                  <div class="body__box">
-                    <?php echo strip_tags($box, '<a><em><br>'); ?>
+                  <div class="body__box" <?php if ($box_bg): echo 'style="background-color:' . $box_bg . ';"';
+                                          endif; ?>>
+                    <?php echo strip_tags($box_body, '<p><a><em><br>'); ?>
                   </div>
                 <?php elseif ($type === 'blockquote'):
                   $blockquote = get_sub_field('blockquote');
+                  $blockquote_body = $blockquote['body'];
+                  $blockquote_bg = $blockquote['bg'] ?: null;
                 ?>
-                  <blockquote>
-                    <?php echo strip_tags($blockquote, '<a><em><br>'); ?>
+                  <blockquote <?php if ($blockquote_bg): echo 'style="background-color:' . $blockquote_bg . ';"';
+                              endif; ?>>
+                    <?php echo strip_tags($blockquote_body, '<p><a><em><br>'); ?>
                   </blockquote>
-                <?php elseif ($type === 'columns'): ?>
-                  <div class="body__columns -full">
+                <?php elseif ($type === 'columns'):
+                  $columns = get_sub_field('columns');
+                  $contents = $columns['contents'];
+                  $columns_bg = $columns['bg'] ?: null;
+                ?>
+                  <div class="body__columns -full" <?php if ($columns_bg): echo 'style="background-color:' . $columns_bg . ';"';
+                                                    endif; ?>>
                     <div class="-inner">
                       <?php
-                      if (have_rows('columns')):
-                        while (have_rows('columns')): the_row();
-                          $columns_type = get_sub_field('type');
-                          $columns_title = get_sub_field('title');
-                          $columns_text = strip_tags(get_sub_field('text'), '<p><a><em><br>');
+                      if ($columns && isset($contents)) :
+                        foreach ($contents as $content) :
+                          $columns_type = $content['type'];
+                          $columns_title = $content['title'];
+                          $columns_text = strip_tags($content['text'], '<p><a><em><br>');
                           $columns_classname = '';
+                          $columns_imgs = $content['imgs'];
                           if ($columns_type == 'left') {
                             $columns_classname = '-c2 -imgright';
                           }
@@ -240,11 +252,12 @@ $top_page = get_page_by_path('home');
                                 <?php echo $columns_text; ?>
                               </div>
                               <div class="-img">
-                                <?php if (have_rows('imgs')):
-                                  while (have_rows('imgs')): the_row();
-                                    $img_file = get_sub_field('img');
+                                <?php
+                                if ($content && isset($columns_imgs)) :
+                                  foreach ($columns_imgs as $img) :
+                                    $img_file = $img['img'];
                                     $img_src = wp_get_attachment_image_url($img_file, 'full') ?? null;
-                                    $img_caption = get_sub_field('caption');
+                                    $img_caption = $img['caption'];
                                 ?>
                                     <figure>
                                       <img src="<?php echo $img_src; ?>" alt="">
@@ -253,17 +266,19 @@ $top_page = get_page_by_path('home');
                                       </figcaption>
                                     </figure>
                                 <?php
-                                  endwhile;
+                                  endforeach;
                                 endif;
                                 ?>
                               </div>
                             <?php elseif ($columns_type == 'right'): ?>
                               <div class="-img">
-                                <?php if (have_rows('imgs')):
-                                  while (have_rows('imgs')): the_row();
-                                    $img_file = get_sub_field('img');
+                                <?php
+                                if ($content && isset($columns_imgs)) :
+                                  foreach ($columns_imgs as $img) :
+                                    $img_file = $img['img'];
                                     $img_src = wp_get_attachment_image_url($img_file, 'full') ?? null;
-                                    $img_caption = get_sub_field('caption'); ?>
+                                    $img_caption = $img['caption'];
+                                ?>
                                     <figure>
                                       <img src="<?php echo $img_src; ?>" alt="">
                                       <figcaption>
@@ -271,7 +286,7 @@ $top_page = get_page_by_path('home');
                                       </figcaption>
                                     </figure>
                                 <?php
-                                  endwhile;
+                                  endforeach;
                                 endif;
                                 ?>
                               </div>
@@ -281,11 +296,13 @@ $top_page = get_page_by_path('home');
                               </div>
                             <?php elseif ($columns_type == 'imgs'): ?>
                               <div class="-imgs">
-                                <?php if (have_rows('imgs')):
-                                  while (have_rows('imgs')): the_row();
-                                    $img_file = get_sub_field('img');
+                                <?php
+                                if ($content && isset($columns_imgs)) :
+                                  foreach ($columns_imgs as $img) :
+                                    $img_file = $img['img'];
                                     $img_src = wp_get_attachment_image_url($img_file, 'full') ?? null;
-                                    $img_caption = get_sub_field('caption'); ?>
+                                    $img_caption = $img['caption'];
+                                ?>
                                     <figure>
                                       <img src="<?php echo $img_src; ?>" alt="">
                                       <figcaption>
@@ -293,14 +310,14 @@ $top_page = get_page_by_path('home');
                                       </figcaption>
                                     </figure>
                                 <?php
-                                  endwhile;
+                                  endforeach;
                                 endif;
                                 ?>
                               </div>
                             <?php endif; ?>
                           </div>
                       <?php
-                        endwhile;
+                        endforeach;
                       endif;
                       ?>
                     </div>
@@ -389,28 +406,6 @@ $top_page = get_page_by_path('home');
                     </div>
                   </div>
                 <?php elseif ($type === 'index'): ?>
-                  <!-- <div class="body__index">
-                    <div class="-title fontPanchang">
-                      INDEX
-                    </div>
-                    <ul class="-list">
-                      <li>
-                        <a href="#section1" data-ebi-scroller>自分好みを見つけることのできる理由</a>
-                      </li>
-                      <li>
-                        <a href="#section2" data-ebi-scroller>鮮やかだけれども濃い</a>
-                      </li>
-                      <li>
-                        <a href="#section3" data-ebi-scroller>久しぶりに991.2を駆る</a>
-                      </li>
-                      <li>
-                        <a href="#section4" data-ebi-scroller>スペック</a>
-                      </li>
-                      <li>
-                        <a href="#section5" data-ebi-scroller>写真を一覧で見る</a>
-                      </li>
-                    </ul>
-                  </div> -->
                   <div class="body__index">
                     <div class="-title fontPanchang">
                       INDEX
@@ -429,7 +424,7 @@ $top_page = get_page_by_path('home');
                   $credits = get_sub_field('credits');
                 ?>
                   <div class="body__credit">
-                    <div class="-title fontPanchang">Credit</div>
+                    <!-- <div class="-title fontPanchang">Credit</div> -->
                     <div class="-body">
                       <?php echo $credits; ?>
                     </div>

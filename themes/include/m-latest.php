@@ -36,7 +36,7 @@ $categories = [
             <?php
             $args = [
               'post_type' => 'cpost',
-              'posts_per_page' => 5,
+              'posts_per_page' => 10,
               'tax_query' => [
                 [
                   'taxonomy' => 'cpost-cat',

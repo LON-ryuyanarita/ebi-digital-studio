@@ -47,9 +47,7 @@
 
     .top__mv__upper {
       .top__mv__item {
-        a {
-          aspect-ratio: 3 / 2;
-
+        > a {
           .-enabledHover & {
             &:hover {
               .top__mv__item__img {
@@ -767,6 +765,7 @@
 
       .top__mv__upper {
         .top__mv__item {
+          aspect-ratio: 3 / 2;
         }
 
         .top__mv__item__img {
