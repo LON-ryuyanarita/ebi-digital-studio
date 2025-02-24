@@ -35,7 +35,7 @@ $themeUri = get_template_directory_uri();
         </p>
       </div>
       <div class="love__btn ebiButton -small -transparent">
-        <a href="#TBD" target="_blank">
+        <a href="/love/">
           <span class="fontPanchang">VIEW ALL</span>
         </a>
       </div>
