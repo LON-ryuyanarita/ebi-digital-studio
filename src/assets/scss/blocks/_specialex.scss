@@ -9,7 +9,7 @@
 
 .specialex {
   overflow: hidden;
-  font-family: $font-zenKakuGothic;
+  font-family: $font-zenKakuGothic;    
 
   // mv
   .specialex__mv {
@@ -373,6 +373,12 @@
       max-width: 826px;
       border: 1px solid #ccc;      
 
+      &:hover {
+        .specialex__feature__itemLinkTag {
+          text-decoration: none;
+        }
+      }
+
       @media #{$mq-lte-sp} {
         margin-top: 37px;
         max-width: 100%;
@@ -495,6 +501,7 @@
   .specialex__feature__cta {
     padding: 83px 0 90px;
     background-color: #000;
+    border-bottom: 1px solid rgb(255 255 255 / 30%);
 
     @media #{$mq-lte-sp} {
       padding: 56px 28px;
@@ -525,14 +532,13 @@
       margin-right: auto;
       margin-top: 15px;
       font-size: 17px;
-      font-weight: 700;
-      border: 1px solid #07c856;
+      font-weight: 700; 
       transition: 
         background-color .3s,
         color .3s;
 
       &:hover {
-        background-color: rgba(#60ff00,.0);
+        background-color: #fff;
         color: #07c856;
       }
 
