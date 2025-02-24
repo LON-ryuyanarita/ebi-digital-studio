@@ -118,7 +118,7 @@
     &__headingMain {
       display: block;
       font-size: 38px;
-      font-weight: 600;      
+      font-weight: 500;
       line-height: 1;
       margin-top: 18px;
 
@@ -129,9 +129,17 @@
 
     &__headingSub {
       display: block;
-      font-size: 13px;
+      font-size: 16px;
+      letter-spacing: 0.01em;
       line-height: 1;      
       font-weight: 500;
+      margin-top: 3px;
+
+      @media #{$mq-lte-sp} {
+        font-size: 12px;
+        margin-top: 2px;
+        letter-spacing: 0;
+      }      
     }
 
     &__head {
