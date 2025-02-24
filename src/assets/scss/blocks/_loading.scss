@@ -39,7 +39,7 @@
 
     &__logo {
         width: 328px;
-        margin-top: 30px;
+        margin-top: 20px;
         opacity: 0;
         
         aspect-ratio: calc(328 / 90);
@@ -53,7 +53,7 @@
 
         @media #{$mq-lte-sp} {
             width: 164px;
-            margin-top: 15px;
+            margin-top: 10px;
         }
 
 

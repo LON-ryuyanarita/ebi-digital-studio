@@ -4,14 +4,16 @@ import $ from 'jquery';
 class Loading {
     constructor() {    
         const isAlreadyLoading = this.chackHasSettionStrage();        
-        if(isAlreadyLoading) {
-            this.hideLoading();
-        } else {
-            this.setSessionStorage();            
-            setTimeout(() => {
-                this.startAnimation();
-            },500)
-        }        
+        // if(isAlreadyLoading) {
+        //     this.hideLoading();
+        // } else {
+        //     this.setSessionStorage();            
+        //     setTimeout(() => {
+        //         this.startAnimation();
+        //     },500)
+        // }        
+
+        this.startAnimation();
     }
 
 
@@ -32,26 +34,22 @@ class Loading {
             })
             .to('#loading__text', {
                 maskPosition: '-150% 0',
-                duration: 1.,
+                duration: 1.5,
+                delay: 0.3,
+                ease: 'sine.out'
             })
-            .to("#loading__logo", { opacity: 1, duration: 0.1 })
+            .to("#loading__logo", { opacity: 1, duration: 0.1, })
             .to("#loading__logo", { opacity: 0, duration: 0.05 })
             .to("#loading__logo", { opacity: 1, duration: 0.1 })
             .to("#loading__logo", { opacity: 0, duration: 0.05 })
             .to("#loading__logo", { opacity: 1, duration: 0.1 })
             .to("#loading__logo", { opacity: 0, duration: 0.05 })
-            .to("#loading__logo", { opacity: 1, duration: .3, delay: 0.1 })       
-            .to('#loading', {
-                background: '#fff',
-                ease: 'sine.out',                       
-                duration: .5,
-                delay: .5,
-            })           
+            .to("#loading__logo", { opacity: 1, duration: .3, delay: 0.1 })                   
             .to('#loading__main', {
                 opacity: 0,
                 ease: 'sine.out',                       
-                duration: .8,
-                delay: -.5
+                duration: .8,       
+                delay: 1,                         
             })                       
             .to('#loading__main', {
                 scale: 4,
@@ -60,11 +58,16 @@ class Loading {
                 ease: 'sine.out',
             })                 
             .to('#loading', {
-                background: '#fff',
-                ease: 'sine.out',                       
+                background: '#fff',                
+                ease: 'sine.out',                                                       
+                duration: .5,                  
+                delay: -0.25            
+            })                   
+            .to('#loading', {
+                background: '#fff',                
+                ease: 'sine.out',                                                       
                 opacity: 0,
-                delay: -.5,
-                duration: .5,                              
+                delay: -.25
             })                   
 
     } 
