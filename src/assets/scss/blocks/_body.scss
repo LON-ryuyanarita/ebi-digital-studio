@@ -372,7 +372,7 @@
       .-inner {
         max-width: $pc-base-width;
         margin: 0 auto;
-        padding: 80px 40px;
+        padding: 80px 40px 20px;
       }
 
       .-column {
@@ -429,6 +429,8 @@
         }
 
         &.-c3 {
+          padding-bottom: 60px;
+
           .-imgs {
             display: flex;
             align-items: stretch;
@@ -968,7 +970,7 @@
         margin-bottom: cvws(55);
 
         .-inner {
-          padding: cvws(70) cvws(20);
+          padding: cvws(70) cvws(20) cvws(10);
         }
 
         .-column {
@@ -1019,6 +1021,8 @@
           }
 
           &.-c3 {
+            padding-bottom: cvws(60);
+
             .-imgs {
               width: 100%;
               flex-flow: row wrap;
