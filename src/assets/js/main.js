@@ -6,6 +6,7 @@ import CreateCss from './createCss.js';
 import Header from './header.js';
 import Carousel from './carousel.js';
 import ShareUrl from './shareUrl.js';
+import Loading from './loading.js';
 
 // DOMContentLoaded
 const DOMContentLoadedCallback = () => {
@@ -13,7 +14,9 @@ const DOMContentLoadedCallback = () => {
   const $window = $(window);
   const $document = $(document);
   const $html = $('html');
-  const $root = $('body');
+  const $root = $('body');  
+
+  const loading = new Loading();
 
   const createCss = new CreateCss();
 
