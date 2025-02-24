@@ -19,7 +19,7 @@ export default class Carousel {
         const $slide = $this.find('.latest__item');
 
         $indicator.text(1);
-        $total.text($slide.length);
+        $total.text($slide.length - 1);
 
         const options = {
           variableWidth: true,
@@ -31,7 +31,8 @@ export default class Carousel {
           dots: false,
         };
         $this.on('beforeChange', (event, slick, currentSlide, nextSlide) => {
-          $indicator.text(nextSlide + 1);
+          const max = $slide.length - 1;
+          $indicator.text(nextSlide + 1 >= max ? max : nextSlide + 1);
         });
         $this.slick(options);
       });

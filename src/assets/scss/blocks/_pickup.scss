@@ -115,6 +115,9 @@
       margin-top: cvws(85);
 
       .section__inner {
+        .top & {
+          padding-bottom: 0;
+        }
       }
     }
 
@@ -125,7 +128,7 @@
 
       .pickup__items {
         margin: cvws(20) cvws(-20) 0;
-        padding: 0 cvws(10);
+        padding: 0 cvws(10) cvws(30);
         overflow: auto;
       }
 

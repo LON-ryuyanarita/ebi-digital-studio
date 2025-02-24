@@ -48,6 +48,8 @@
     .top__mv__upper {
       .top__mv__item {
         a {
+          aspect-ratio: 3 / 2;
+
           .-enabledHover & {
             &:hover {
               .top__mv__item__img {
@@ -61,15 +63,15 @@
             }
           }
         }
+      }
 
-        .top__mv__item__img {
-          height: auto;
-          position: relative;
-          top: auto;
-          bottom: auto;
-          left: auto;
-          right: auto;
-        }
+      .top__mv__item__img {
+        height: 100%;
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
       }
     }
 
@@ -765,6 +767,13 @@
 
       .top__mv__upper {
         .top__mv__item {
+        }
+
+        .top__mv__item__img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
         }
       }
 
