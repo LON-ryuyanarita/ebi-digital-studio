@@ -3,11 +3,14 @@ import $ from 'jquery';
 
 class Loading {
     constructor() {    
-        if(this.chackHasSettionStrage()) {
+        const isAlreadyLoading = this.chackHasSettionStrage();        
+        if(isAlreadyLoading) {
             this.hideLoading();
         } else {
             this.setSessionStorage();            
-            this.startAnimation()
+            setTimeout(() => {
+                this.startAnimation();
+            },500)
         }        
     }
 
@@ -43,19 +46,19 @@ class Loading {
                 ease: 'sine.out',                       
                 duration: .5,
                 delay: .5,
-            })                  
-            .to('#loading__main', {
-                scale: 25,                                
-                duration: 1.,
-                delay: -1,
-                ease: 'sine.in',
-            })            
+            })           
             .to('#loading__main', {
                 opacity: 0,
                 ease: 'sine.out',                       
-                duration: 1.,
-                delay: -1.
-            })         
+                duration: .8,
+                delay: -.5
+            })                       
+            .to('#loading__main', {
+                scale: 4,
+                duration: .8,
+                delay: -.8,
+                ease: 'sine.out',
+            })                 
             .to('#loading', {
                 background: '#fff',
                 ease: 'sine.out',                       
@@ -67,11 +70,11 @@ class Loading {
     } 
 
     chackHasSettionStrage() {
-        return sessionStorage.getItem('loading') === 'true';
+        return window.sessionStorage.getItem('loading') === 'true';
     }
 
     setSessionStorage() {
-        sessionStorage.setItem('loading', 'true');
+        window.sessionStorage.setItem('loading', 'true');
     }
 }
 
