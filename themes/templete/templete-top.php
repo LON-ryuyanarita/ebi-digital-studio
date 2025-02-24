@@ -267,147 +267,7 @@ $top_page = get_page_by_path('home');
             </header>
 
             <section class="top__se__contents">
-              <div class="-main">
-                <h3 class="top__se__contents__title">
-                  <div class="-inner">
-                    <span>
-                      <span class="fontPanchang">PORSCHE STUDIO GINZA</span>でしか体験できない
-                    </span>
-                    <span>
-                      <span class="fontPanchang">10</span>のスペシャルコンテンツ
-                    </span>
-                  </div>
-                </h3>
-                <div class="top__se__contents__map">
-                  <img src="<?php echo $themeUri; ?>/assets/img/top-se-map.svg" alt="">
-                </div>
-              </div>
-              <div class="-nav">
-                <ol>
-                  <li>
-                    <a href="#map1">
-                      <div class="-img">
-                        <img src="<?php echo $themeUri; ?>/assets/img/top-se-img-1.jpg" alt="">
-                      </div>
-                      <div class="-name fontPanchang">
-                        01.<br>
-                        EV Station
-                      </div>
-                      <i><span></span><span></span></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#map1">
-                      <div class="-img">
-                        <img src="<?php echo $themeUri; ?>/assets/img/top-se-img-2.jpg" alt="">
-                      </div>
-                      <div class="-name fontPanchang">
-                        02.<br>
-                        Exhibition
-                      </div>
-                      <i><span></span><span></span></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#map1">
-                      <div class="-img">
-                        <img src="<?php echo $themeUri; ?>/assets/img/top-se-img-3.jpg" alt="">
-                      </div>
-                      <div class="-name fontPanchang">
-                        03.<br class="pc">
-                        Test <br class="sp">Drive Counter
-                      </div>
-                      <i><span></span><span></span></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#map1">
-                      <div class="-img">
-                        <img src="<?php echo $themeUri; ?>/assets/img/top-se-img-4.jpg" alt="">
-                      </div>
-                      <div class="-name fontPanchang">
-                        04.<br class="pc">
-                        Sales & <br class="sp">Connection
-                      </div>
-                      <i><span></span><span></span></i>
-                    </a>
-                  </li>
-                </ol>
-                <ol>
-                  <li>
-                    <a href="#map1">
-                      <div class="-img">
-                        <img src="<?php echo $themeUri; ?>/assets/img/top-se-img-5.jpg" alt="">
-                      </div>
-                      <div class="-name fontPanchang">
-                        05.<br class="pc">
-                        Drive <br class="sp">Simulator
-                      </div>
-                      <i><span></span><span></span></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#map1">
-                      <div class="-img">
-                        <img src="<?php echo $themeUri; ?>/assets/img/top-se-img-6.jpg" alt="">
-                      </div>
-                      <div class="-name fontPanchang">
-                        06.<br class="pc">
-                        Event <br class="sp">Information
-                      </div>
-                      <i><span></span><span></span></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#map1">
-                      <div class="-img">
-                        <img src="<?php echo $themeUri; ?>/assets/img/top-se-img-7.jpg" alt="">
-                      </div>
-                      <div class="-name fontPanchang">
-                        07.<br class="pc">
-                        Drive <br class="sp">Journey
-                      </div>
-                      <i><span></span><span></span></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#map1">
-                      <div class="-img">
-                        <img src="<?php echo $themeUri; ?>/assets/img/top-se-img-8.jpg" alt="">
-                      </div>
-                      <div class="-name fontPanchang">
-                        08.<br>
-                        Lifestyle
-                      </div>
-                      <i><span></span><span></span></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#map1">
-                      <div class="-img">
-                        <img src="<?php echo $themeUri; ?>/assets/img/top-se-img-9.jpg" alt="">
-                      </div>
-                      <div class="-name fontPanchang">
-                        09.<br class="pc">
-                        Books <br class="sp">& Academy
-                      </div>
-                      <i><span></span><span></span></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#map1">
-                      <div class="-img">
-                        <img src="<?php echo $themeUri; ?>/assets/img/top-se-img-10.jpg" alt="">
-                      </div>
-                      <div class="-name fontPanchang">
-                        10.<br>
-                        Restaurant
-                      </div>
-                      <i><span></span><span></span></i>
-                    </a>
-                  </li>
-                </ol>
-              </div>
+              <?php get_template_part('include/m-seMap'); ?>
             </section>
           </div>
         </section>
@@ -480,5 +340,7 @@ $top_page = get_page_by_path('home');
   endif;
   ?>
 </main>
+
+<?php get_template_part('include/m-seMapModals'); ?>
 
 <?php get_footer(); ?>
