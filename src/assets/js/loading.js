@@ -3,15 +3,18 @@ import $ from 'jquery';
 
 class Loading {
     constructor() {    
-        const isAlreadyLoading = this.chackHasSettionStrage();        
+        const isAlreadyLoading = this.chackHasSettionLocalStorage();        
         if(isAlreadyLoading) {
             this.hideLoading();
         } else {
-            this.setSessionStorage();            
+            gsap.set('#loading', {
+                backgroundColor: '#000',                
+            })
             setTimeout(() => {
                 this.startAnimation();
             },500)            
-        }                
+        }               
+        this.setLocalStorage(); 
     }
 
 
@@ -26,10 +29,6 @@ class Loading {
             }
         });
         tl
-            .to('#loading', {
-                backgroundColor: '#000',
-                duration: .2,
-            })
             .to('#loading__text', {
                 maskPosition: '-150% 0',
                 duration: 1.5,
@@ -69,13 +68,23 @@ class Loading {
             })                   
 
     } 
-
-    chackHasSettionStrage() {
-        return window.sessionStorage.getItem('loading') === 'true';
+    
+    chackHasSettionLocalStorage() {
+        const storedTime = window.localStorage.getItem('loading');        
+        if (!storedTime) {
+          // 保存された日時がない場合は、設定可能（trueを返す）
+            return false;
+        }
+        const storedDate = new Date(storedTime);
+        const now = new Date();
+        const diff = now - storedDate; // ミリ秒単位
+        // 24時間以内なら false を返し、24時間経過していれば true を返す
+        return diff < 1000 * 60 * 60 * 24;
     }
-
-    setSessionStorage() {
-        window.sessionStorage.setItem('loading', 'true');
+    
+    setLocalStorage() {
+        // 現在の日時を ISO 形式の文字列で保存
+        window.localStorage.setItem('loading', new Date().toISOString());
     }
 }
 
