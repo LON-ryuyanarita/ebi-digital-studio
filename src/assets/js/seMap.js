@@ -30,5 +30,30 @@ export default class SeMap {
         this.$pointers.removeClass('-inactive -current');
       },
     });
+    this.$pointers.on({
+      'click.ebi.semap': (e) => {
+        const $target = $(e.target).closest(this.$pointers);
+        const thumb = $target.attr('data-ebi-semap-pointer');
+        const $targetThumb = this.$nav.filter(
+          `[data-ebi-semap-thumb="${thumb}"]`
+        );
+        $targetThumb.trigger('click.ebi.modal');
+      },
+      'mouseenter.ebi.semap': (e) => {
+        const $target = $(e.target).closest(this.$pointers);
+        const thumb = $target.attr('data-ebi-semap-pointer');
+        this.$pointers.addClass('-inactive');
+        $target.removeClass('-inactive').addClass('-current');
+        this.$nav
+          .addClass('-inactive')
+          .filter(`[data-ebi-semap-thumb="${thumb}"]`)
+          .removeClass('-inactive')
+          .addClass('-current');
+      },
+      'mouseleave.ebi.semap': (e) => {
+        this.$pointers.removeClass('-inactive -current');
+        this.$nav.removeClass('-inactive -current');
+      },
+    });
   }
 }
