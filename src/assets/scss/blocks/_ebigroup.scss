@@ -15,11 +15,19 @@
   .ebigroup__mv {
     position: relative;
     width: 100%;
-    height: calc(var(--vh)* 100 - 75px);    
+    aspect-ratio: calc(2560 / 1272);
+    height: auto;
+      
+    @media #{$mq-gt-pcmax} {
+      height: calc(var(--vh)* 100 - 75px);
+      aspect-ratio: initial;
+    }    
 
-    @media #{$mq-lte-sp} {
-      height: calc(var(--vh)* 50 - 11.7333333333vw);
+    @media #{$mq-lte-sp} {      
+      aspect-ratio: 1;
+      height: auto;
     }
+
 
     &__bg {
       width: 100%;
