@@ -9,6 +9,7 @@
 
 .ebigroup {
   overflow: hidden;
+  font-family: $font-zenKakuGothic;
 
   // mv
   .ebigroup__mv {
@@ -59,7 +60,7 @@
       font-size: 16px;
       line-height: 1;
       margin-top: 13px;
-      font-weight: 700;
+      font-weight: 700;      
 
       @media #{$mq-lte-sp} {
         font-size: 12px;
@@ -463,6 +464,11 @@
       }
     }
 
+    &__secHead {
+      position: relative;
+      z-index: 10;
+    }
+
     &__secHeadingMain {
       display: block;
       font-size: 28px;
@@ -475,9 +481,11 @@
     &__secHeadingSub {
       display: block;
       font-size: 14px;
+      font-weight: 700;
     }
 
     &__secFig {
+      position: relative;
       margin-top: 40px;
 
       @media #{$mq-lte-sp} {
@@ -505,7 +513,7 @@
       font-size: 12px;
       text-align: center;
       opacity: 0.5;
-      margin-top: 15px;
+      margin-top: 6px;
 
       @media #{$mq-lte-sp} {
         font-size: 10px;
@@ -637,6 +645,7 @@
       display: block;
       font-size: 12px;
       opacity: 0.5;
+      font-weight: 500;
     }
 
     &__itemDesc {
@@ -860,8 +869,8 @@
     &__itemTitleSub {
       display: block;
       font-size: 12px;
-      font-weight: 700;
-      opacity: 0.5;
+      font-weight: 500;
+      opacity: 0.5;      
 
       @media #{$mq-lte-sp} {
         font-size: 10px;
@@ -1084,31 +1093,20 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 28px 0;
+      padding: 27px 0 28px;
       font-size: 17px;
-      font-weight: 700;
-      border: 1px solid #000;
+      font-weight: 700;      
       line-height: 1;      
       border-radius: 10rem;
       margin-top: 32px;
       width: 100%;
       max-width: 440px;      
       color: #fff;
-      background-color: #000;
-      border: 1px solid #000;
+      background-color: #000;            
       transition: background-color 0.3s, color 0.3s;
 
       &:hover {
-        background-color: rgba(0,0,0,0);
-        color: #000;
-
-        .ebigroup__kokusai__linkIcon {
-          opacity: 0;
-        }
-
-        .ebigroup__kokusai__linkIconHv {
-          opacity: 1;
-        }
+        background-color: #d5001c;
       }
 
       @media #{$mq-lte-sp} {
@@ -1131,24 +1129,7 @@
         width: 100%;
         height: auto;
       }
-    }    
-
-    &__linkIconHv {
-      width: 13px;
-      aspect-ratio: 13 / 11;
-      position: absolute;
-      top: 51%;
-      right: 30px;
-      transform: translateY(-50%);   
-      opacity: 0;
-      transition: opacity 0.3s;
-      
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-    }    
+    }
 
   }
 

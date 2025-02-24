@@ -804,9 +804,6 @@ $themeUri = get_template_directory_uri();
           <span class="ebigroup__kokusai__linkIcon">
             <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
           </span>
-          <span class="ebigroup__kokusai__linkIconHv">
-            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
-          </span>
         </a>            
 
       </div>

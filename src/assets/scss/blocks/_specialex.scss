@@ -9,6 +9,7 @@
 
 .specialex {
   overflow: hidden;
+  font-family: $font-zenKakuGothic;
 
   // mv
   .specialex__mv {
@@ -62,7 +63,7 @@
       line-height: 1;
       margin-top: 13px;
       font-weight: 700;
-      padding-left: 10px;
+      padding-left: 10px;      
 
       @media #{$mq-lte-sp} {
         font-size: 12px;
