@@ -4,16 +4,14 @@ import $ from 'jquery';
 class Loading {
     constructor() {    
         const isAlreadyLoading = this.chackHasSettionStrage();        
-        // if(isAlreadyLoading) {
-        //     this.hideLoading();
-        // } else {
-        //     this.setSessionStorage();            
-        //     setTimeout(() => {
-        //         this.startAnimation();
-        //     },500)
-        // }        
-
-        this.startAnimation();
+        if(isAlreadyLoading) {
+            this.hideLoading();
+        } else {
+            this.setSessionStorage();            
+            setTimeout(() => {
+                this.startAnimation();
+            },500)            
+        }                
     }
 
 
@@ -52,7 +50,7 @@ class Loading {
                 delay: 1,                         
             })                       
             .to('#loading__main', {
-                scale: 4,
+                scale: 3,
                 duration: .8,
                 delay: -.8,
                 ease: 'sine.out',
