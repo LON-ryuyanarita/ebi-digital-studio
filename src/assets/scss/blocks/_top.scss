@@ -676,8 +676,9 @@
     }
 
     .top__map__contents {
-      img {
+      iframe {
         width: 100%;
+        aspect-ratio: 900 / 334;
       }
     }
 
@@ -1201,11 +1202,9 @@
       .top__map__contents {
         height: cvws(475);
 
-        img {
+        iframe {
           width: 100%;
           height: 100%;
-          object-fit: cover;
-          object-position: center;
         }
       }
 

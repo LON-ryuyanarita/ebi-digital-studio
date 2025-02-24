@@ -447,7 +447,7 @@ $top_page = get_page_by_path('home');
               東京を中心に多数ショールームを展開ぜひお近くのショールームまでお越しください
             </div>
             <div class="top__map__contents">
-              <img src="<?php echo $themeUri; ?>/assets/img/_dummy/top-map.jpg" alt="">
+              <iframe src="https://www.google.com/maps/d/u/7/embed?mid=1Z-whQUwxi7Hfo11cHT262xkwNlil-gY&ehbc=2E312F" width="640" height="480"></iframe>
             </div>
           </div>
         </section>
