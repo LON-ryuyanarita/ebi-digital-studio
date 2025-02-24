@@ -10,6 +10,11 @@
       <main class="main" role="main">
         <% content(__append) %>
       </main>
+
+      <% if (meta.requiredSeMapModals) { %>
+        <%- include(`../modules/m-seMapModals.ejs`) %>
+      <% } %>
+
       <%- include(`../modules/c-footer`); %>
     </div>
     <%- include(`../modules/c-loading`); %>

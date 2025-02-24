@@ -1,0 +1,1058 @@
+/* ==========================================================================
+ *
+ * Blocks - seMap
+ *
+========================================================================== */
+
+@use 'sass:math';
+@use './variables' as *;
+@use './_utils' as *;
+
+.seMap {
+  & {
+    padding: 0 20px 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    .-main {
+      width: 100%;
+    }
+
+    .-nav {
+      margin-left: 20px;
+      display: flex;
+      align-items: stretch;
+      flex-shrink: 0;
+
+      ol {
+        &:nth-child(1) {
+          width: 161px;
+        }
+
+        &:nth-child(2) {
+          width: 144px;
+          margin-left: 20px;
+        }
+      }
+
+      li {
+        font-size: 9px;
+        line-height: 1.111;
+
+        a {
+          display: block;
+          position: relative;
+          transition: all 200ms var(--ease-fast-out-slow-in);
+
+          &.-current {
+            color: var(--color-red-1);
+            i {
+              background-color: var(--color-red-1);
+            }
+          }
+
+          &.-inactive {
+            filter: grayscale(1);
+            opacity: 0.6;
+          }
+        }
+
+        .-name {
+          padding: 6px 0 10px;
+        }
+
+        i {
+          width: 19px;
+          height: 19px;
+          background-color: var(--color-black-1);
+          position: absolute;
+          bottom: 10px;
+          right: 0;
+          transition: background-color 200ms var(--ease-fast-out-slow-in);
+
+          span {
+            background-color: var(--color-white-1);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+
+            &:nth-child(1) {
+              width: 1px;
+              height: 9px;
+            }
+
+            &:nth-child(2) {
+              width: 9px;
+              height: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @at-root {
+    .seMap__title {
+      text-align: center;
+      border-top: 1px solid var(--color-black-1);
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 17px;
+        height: 10px;
+        background: url(../img/icon-balloon-head-black.svg) no-repeat center
+          center transparent;
+        background-size: contain;
+        position: absolute;
+        bottom: -12px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-90deg);
+      }
+
+      .-inner {
+        padding: 28px 0;
+        overflow: hidden;
+        position: relative;
+
+        &::before,
+        &::after {
+          content: '';
+          width: 50%;
+          height: 1px;
+          background-color: var(--color-black-1);
+          position: absolute;
+          bottom: 0;
+        }
+
+        &::before {
+          right: 50%;
+          transform: translateX(-4px);
+        }
+
+        &::after {
+          left: 50%;
+          transform: translateX(4px);
+        }
+
+        > span {
+          line-height: 1;
+          display: block;
+
+          &:nth-child(1) {
+            font-size: 19px;
+            font-weight: bold;
+
+            span {
+              font-size: 23px;
+              font-weight: 500;
+            }
+          }
+
+          &:nth-child(2) {
+            margin-top: 4px;
+            font-size: 26px;
+            font-weight: bold;
+
+            span {
+              font-size: 46px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+
+    .seMap__map {
+      width: 88.889%;
+      margin: 96px auto 0;
+      position: relative;
+
+      .-map {
+        position: relative;
+        z-index: 0;
+      }
+    }
+
+    .seMap__pointers {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .seMap__pointer {
+      width: math.div(36px, 760px) * 100%;
+      position: absolute;
+
+      &.-current {
+        &::before {
+          opacity: 1;
+          transition-duration: 100ms, 200ms;
+          transition-delay: 0ms, 0ms;
+        }
+
+        .-title {
+          transform: translate3d(-50%, -100%, 0);
+          opacity: 1;
+          transition-duration: 100ms, 100ms;
+          transition-delay: 200ms, 200ms;
+        }
+
+        i {
+          width: 100%;
+          aspect-ratio: 1 / 1;
+          display: block;
+          position: relative;
+
+          span {
+            &:nth-child(1),
+            &:nth-child(2) {
+              animation-name: pointer-scale;
+              animation-duration: 450ms;
+              animation-delay: 150ms;
+              animation-iteration-count: 1;
+              animation-fill-mode: backwards;
+              animation-timing-function: var(--ease-out-back);
+            }
+            &:nth-child(2) {
+              animation-delay: 0ms;
+            }
+          }
+        }
+
+        &.-p1 {
+          &::before {
+            top: math.div(-119px, 36px) * 100%;
+          }
+        }
+
+        &.-p2 {
+          &::before {
+            top: math.div(-172px, 36px) * 100%;
+          }
+        }
+
+        &.-p3 {
+          &::before {
+            top: math.div(-253px, 36px) * 100%;
+          }
+        }
+
+        &.-p4 {
+          &::before {
+            top: math.div(-171px, 36px) * 100%;
+          }
+        }
+
+        &.-p5 {
+          &::before {
+            top: math.div(-230px, 36px) * 100%;
+          }
+        }
+
+        &.-p6 {
+          &::before {
+            top: math.div(-228px, 36px) * 100%;
+          }
+        }
+
+        &.-p7 {
+          &::before {
+            top: math.div(-241px, 36px) * 100%;
+          }
+        }
+
+        &.-p8 {
+          &::before {
+            top: math.div(-165px, 36px) * 100%;
+          }
+        }
+
+        &.-p9 {
+          &::before {
+            top: math.div(-305px, 36px) * 100%;
+          }
+        }
+
+        &.-p10 {
+          &::before {
+            top: math.div(-227px, 36px) * 100%;
+          }
+        }
+      }
+
+      &.-inactive {
+        i {
+          span {
+            &:nth-child(1),
+            &:nth-child(2) {
+              opacity: 0;
+            }
+          }
+        }
+      }
+
+      &::before {
+        content: '';
+        width: 1px;
+        background-color: var(--color-black-1);
+        display: block;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        opacity: 0;
+        top: 0px;
+        transition: opacity 100ms 100ms ease,
+          top 100ms 100ms var(--ease-fast-out-slow-in);
+      }
+
+      &.-p1 {
+        top: math.div(81px, 507px) * 100%;
+        left: math.div(520px, 760px) * 100%;
+        .-title {
+          top: math.div(-119px, 36px) * 100%;
+        }
+      }
+
+      &.-p2 {
+        top: math.div(134px, 507px) * 100%;
+        left: math.div(606px, 760px) * 100%;
+        .-title {
+          top: math.div(-172px, 36px) * 100%;
+        }
+      }
+
+      &.-p3 {
+        top: math.div(243px, 507px) * 100%;
+        left: math.div(400px, 760px) * 100%;
+        .-title {
+          top: math.div(-253px, 36px) * 100%;
+        }
+      }
+
+      &.-p4 {
+        top: math.div(181px, 507px) * 100%;
+        left: math.div(356px, 760px) * 100%;
+        .-title {
+          top: math.div(-171px, 36px) * 100%;
+        }
+      }
+
+      &.-p5 {
+        top: math.div(211px, 507px) * 100%;
+        left: math.div(606px, 760px) * 100%;
+        .-title {
+          top: math.div(-230px, 36px) * 100%;
+        }
+      }
+
+      &.-p6 {
+        top: math.div(262px, 507px) * 100%;
+        left: math.div(351px, 760px) * 100%;
+        .-title {
+          top: math.div(-228px, 36px) * 100%;
+        }
+      }
+
+      &.-p7 {
+        top: math.div(283px, 507px) * 100%;
+        left: math.div(298px, 760px) * 100%;
+        .-title {
+          top: math.div(-241px, 36px) * 100%;
+        }
+      }
+
+      &.-p8 {
+        top: math.div(220px, 507px) * 100%;
+        left: math.div(247px, 760px) * 100%;
+        .-title {
+          top: math.div(-165px, 36px) * 100%;
+        }
+      }
+
+      &.-p9 {
+        top: math.div(355px, 507px) * 100%;
+        left: math.div(254px, 760px) * 100%;
+        .-title {
+          top: math.div(-305px, 36px) * 100%;
+        }
+      }
+
+      &.-p10 {
+        top: math.div(386px, 507px) * 100%;
+        left: math.div(105px, 760px) * 100%;
+        .-title {
+          top: math.div(-227px, 36px) * 100%;
+        }
+      }
+
+      .-title {
+        padding: 3px 14px;
+        color: var(--color-white-1);
+        font-family: $font-family-panchang;
+        font-size: 17px;
+        line-height: 1;
+        background-color: var(--color-black-1);
+        white-space: nowrap;
+        position: absolute;
+        left: 50%;
+
+        opacity: 0;
+        transform: translate3d(-50%, -75%, 0);
+        transition: opacity 200ms 0ms ease,
+          transform 200ms 0ms var(--ease-fast-out-slow-in);
+      }
+
+      i {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        display: block;
+        position: relative;
+
+        span {
+          border: 1px solid var(--color-red-1);
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate3d(-50%, -50%, 0);
+          transition: all 200ms var(--ease-out-expo);
+
+          &:nth-child(1) {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+          }
+
+          &:nth-child(2) {
+            width: math.div(22px, 36px) * 100%;
+            aspect-ratio: 1 / 1;
+          }
+
+          &:nth-child(3) {
+            width: math.div(8px, 36px) * 100%;
+            aspect-ratio: 1 / 1;
+            background-color: var(--color-red-1);
+          }
+
+          @keyframes pointer-scale {
+            0% {
+              opacity: 0;
+              transform: translate3d(-50%, -50%, 0) scale(0);
+            }
+            100% {
+              opacity: 1;
+              transform: translate3d(-50%, -50%, 0) scale(1);
+            }
+          }
+        }
+      }
+    }
+
+    .seMap__modal {
+      &.-s1 {
+        .-txt {
+          .ebiButton {
+            a {
+              padding: 0 72px;
+            }
+          }
+        }
+      }
+
+      &.-s3 {
+        .-txt {
+          .ebiButton {
+            a {
+              padding: 0 40px;
+            }
+          }
+        }
+      }
+
+      &.-s4 {
+        .-txt {
+          .seMap__modal__btns {
+            margin: 24px 0 -24px 0;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+          }
+
+          .ebiButton {
+            min-width: calc((100% - 8px) / 2);
+            margin: 0 0 20px 0;
+
+            &:nth-child(1) {
+              margin-right: 8px;
+            }
+
+            a {
+              width: 100%;
+              position: relative;
+
+              .-enabledHover & {
+                &:hover {
+                  i.-window {
+                    background-image: url(../img/icon-window-1.svg);
+                    transition-duration: 200ms;
+                  }
+                }
+              }
+            }
+
+            i.-window {
+              width: 9px;
+              height: 8px;
+              display: block;
+              background: url(../img/icon-window-1-black.svg) no-repeat center
+                center transparent;
+              background-size: contain;
+              position: absolute;
+              top: 50%;
+              right: 18px;
+              transform: translateY(-50%);
+              transition: background-image 400ms var(--ease-linear-out-slow-in);
+            }
+          }
+        }
+      }
+    }
+
+    .seMap__modal__header {
+      margin-bottom: 30px;
+      padding: 20px 0 24px;
+      border-bottom: 1px solid rgba($color-black-1, 0.2);
+    }
+
+    .seMap__modal__title {
+      font-size: 36px;
+      font-weight: 500;
+      line-height: 42px;
+    }
+
+    .seMap__modal__body {
+      &.-column {
+        &.-c1 {
+          .-txt {
+          }
+
+          .-imgs {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+          }
+        }
+
+        &.-c2 {
+          display: flex;
+          justify-content: space-between;
+
+          .-txt {
+            width: 100%;
+          }
+
+          .-imgs {
+            width: 43.26%;
+            margin-left: 30px;
+            padding-top: 28px;
+            flex-shrink: 0;
+
+            img {
+              & + img {
+                margin-top: 20px;
+              }
+            }
+          }
+        }
+      }
+
+      &.-list {
+        padding-top: 28px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 28px;
+        column-gap: 20px;
+      }
+
+      .-txt {
+        font-size: 15px;
+        line-height: 1.6;
+
+        p {
+          & + p {
+            margin-top: 24px;
+          }
+        }
+
+        .ebiButton {
+          margin-top: 24px;
+        }
+      }
+    }
+
+    .seMap__modal__item {
+      > img {
+      }
+
+      > h4 {
+        font-size: 16px;
+        line-height: 42px;
+      }
+
+      > p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  // SP 以下 (- 768)
+  @media #{$mq-lte-sp} {
+    & {
+      padding: 0 cvws(20) cvws(20);
+      flex-flow: column nowrap;
+
+      .-main {
+      }
+
+      .-nav {
+        margin: cvws(-120) 0 0 0;
+        padding: 0 cvws(20);
+        flex-flow: column nowrap;
+        z-index: 1;
+
+        ol {
+          margin: 0 cvws(-15);
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: flex-start;
+
+          &:nth-child(1) {
+            width: auto;
+
+            li {
+              &:nth-child(1) {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+
+                a {
+                  width: cvws(190);
+                }
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            width: auto;
+            margin: 0 cvws(-15);
+          }
+        }
+
+        li {
+          width: cvws(190);
+          margin: 0 cvws(15);
+          font-size: cvws(15);
+          line-height: 1;
+
+          .-name {
+            padding: cvws(8) 0 cvws(16);
+          }
+
+          i {
+            width: cvws(31);
+            height: cvws(31);
+            bottom: cvws(12);
+
+            span {
+              &:nth-child(1) {
+                width: 1px;
+                height: cvws(17);
+              }
+
+              &:nth-child(2) {
+                width: cvws(17);
+                height: 1px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @at-root {
+      .seMap__title {
+        &::before {
+          width: cvws(17px);
+          height: cvws(10px);
+          bottom: cvws(-12px);
+        }
+
+        .-inner {
+          padding: cvws(26) 0 cvws(28);
+
+          &::before {
+            transform: translateX(cvws(-4px));
+          }
+
+          &::after {
+            transform: translateX(cvws(4px));
+          }
+
+          > span {
+            &:nth-child(1) {
+              font-size: cvws(20);
+              line-height: cvws(28);
+
+              span {
+                font-size: cvws(24);
+              }
+            }
+
+            &:nth-child(2) {
+              margin-top: cvws(12);
+              font-size: cvws(34);
+              line-height: cvws(28);
+
+              span {
+                font-size: cvws(54);
+              }
+            }
+          }
+        }
+      }
+
+      .seMap__map {
+        width: 100%;
+        margin-top: cvws(100);
+      }
+
+      .seMap__pointer {
+        width: cvws(32);
+
+        &.-current {
+          &.-p1 {
+            &::before {
+              top: math.div(-119px * 0.75, 32px) * 100%;
+            }
+          }
+
+          &.-p2 {
+            &::before {
+              top: math.div(-172px * 0.75, 32px) * 100%;
+            }
+          }
+
+          &.-p3 {
+            &::before {
+              top: math.div(-253px * 0.75, 32px) * 100%;
+            }
+          }
+
+          &.-p4 {
+            &::before {
+              top: math.div(-171px * 0.75, 32px) * 100%;
+            }
+          }
+
+          &.-p5 {
+            &::before {
+              top: math.div(-230px * 0.75, 32px) * 100%;
+            }
+          }
+
+          &.-p6 {
+            &::before {
+              top: math.div(-228px * 0.75, 32px) * 100%;
+            }
+          }
+
+          &.-p7 {
+            &::before {
+              top: math.div(-241px * 0.75, 32px) * 100%;
+            }
+          }
+
+          &.-p8 {
+            &::before {
+              top: math.div(-165px * 0.75, 32px) * 100%;
+            }
+          }
+
+          &.-p9 {
+            &::before {
+              top: math.div(-305px * 0.75, 32px) * 100%;
+            }
+          }
+
+          &.-p10 {
+            &::before {
+              top: math.div(-227px * 0.75, 32px) * 100%;
+            }
+          }
+        }
+
+        &.-p1 {
+          top: cvws(71);
+          left: cvws(458);
+          .-title {
+            top: math.div(-119px * 0.75, 32px) * 100%;
+          }
+        }
+
+        &.-p2 {
+          top: cvws(118);
+          left: cvws(534);
+          .-title {
+            top: math.div(-172px * 0.75, 32px) * 100%;
+          }
+        }
+
+        &.-p3 {
+          top: cvws(214);
+          left: cvws(353);
+          .-title {
+            top: math.div(-253px * 0.75, 32px) * 100%;
+          }
+        }
+
+        &.-p4 {
+          top: cvws(159);
+          left: cvws(314);
+          .-title {
+            top: math.div(-171px * 0.75, 32px) * 100%;
+          }
+        }
+
+        &.-p5 {
+          top: cvws(187);
+          left: cvws(535);
+          .-title {
+            top: math.div(-230px * 0.75, 32px) * 100%;
+          }
+        }
+
+        &.-p6 {
+          top: cvws(231);
+          left: cvws(311);
+          .-title {
+            top: math.div(-228px * 0.75, 32px) * 100%;
+          }
+        }
+
+        &.-p7 {
+          top: cvws(250);
+          left: cvws(264);
+          .-title {
+            top: math.div(-241px * 0.75, 32px) * 100%;
+          }
+        }
+
+        &.-p8 {
+          top: cvws(195);
+          left: cvws(219);
+          .-title {
+            top: math.div(-165px * 0.75, 32px) * 100%;
+          }
+        }
+
+        &.-p9 {
+          top: cvws(313);
+          left: cvws(225);
+          .-title {
+            top: math.div(-305px * 0.75, 32px) * 100%;
+          }
+        }
+
+        &.-p10 {
+          top: cvws(341);
+          left: cvws(95);
+          .-title {
+            top: math.div(-227px * 0.75, 32px) * 100%;
+          }
+        }
+
+        .-title {
+          padding: cvws(3) cvws(14);
+          font-size: cvws(17);
+        }
+
+        i {
+          span {
+            &:nth-child(2) {
+              width: cvws(20);
+            }
+
+            &:nth-child(3) {
+              width: cvws(7);
+            }
+          }
+        }
+      }
+
+      .seMap__modal {
+        margin-top: cvws(-10);
+
+        &.-s1 {
+          .-txt {
+            .ebiButton {
+              a {
+                padding: 0 cvws(58);
+              }
+            }
+          }
+        }
+
+        &.-s3 {
+          .-txt {
+            .ebiButton {
+              width: 100%;
+              a {
+                width: 100%;
+                padding: 0;
+              }
+            }
+          }
+        }
+
+        &.-s4 {
+          .-txt {
+            .seMap__modal__btns {
+              margin: cvws(56) 0 0 0;
+            }
+
+            .ebiButton {
+              min-width: calc((100% - cvws(10)) / 2);
+              margin: 0;
+
+              &:nth-child(1) {
+                margin-right: cvws(10);
+
+                a {
+                  font-size: cvws(16);
+                  padding-right: cvws(24);
+                }
+              }
+
+              a {
+                padding: 0;
+              }
+
+              i.-window {
+                width: cvws(19);
+                height: cvws(16);
+                right: cvws(16);
+              }
+            }
+          }
+        }
+      }
+
+      .seMap__modal__header {
+        margin-bottom: cvws(34);
+        padding: 0 0 cvws(20);
+      }
+
+      .seMap__modal__title {
+        font-size: cvws(44);
+        line-height: cvws(50);
+      }
+
+      .seMap__modal__body {
+        &.-column {
+          &.-c1 {
+            .-txt {
+            }
+
+            .-imgs {
+              margin-top: cvws(68);
+              grid-template-columns: repeat(2, 1fr);
+              gap: cvws(20);
+            }
+          }
+
+          &.-c2 {
+            flex-flow: column nowrap;
+
+            .-txt {
+            }
+
+            .-imgs {
+              width: 100%;
+              margin-top: cvws(68);
+              margin-left: 0;
+              padding-top: 0;
+              margin-top: cvws(68);
+              display: grid;
+              grid-template-columns: repeat(2, 1fr);
+              gap: cvws(20);
+
+              img {
+                & + img {
+                  margin-top: 0;
+                }
+              }
+            }
+          }
+        }
+
+        &.-list {
+          padding-top: cvws(52);
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: cvws(40);
+          column-gap: cvws(20);
+        }
+
+        .-txt {
+          font-size: cvws(24);
+          line-height: cvws(36);
+
+          p {
+            & + p {
+              margin-top: cvws(36);
+            }
+          }
+
+          .ebiButton {
+            margin-top: cvws(56);
+          }
+        }
+      }
+
+      .seMap__modal__item {
+        > img {
+        }
+
+        > h4 {
+          margin-top: cvws(18);
+          font-size: cvws(24);
+          line-height: cvws(28);
+        }
+
+        > p {
+          margin-top: cvws(10);
+          font-size: cvws(24);
+          line-height: cvws(36);
+        }
+      }
+    }
+  }
+
+  // PC Max 以上 (1280 +1 - )
+  @media #{$mq-gt-pcmax} {
+    & {
+    }
+
+    @at-root {
+    }
+  }
+}

@@ -5,8 +5,10 @@ import CreateCss from './createCss.js';
 // import Top from './top.js';
 import Header from './header.js';
 import Carousel from './carousel.js';
+import Modal from './modal.js';
 import ShareUrl from './shareUrl.js';
 import Loading from './loading.js';
+import SeMap from './seMap.js';
 
 // DOMContentLoaded
 const DOMContentLoadedCallback = () => {
@@ -14,7 +16,7 @@ const DOMContentLoadedCallback = () => {
   const $window = $(window);
   const $document = $(document);
   const $html = $('html');
-  const $root = $('body');  
+  const $root = $('body');
 
   const loading = new Loading();
 
@@ -78,8 +80,12 @@ const DOMContentLoadedCallback = () => {
   header.init();
   const carousel = new Carousel();
   carousel.init();
+  const modal = new Modal();
+  modal.init();
   const shareUrl = new ShareUrl();
   shareUrl.init();
+  const seMap = new SeMap();
+  seMap.init();
 
   const handleScroll = () => {
     windowInfo.scrollX = window.scrollX;
