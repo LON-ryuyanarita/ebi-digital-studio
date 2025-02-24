@@ -65,7 +65,7 @@ $themeUri = get_template_directory_uri();
                 </p>                                              
               </div>
               <figure class="team__mv__logo">
-                <img src="/assets/img/team/logo.png" alt="EBI DIGITAL STUDIO">
+                <img src="<?= $themeUri ?>/assets/img/team/logo.png" alt="EBI DIGITAL STUDIO">
               </figure>
             </div>
           </div>
@@ -94,7 +94,7 @@ $themeUri = get_template_directory_uri();
                       <span>Scope</span>
                       Produce / Direction / Edit / Writing / Photographer
                     </p>
-                    <p class="team__member__itemCompany fontPanchang">
+                    <p class="team__member__itemCompany">
                       EBI Marketing Inc. / Sanji international Co.,Ltd.
                     </p>
                   </div>
@@ -111,7 +111,7 @@ $themeUri = get_template_directory_uri();
                       <span>Scope</span>
                       Coordination
                     </p>
-                    <p class="team__member__itemCompany fontPanchang">
+                    <p class="team__member__itemCompany">
                       EBI Marketing Inc.
                     </p>
                   </div>
@@ -128,7 +128,7 @@ $themeUri = get_template_directory_uri();
                       <span>Scope</span>
                       Produce / Direction
                     </p>
-                    <p class="team__member__itemCompany fontPanchang">
+                    <p class="team__member__itemCompany">
                       LON Inc. / CREATOR BOX Inc.
                     </p>
                   </div>
@@ -139,13 +139,13 @@ $themeUri = get_template_directory_uri();
                   </figure>
                   <div class="team__member__itemText">
                     <p class="team__member__itemPosition fontPanchang">Editor / Writer</p>
-                    <p class="team__member__itemNameEn fontPanchang">Ryuya Narita</p>
-                    <h3 class="team__member__itemNameJa">成田 龍矢</h3>                    
+                    <p class="team__member__itemNameEn fontPanchang">Yuki Kobayashi</p>
+                    <h3 class="team__member__itemNameJa">小林 ゆき</h3>                    
                     <p class="team__member__itemScope fontPanchang">
                       <span>Scope</span>
                       Edit / Writting
                     </p>
-                    <p class="team__member__itemCompany fontPanchang">
+                    <p class="team__member__itemCompany">
                       CREATOR BOX Inc.
                     </p>
                   </div>
@@ -162,7 +162,7 @@ $themeUri = get_template_directory_uri();
                       <span>Scope</span>
                       Photographer 
                     </p>
-                    <p class="team__member__itemCompany fontPanchang">
+                    <p class="team__member__itemCompany">
                       CREATOR BOX Inc.
                     </p>
                   </div>

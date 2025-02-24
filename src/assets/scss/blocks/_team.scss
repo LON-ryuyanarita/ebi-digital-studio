@@ -202,6 +202,10 @@
       }
     }
 
+    &__itemText {
+      font-weight: 500;
+    }
+
     &__itemPosition {
       font-size: 10px;
       line-height: 1;
@@ -244,6 +248,7 @@
       span {
         display: block;
         font-size: 9px;
+        margin-bottom: 2px;
       }
     }
 
@@ -251,6 +256,7 @@
       font-size: 10px;
       font-weight: 500;
       margin-top: 5px;
+      opacity: 0.5;
 
       @media #{$mq-lte-sp} {
         font-size: 8px;
