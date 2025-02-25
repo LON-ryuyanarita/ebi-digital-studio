@@ -1,6 +1,7 @@
 <%_
   const meta = {
     page: 'EXPERIENCE',
+    requiredSeMapModals: true,
   };
 -%>
 <%_ function content (__append) { -%>
@@ -270,7 +271,9 @@
         </div>
       </div>
 
-      <div class="specialex__feature__map"></div>
+      <div class="specialex__feature__map">
+        <%- include(`${ejsRelativePath}modules/m-seMap.ejs`) %>
+      </div>
 
     </section>
 
