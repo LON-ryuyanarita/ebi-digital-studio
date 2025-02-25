@@ -571,6 +571,15 @@ $themeUri = get_template_directory_uri();
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span> 
           </a>              
+          <a href="" class="ebigroup__stores__itemLink __ja">
+            <span>認定中古車在庫一覧</span>
+            <span class="ebigroup__stores__itemLinkIcon">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+            </span>
+            <span class="ebigroup__stores__itemLinkIconHv">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+            </span> 
+          </a>                
         </div>
       </li>
       <li class="ebigroup__stores__item">

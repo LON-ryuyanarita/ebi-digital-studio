@@ -282,7 +282,9 @@ $themeUri = get_template_directory_uri();
       </div>
 
       <div class="specialex__feature__map">
-        <?php get_template_part('include/m-seMap'); ?>
+        <div class="specialex__feature__mapBox">
+          <?php get_template_part('include/m-seMap'); ?>
+        </div>
       </div>
 
     </section>
