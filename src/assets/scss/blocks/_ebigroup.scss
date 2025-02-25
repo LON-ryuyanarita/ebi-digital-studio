@@ -531,12 +531,18 @@
       &.__is1 {
         margin-top: -20px;
         display: block;
-        width: 100%;
-        aspect-ratio: calc(468 / 263);
-
+        width: 100%; 
         @media #{$mq-lte-sp} {
-          margin-top: 0px;
-          aspect-ratio: calc(335 / 219);
+          margin-top: 0px;          
+        }
+
+        picture {
+          display: block;
+          aspect-ratio: calc(468 / 263);
+
+          @media #{$mq-lte-sp} {
+            aspect-ratio: calc(335 / 219);
+          }
         }
 
         img {
@@ -552,10 +558,14 @@
         margin-top: 32px;
         margin-left: auto;
         margin-right: auto;
-        aspect-ratio: calc(311 / 173);
 
-        @media #{$mq-lte-sp} {
-          aspect-ratio: calc(	945 / 596);
+        picture {
+          display: block;
+          aspect-ratio: calc(311 / 173);
+
+          @media #{$mq-lte-sp} {
+            aspect-ratio: calc(945 / 596);          
+          }
         }
       }
     }
