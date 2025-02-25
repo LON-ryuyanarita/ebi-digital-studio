@@ -329,7 +329,7 @@ $themeUri = get_template_directory_uri();
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>
-          <a href="" class="ebigroup__stores__itemLink fontPanchang">
+          <a data-ebi-onlineconnection class="ebigroup__stores__itemLink fontPanchang">
             <span>ONLINE CONNECTION</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">

@@ -7,6 +7,7 @@ import Header from './header.js';
 import Carousel from './carousel.js';
 import Modal from './modal.js';
 import ShareUrl from './shareUrl.js';
+import OnlineConnection from './onlineConnection.js';
 import Loading from './loading.js';
 import SeMap from './seMap.js';
 
@@ -84,6 +85,8 @@ const DOMContentLoadedCallback = () => {
   modal.init();
   const shareUrl = new ShareUrl();
   shareUrl.init();
+  const onlineConnection = new OnlineConnection();
+  onlineConnection.init();
   const seMap = new SeMap();
   seMap.init();
 
