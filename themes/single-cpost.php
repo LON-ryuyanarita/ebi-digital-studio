@@ -245,77 +245,81 @@ $top_page = get_page_by_path('home');
                             $columns_classname = '-c3';
                           }
                       ?>
-                          <div class="-column <?php echo $columns_classname; ?>">
-                            <?php if ($columns_type == 'left'): ?>
-                              <div class="-txt">
-                                <h3><?php echo $columns_title; ?></h3>
-                                <?php echo $columns_text; ?>
-                              </div>
-                              <div class="-img">
-                                <?php
-                                if ($content && isset($columns_imgs)) :
-                                  foreach ($columns_imgs as $img) :
-                                    $img_file = $img['img'];
-                                    $img_src = wp_get_attachment_image_url($img_file, 'full') ?? null;
-                                    $img_caption = $img['caption'];
-                                ?>
-                                    <figure>
-                                      <img src="<?php echo $img_src; ?>" alt="">
-                                      <figcaption>
-                                        <?php echo nl2br(strip_tags($img_caption)); ?>
-                                      </figcaption>
-                                    </figure>
-                                <?php
-                                  endforeach;
-                                endif;
-                                ?>
-                              </div>
-                            <?php elseif ($columns_type == 'right'): ?>
-                              <div class="-img">
-                                <?php
-                                if ($content && isset($columns_imgs)) :
-                                  foreach ($columns_imgs as $img) :
-                                    $img_file = $img['img'];
-                                    $img_src = wp_get_attachment_image_url($img_file, 'full') ?? null;
-                                    $img_caption = $img['caption'];
-                                ?>
-                                    <figure>
-                                      <img src="<?php echo $img_src; ?>" alt="">
-                                      <figcaption>
-                                        <?php echo nl2br(strip_tags($img_caption)); ?>
-                                      </figcaption>
-                                    </figure>
-                                <?php
-                                  endforeach;
-                                endif;
-                                ?>
-                              </div>
-                              <div class="-txt">
-                                <h3><?php echo $columns_title; ?></h3>
-                                <?php echo $columns_text; ?>
-                              </div>
-                            <?php elseif ($columns_type == 'imgs'): ?>
-                              <div class="-imgs">
-                                <?php
-                                if ($content && isset($columns_imgs)) :
-                                  foreach ($columns_imgs as $img) :
-                                    $img_file = $img['img'];
-                                    $img_src = wp_get_attachment_image_url($img_file, 'full') ?? null;
-                                    $img_caption = $img['caption'];
-                                ?>
-                                    <figure>
-                                      <img src="<?php echo $img_src; ?>" alt="">
-                                      <figcaption>
-                                        <?php echo nl2br(strip_tags($img_caption)); ?>
-                                      </figcaption>
-                                    </figure>
-                                <?php
-                                  endforeach;
-                                endif;
-                                ?>
-                              </div>
-                            <?php endif; ?>
-                          </div>
+                          <?php if ($columns_type == 'hr'): ?>
+                            <hr>
+                          <?php else : ?>
+                            <div class="-column <?php echo $columns_classname; ?>">
+                              <?php if ($columns_type == 'left'): ?>
+                                <div class="-txt">
+                                  <h3><?php echo $columns_title; ?></h3>
+                                  <?php echo $columns_text; ?>
+                                </div>
+                                <div class="-img">
+                                  <?php
+                                  if ($content && isset($columns_imgs)) :
+                                    foreach ($columns_imgs as $img) :
+                                      $img_file = $img['img'];
+                                      $img_src = wp_get_attachment_image_url($img_file, 'full') ?? null;
+                                      $img_caption = $img['caption'];
+                                  ?>
+                                      <figure>
+                                        <img src="<?php echo $img_src; ?>" alt="">
+                                        <figcaption>
+                                          <?php echo nl2br(strip_tags($img_caption)); ?>
+                                        </figcaption>
+                                      </figure>
+                                  <?php
+                                    endforeach;
+                                  endif;
+                                  ?>
+                                </div>
+                              <?php elseif ($columns_type == 'right'): ?>
+                                <div class="-img">
+                                  <?php
+                                  if ($content && isset($columns_imgs)) :
+                                    foreach ($columns_imgs as $img) :
+                                      $img_file = $img['img'];
+                                      $img_src = wp_get_attachment_image_url($img_file, 'full') ?? null;
+                                      $img_caption = $img['caption'];
+                                  ?>
+                                      <figure>
+                                        <img src="<?php echo $img_src; ?>" alt="">
+                                        <figcaption>
+                                          <?php echo nl2br(strip_tags($img_caption)); ?>
+                                        </figcaption>
+                                      </figure>
+                                  <?php
+                                    endforeach;
+                                  endif;
+                                  ?>
+                                </div>
+                                <div class="-txt">
+                                  <h3><?php echo $columns_title; ?></h3>
+                                  <?php echo $columns_text; ?>
+                                </div>
+                              <?php elseif ($columns_type == 'imgs'): ?>
+                                <div class="-imgs">
+                                  <?php
+                                  if ($content && isset($columns_imgs)) :
+                                    foreach ($columns_imgs as $img) :
+                                      $img_file = $img['img'];
+                                      $img_src = wp_get_attachment_image_url($img_file, 'full') ?? null;
+                                      $img_caption = $img['caption'];
+                                  ?>
+                                      <figure>
+                                        <img src="<?php echo $img_src; ?>" alt="">
+                                        <figcaption>
+                                          <?php echo nl2br(strip_tags($img_caption)); ?>
+                                        </figcaption>
+                                      </figure>
+                                  <?php
+                                    endforeach;
+                                  endif;
+                                  ?>
+                                </div>
+                              <?php endif; ?>
+                            </div>
+                          <?php endif; ?>
                       <?php
                         endforeach;
                       endif;

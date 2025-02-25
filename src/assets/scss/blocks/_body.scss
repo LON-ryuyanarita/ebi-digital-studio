@@ -332,16 +332,17 @@
     }
 
     .body__fullimg {
-      height: 587px;
       margin-top: 80px;
       margin-bottom: 72px;
-      overflow: hidden;
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center center;
+      figcaption {
+        margin-top: 14px;
+        padding: 0 1em;
+        font-size: 14px;
+        line-height: 1.286;
+        font-weight: 400;
+        text-align: left;
+        display: block;
       }
     }
 
@@ -379,13 +380,8 @@
         &.-c2 {
           padding-bottom: 60px;
           display: flex;
-          align-items: stretch;
+          align-items: center;
           justify-content: center;
-
-          & + .-c2 {
-            padding-top: 60px;
-            border-top: 1px solid rgba($color-black-1, 0.2);
-          }
 
           .-txt {
             width: 100%;
@@ -406,6 +402,7 @@
             width: 49%;
             margin-left: 32px;
             flex-shrink: 0;
+            align-self: flex-start;
 
             figcaption {
               margin-top: 14px;
@@ -449,6 +446,17 @@
             }
           }
         }
+      }
+
+      hr {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 60px;
+        border: none;
+        border-top: 1px solid rgba($color-black-1, 0.2);
+        outline: none;
+        box-shadow: none;
+        display: block;
       }
     }
 
@@ -951,8 +959,14 @@
       }
 
       .body__fullimg {
-        height: auto;
         margin: cvws(100) cvws(-20) cvws(90);
+
+        figcaption {
+          margin-top: cvws(10);
+          padding: 0 cvws(20);
+          font-size: cvws(24);
+          line-height: cvws(28);
+        }
       }
 
       .body__movie {
@@ -977,10 +991,6 @@
           &.-c2 {
             padding-bottom: cvws(60);
             flex-flow: column nowrap;
-
-            & + .-c2 {
-              padding-top: cvws(50);
-            }
 
             .-txt {
               order: 1;
@@ -1038,6 +1048,10 @@
               }
             }
           }
+        }
+
+        hr {
+          margin-bottom: cvws(50);
         }
       }
 

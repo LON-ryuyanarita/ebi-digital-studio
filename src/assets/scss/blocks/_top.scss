@@ -157,7 +157,7 @@
 
       .-tags {
         line-height: 1;
-        // display: flex; */
+        // display: flex;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -181,7 +181,7 @@
           }
 
           & + a {
-            margin-left: 1em;
+            margin-left: 0.4em;
           }
         }
       }

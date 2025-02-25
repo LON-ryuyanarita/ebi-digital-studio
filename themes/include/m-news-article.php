@@ -10,7 +10,7 @@ $title = get_field('title');
 ?>
 <div class="newsList__item">
   <a href="<?php echo get_permalink($post_id); ?>">
-    <div class="-title"><?php echo nl2br($title); ?></div>
+    <div class="-title"><?php echo strip_tags($title); ?></div>
     <time class="-date fontPanchang" datetime="<?php echo get_the_date('c'); ?>"><?php echo get_the_date('Y/m/d'); ?></time>
     <div class="-i"><i><?php echo file_get_contents(get_template_directory() . '/include/svg/icon-arrow-4.svg'); ?></i></div>
   </a>
