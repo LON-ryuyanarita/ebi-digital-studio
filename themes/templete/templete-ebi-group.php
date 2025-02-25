@@ -289,7 +289,7 @@ $themeUri = get_template_directory_uri();
 </section>
 
 
-<section class="ebigroup__stores">
+<section id="stores" class="ebigroup__stores">
   <div class="ebigroup__stores__head">
     <h2 class="ebigroup__stores__heading">
       <span class="ebigroup__stores__headingMain fontPanchang">EBI GROUP</span>

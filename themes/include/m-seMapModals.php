@@ -33,7 +33,7 @@ $themeUri = get_template_directory_uri();
               お客様のEVに関する疑問や不安を細部にわたって解決いたします。
             </p>
             <div class="ebiButton -small">
-              <a href="#TBD" target="_blank">
+              <a href="https://www.porsche.co.jp/dealersearch/chargingmap/" target="_blank">
                 <span>EV Charging mapはこちら</span>
               </a>
             </div>
@@ -123,7 +123,7 @@ $themeUri = get_template_directory_uri();
               試乗の折返しポイントは、2025年2月にOPENしたばかりの日本初の独立型サービス拠点「ポルシェサービスセンター東京ベイ辰巳」。辰巳工場のポルシェEVチャージャーを使用し、E-パフォーマンスモデルへの充電体験をポルシェプロがレクチャーいたします。また、最先端設備が整うサービスセンター内の見学ツアーもお楽しみいただけます。
             </p>
             <div class="ebiButton -small">
-              <a href="#TBD" target="_blank">
+              <a href="/articles/news1/">
                 <span>E-パフォーマンスモデル特別試乗プランの詳細を知る</span>
               </a>
             </div>
@@ -174,7 +174,7 @@ $themeUri = get_template_directory_uri();
                 </a>
               </div>
               <div class="ebiButton -small">
-                <a href="#TBD" target="_blank">
+                <a href="/ebi-group/#stores">
                   <span>各拠点に関する情報はこちら</span>
                 </a>
               </div>
