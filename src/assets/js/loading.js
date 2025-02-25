@@ -35,30 +35,28 @@ class Loading {
                 delay: 0.3,
                 ease: 'sine.out'
             })
-            .to("#loading__logo", { opacity: 1, duration: 0.1, })
+            .to("#loading__logo", { opacity: 1, duration: 0.075, })
             .to("#loading__logo", { opacity: 0, duration: 0.05 })
-            .to("#loading__logo", { opacity: 1, duration: 0.1 })
+            .to("#loading__logo", { opacity: 1, duration: 0.075 })
             .to("#loading__logo", { opacity: 0, duration: 0.05 })
-            .to("#loading__logo", { opacity: 1, duration: 0.1 })
-            .to("#loading__logo", { opacity: 0, duration: 0.05 })
-            .to("#loading__logo", { opacity: 1, duration: .3, delay: 0.1 })                   
+            .to("#loading__logo", { opacity: 1, duration: .15, delay: 0.05 })                   
             .to('#loading__main', {
                 opacity: 0,
                 ease: 'sine.out',                       
                 duration: .8,       
-                delay: 1,                         
+                delay: .5,              
             })                       
             .to('#loading__main', {
-                scale: 3,
+                scale: 20,
                 duration: .8,
                 delay: -.8,
-                ease: 'sine.out',
+                ease: 'sine.in',
             })                 
             .to('#loading', {
                 background: '#fff',                
                 ease: 'sine.out',                                                       
                 duration: .5,                  
-                delay: -0.25            
+                delay: -0.25        
             })                   
             .to('#loading', {
                 background: '#fff',                
