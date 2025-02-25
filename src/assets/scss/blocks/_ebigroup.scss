@@ -377,11 +377,13 @@
       margin-top: 52px;
       width: 100vw;
       margin-left: calc(50% - 50vw);
+      aspect-ratio: calc(1366 / 461);
 
       @media #{$mq-lte-sp} {
         width: 100%;
         margin-left: initial;
         margin-top: 24px;
+        aspect-ratio: calc(335 / 450);
       }
     }
 
@@ -486,6 +488,7 @@
 
     &__sec {
       padding: 0 52px;
+      width: 100%;
 
       @media #{$mq-lte-sp} {
         padding: 0 10px;
@@ -527,9 +530,19 @@
 
       &.__is1 {
         margin-top: -20px;
+        display: block;
+        width: 100%;
+        aspect-ratio: calc(468 / 263);
 
         @media #{$mq-lte-sp} {
           margin-top: 0px;
+          aspect-ratio: calc(335 / 219);
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          height: auto;
         }
       }
 
@@ -539,6 +552,11 @@
         margin-top: 32px;
         margin-left: auto;
         margin-right: auto;
+        aspect-ratio: calc(311 / 173);
+
+        @media #{$mq-lte-sp} {
+          aspect-ratio: calc(	945 / 596);
+        }
       }
     }
 
@@ -573,6 +591,10 @@
     }
 
     &__secDeco {
+      aspect-ratio: calc(1323 / 220);
+      @media #{$mq-lte-sp} {
+        aspect-ratio: calc(335 / 236);        
+      }
     }
   }
 
