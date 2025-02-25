@@ -19,8 +19,8 @@ $top_page = get_page_by_path('home');
         <header class="top__header">
           <h2 class="top__title fontPanchang">EBI DIGITAL STUDIO</h2>
           <div class="top__description">
-            日本最大のポルシェディーラー EBI GROUPが企画する<br>
-            ポルシェのイベントやコンテンツのポータルサイトです。
+            日本最大のポルシェ正規ディーラー EBI GROUP が創出する<br>
+            ポルシェに惹かれるすべての人たちへ向けたメディアサイト
           </div>
         </header>
 
