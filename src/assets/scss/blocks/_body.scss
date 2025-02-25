@@ -385,16 +385,19 @@
 
           .-txt {
             width: 100%;
+            margin-top: -6px;
 
             h3 {
-              margin-top: -6px;
+              margin-bottom: 20px;
               font-size: 32px;
               font-weight: bold;
               line-height: 1.188;
             }
 
             p {
-              margin-top: 20px;
+              & + p {
+                margin-top: 20px;
+              }
             }
           }
 
@@ -402,7 +405,6 @@
             width: 49%;
             margin-left: 32px;
             flex-shrink: 0;
-            align-self: flex-start;
 
             figcaption {
               margin-top: 14px;
@@ -993,16 +995,19 @@
             flex-flow: column nowrap;
 
             .-txt {
+              margin-top: 0;
               order: 1;
 
               h3 {
-                margin-top: 0;
+                margin-bottom: cvws(20);
                 font-size: cvws(36);
                 line-height: cvws(42);
               }
 
               p {
-                margin-top: cvws(20);
+                & + p {
+                  margin-top: cvws(20);
+                }
               }
             }
 
