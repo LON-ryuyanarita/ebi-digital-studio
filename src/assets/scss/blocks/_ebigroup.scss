@@ -619,6 +619,12 @@
       background-color: #ccc;
       margin-top: 40px;
 
+      iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
       @media #{$mq-lte-sp} {
         height: 237px;
         margin-top: 20px;

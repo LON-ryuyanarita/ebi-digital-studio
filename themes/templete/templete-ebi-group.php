@@ -297,7 +297,7 @@ $themeUri = get_template_directory_uri();
     </h2>
   </div>
   <div class="ebigroup__stores__map">
-
+    <iframe src="https://www.google.com/maps/d/u/7/embed?mid=1Z-whQUwxi7Hfo11cHT262xkwNlil-gY&ehbc=2E312F" width="640" height="480"></iframe>
   </div>
 
   <div class="section__inner">
