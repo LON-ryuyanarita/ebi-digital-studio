@@ -73,6 +73,7 @@
 
       .-lower {
         margin-top: 2px;
+        padding-right: 240px;
       }
 
       .article__info {
@@ -94,13 +95,19 @@
       font-size: 10px;
       font-family: $font-family-panchang;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: flex-start;
 
       & + dl {
         &::before {
           content: '/';
           margin: 0 6px;
+        }
+      }
+
+      &.-tags {
+        dd {
+          flex-flow: row wrap;
         }
       }
 
@@ -276,6 +283,7 @@
 
         .-lower {
           margin-top: cvws(18);
+          padding-right: 0;
         }
 
         .article__info {

@@ -157,10 +157,14 @@
 
       .-tags {
         line-height: 1;
-        display: flex;
+        // display: flex; */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         position: absolute;
         bottom: 80px;
         left: 155px;
+        right: 0;
         z-index: 1;
 
         a {
@@ -681,7 +685,9 @@
         }
 
         .-tags {
-          bottom: cvws(100);
+          padding-bottom: cvws(4);
+          line-height: 1.2;
+          bottom: cvws(98);
           left: cvws(170);
 
           a {

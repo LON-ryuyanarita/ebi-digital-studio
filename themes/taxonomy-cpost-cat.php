@@ -85,6 +85,7 @@ $top_page = get_page_by_path('home');
             </a>
             <div class="-tags">
               <?php if (!empty($terms) && !is_wp_error($terms)) :
+                $terms = array_slice($terms, 0, 3);
                 foreach ($terms as $term) : ?>
                   <a href="<?php echo get_term_link($term); ?>">#<?php echo esc_html($term->name); ?></a>
               <?php endforeach;

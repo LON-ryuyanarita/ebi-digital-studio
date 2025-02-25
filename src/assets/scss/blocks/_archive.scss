@@ -147,10 +147,14 @@
 
       .-tags {
         line-height: 1;
-        display: flex;
+        // display: flex;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         position: absolute;
         bottom: 80px;
         left: 155px;
+        right: 0;
         z-index: 1;
 
         a {
@@ -311,11 +315,23 @@
       }
 
       .archive__top__article__item {
+        height: 100%;
+
         a {
+          height: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+          }
         }
 
         .-tags {
-          bottom: cvws(100);
+          padding-bottom: cvws(4);
+          line-height: 1.2;
+          bottom: cvws(98);
           left: cvws(170);
 
           a {
@@ -326,6 +342,7 @@
       }
 
       .archive__top__article__img {
+        height: 100%;
       }
 
       .archive__top__article__body {

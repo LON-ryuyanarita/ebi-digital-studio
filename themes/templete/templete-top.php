@@ -65,6 +65,7 @@ $top_page = get_page_by_path('home');
                   <?php
                   $terms = wp_get_post_terms($post_id, 'cpost-tag');
                   if (!empty($terms) && !is_wp_error($terms)) :
+                    $terms = array_slice($terms, 0, 3);
                     foreach ($terms as $term) :
                   ?>
                       <a href="<?php echo get_term_link($term); ?>">#<?php echo esc_html($term->name); ?></a>
@@ -123,6 +124,7 @@ $top_page = get_page_by_path('home');
                       <?php
                       $terms = wp_get_post_terms($post_id, 'cpost-tag');
                       if (!empty($terms) && !is_wp_error($terms)) :
+                        $terms = array_slice($terms, 0, 3);
                         foreach ($terms as $term) :
                       ?>
                           <a href="<?php echo get_term_link($term); ?>">#<?php echo esc_html($term->name); ?></a>
