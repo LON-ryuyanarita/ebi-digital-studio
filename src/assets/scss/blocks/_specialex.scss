@@ -230,6 +230,14 @@
       &.__is2 {
         margin-top: 77px;
 
+        .specialex__feature__itemPicItem {
+          aspect-ratio: calc(500 / 336);
+
+          @media #{$mq-lte-sp} {
+            aspect-ratio: calc(334 / 225);
+          }
+        }
+
         @media #{$mq-lte-sp} {
           margin-top: 52px;
         }
@@ -237,6 +245,18 @@
 
       &.__is3 {
         margin-top: 115px;
+
+        .specialex__feature__itemPicItem {
+          aspect-ratio: calc(67 / 37);          
+        }
+        
+        .specialex__feature__galleryItem {
+          aspect-ratio: calc(595 / 338);
+
+          @media #{$mq-lte-sp} {
+            aspect-ratio: calc(165 / 94);
+          }
+        }
 
         @media #{$mq-lte-sp} {
           margin-top: 69px;
@@ -307,8 +327,7 @@
         font-size: 14px;
         gap: 10px;
       }
-
-      // TODO
+      
       &::before {
         content: "";
         display: inline-block;
