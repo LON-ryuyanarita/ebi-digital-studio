@@ -15,6 +15,11 @@ class Loading {
             },500)            
         }               
         this.setLocalStorage(); 
+
+        // gsap.set('#loading', {
+        //     backgroundColor: '#000',                
+        // })        
+        // this.startAnimation();
     }
 
 
@@ -43,11 +48,9 @@ class Loading {
         tl
             .to('#loading__text', {
                 maskPosition: '-150% 0',
-                duration: 1.5,
-                delay: 0.3,
-                ease: 'sine.out'
+                duration: 1.2,                
             })
-            .to("#loading__logo", { opacity: 1, duration: 0.075, })
+            .to("#loading__logo", { opacity: 1, duration: 0.075, delay: -0.075})
             .to("#loading__logo", { opacity: 0, duration: 0.05 })
             .to("#loading__logo", { opacity: 1, duration: 0.075 })
             .to("#loading__logo", { opacity: 0, duration: 0.05 })
