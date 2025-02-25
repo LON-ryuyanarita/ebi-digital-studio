@@ -25,7 +25,7 @@ $themeUri = get_template_directory_uri();
   </figure>
   <h1 class="ebigroup__mv__title">
     <span class="ebigroup__mv__titleMain fontPanchang">EBI GROUP</span>
-    <span class="ebigroup__mv__titleSub fontPanchang">イー・ビー・アイ・グループ</span>
+    <span class="ebigroup__mv__titleSub">イー・ビー・アイ・グループ</span>
   </h1>
 </section>
 
