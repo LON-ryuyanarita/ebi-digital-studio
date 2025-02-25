@@ -48,6 +48,7 @@ $top_page = get_page_by_path('home');
                       <img src="<?php echo esc_url($top_mv_src); ?>" alt="">
                     <?php else : ?>
                       <video
+                        class="js__loading__restartVideo"
                         src="<?php echo esc_url($top_mv_src); ?>"
                         muted
                         autoplay

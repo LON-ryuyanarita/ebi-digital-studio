@@ -4,7 +4,7 @@ import $ from 'jquery';
 class Loading {
     constructor() {    
         const isAlreadyLoading = this.chackHasSettionLocalStorage();        
-        if(isAlreadyLoading) {
+        if(isAlreadyLoading) {            
             this.hideLoading();
         } else {
             gsap.set('#loading', {
@@ -20,6 +20,18 @@ class Loading {
 
     hideLoading() {
         $('#loading').remove();
+    }
+
+    restartVideo() {
+        const $video = gsap.utils.toArray('.js__loading__restartVideo');
+        $video.forEach((video) => {
+            // 一度停止
+            video.pause();
+            // 一度最初に戻す                    
+            video.currentTime = 0;
+            // 再生
+            video.play();
+        })        
     }
 
     startAnimation() {
@@ -62,7 +74,10 @@ class Loading {
                 background: '#fff',                
                 ease: 'sine.out',                                                       
                 opacity: 0,
-                delay: -.25
+                delay: -.25,
+                onStart: () => {
+                    this.restartVideo(); 
+                }
             })                   
 
     } 
