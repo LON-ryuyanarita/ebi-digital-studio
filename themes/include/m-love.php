@@ -23,7 +23,7 @@ $themeUri = get_template_directory_uri();
   <div class="love__inner">
     <div class="love__summary">
       <h2 class="love__title">
-        <em class="fontPanchang">LOVE<br>PORSCHE</em>
+        <em class="fontPanchang">LOVE<br class="pc"> PORSCHE</em>
         <span>オーナーレビュー</span>
       </h2>
       <div class="love__description">

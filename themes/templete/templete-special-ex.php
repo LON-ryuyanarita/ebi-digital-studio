@@ -47,7 +47,7 @@ $themeUri = get_template_directory_uri();
                 <br class="pc">
                 国内でも類を見ない特別なストアとして、
                 <br class="pc">
-                EBI GROUPがコンセプトを企画しております。
+                EBI GROUP がコンセプトを企画しております。
               </p>
               <p>
                 このストアで[新車/中古車]をご購入いただいたお客様には、
@@ -218,7 +218,7 @@ $themeUri = get_template_directory_uri();
               </h2>
               <p class="specialex__feature__itemHeading __is3">
                 <span>
-                  日本最大のポルシェディーラーEBI GROUPのハブストアとして、
+                  日本最大のポルシェディーラー EBI GROUP のハブストアとして、
                   <br class="pc">
                   全8拠点とのシームレスな
                   <br class="pc">

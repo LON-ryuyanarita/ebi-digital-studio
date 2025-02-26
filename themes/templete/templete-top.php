@@ -218,12 +218,9 @@ $top_page = get_page_by_path('home');
           <div class="top__ds__inner">
             <h2 class="top__ds__title fontPanchang">
               <em>EBI DIGITAL STUDIO</em>
-              <small>ディーラーだから提供できる価値がある。</small>
+              <small>ポルシェに惹かれるすべての人へ。</small>
             </h2>
             <div class="top__ds__text">
-              <p>
-                EBI DIGITAL STUDIO<br>ポルシェに惹かれるすべての人へ。
-              </p>
               <p>
                 東京のポルシェ正規ディーラー EBI GROUP が提供する、<br>
                 “ポルシェ・エンターテイメント空間”です。
@@ -313,15 +310,15 @@ $top_page = get_page_by_path('home');
 
           <div class="top__map">
             <div class="top__map__title">
-              東京を中心に多数ショールームを展開ぜひお近くのショールームまでお越しください
+              東京都心に多数の拠点を展開。<br>ぜひお近くの店舗までお越しください。
             </div>
             <div class="top__map__contents">
-              <iframe src="https://www.google.com/maps/d/u/7/embed?mid=1Z-whQUwxi7Hfo11cHT262xkwNlil-gY&ehbc=2E312F" width="640" height="480"></iframe>
+              <iframe src="https://www.google.com/maps/d/u/7/embed?mid=1Z-whQUwxi7Hfo11cHT262xkwNlil-gY&amp;ehbc=2E312F&amp;z=11" width="640" height="480"></iframe>
             </div>
           </div>
         </section>
 
-        <section class="top__contact">EBI GROUP （株式会社エポカルインターナショナル）が運営するポルシェスタジオ銀座の外観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP
+        <section class="top__contact">
           <div class="top__contact__inner">
             <h2 class="top__contact__title fontPanchang">
               CONTACT
@@ -329,11 +326,14 @@ $top_page = get_page_by_path('home');
             <div class="top__contact__text">
               <p>
                 ご試乗やご購入に関するご相談など、<br class="sp">まずはお気軽にお問い合わせください。<br>
-                グループのハブストア「ポルシェスタジオ銀座」の<br class="sp">ポルシェプロが対応させていただきます。
+                グループのハブストア「ポルシェスタジオ銀座」の<br class="sp">PORSCHE PROが対応させていただきます。
               </p>
               <p>
                 その後、お客様のご状況やご希望に合わせて、<br>
                 都心の各拠点へシームレスにお繋ぎすることも可能です。
+              </p>
+              <p>
+                スタッフ一同、心よりお待ちしております。
               </p>
             </div>
             <div class="top__contact__btn ebiButton -full -black">
