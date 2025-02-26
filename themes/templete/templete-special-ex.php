@@ -137,9 +137,9 @@ $themeUri = get_template_directory_uri();
                   <br class="pc">
                   【E-Paformanceモデル専用】の爽快テストドライブプラン
                 </span>
-                <span class="specialex__feature__itemLinkTag">
-                  試乗体験プランの詳細を見る
-                </span>
+                <a href="https://ebi-digitalstudio.jp/articles/news1/">
+                  <span class="specialex__feature__itemLinkTag">試乗体験プランの詳細を見る</span>
+                </a>
               </div>
             </a>
           </div>
@@ -293,7 +293,7 @@ $themeUri = get_template_directory_uri();
     <section class="specialex__feature__cta">
       <div class="section__inner">
         <h2 class="specialex__feature__cta__heading">ポルシェスタジオ銀座 公式LINEはこちら</h2>
-        <a href="" class="specialex__feature__cta__link">
+        <a href="https://page.line.me/836wxeor" target="_blank" class="specialex__feature__cta__link">
           公式LINEを登録する
         </a>
       </div>
