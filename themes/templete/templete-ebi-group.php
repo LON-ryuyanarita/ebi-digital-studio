@@ -46,7 +46,7 @@ $themeUri = get_template_directory_uri();
         <p>
           EBI GROUP は1998年からボルシェビジネスをスタートし、
           <br class="pc">
-          25年以上に渡り国内最大市場である東京でポルシェ正規ディーラーを展開してしています。
+          25年以上に渡り国内最大市場である東京でポルシェ正規ディーラーを展開しています。
         </p>
         <p>
           お客さまの“歓びの創造者”をモットーに、
@@ -297,7 +297,7 @@ $themeUri = get_template_directory_uri();
     </h2>
   </div>
   <div class="ebigroup__stores__map">
-    <iframe src="https://www.google.com/maps/d/u/7/embed?mid=1Z-whQUwxi7Hfo11cHT262xkwNlil-gY&ehbc=2E312F" width="640" height="480"></iframe>
+    <iframe src="https://www.google.com/maps/d/u/7/embed?mid=1Z-whQUwxi7Hfo11cHT262xkwNlil-gY&amp;ehbc=2E312F&amp;z=11" width="640" height="480"></iframe>
   </div>
 
   <div class="section__inner">
