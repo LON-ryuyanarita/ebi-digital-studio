@@ -48,35 +48,42 @@ class Loading {
         tl
             .to('#loading__text', {
                 maskPosition: '-150% 0',
-                duration: 1.2,                
-            })
-            .to("#loading__logo", { opacity: 1, duration: 0.075, delay: -0.075})
-            .to("#loading__logo", { opacity: 0, duration: 0.05 })
-            .to("#loading__logo", { opacity: 1, duration: 0.075 })
-            .to("#loading__logo", { opacity: 0, duration: 0.05 })
-            .to("#loading__logo", { opacity: 1, duration: .15, delay: 0.05 })                   
+                duration: 1.,
+                onStart: () => {
+                    const _tl = gsap.timeline({
+                        delay: 0.8,
+                    });
+                    _tl
+                        .to("#loading__logo", { opacity: 1, duration: 0.075})
+                        .to("#loading__logo", { opacity: 0, duration: 0.05 })
+                        .to("#loading__logo", { opacity: 1, duration: 0.075 })
+                        .to("#loading__logo", { opacity: 0, duration: 0.05 })
+                        .to("#loading__logo", { opacity: 1, duration: .15, delay: 0.05 })                       
+                }                
+            })                
             .to('#loading__main', {
                 opacity: 0,
-                ease: 'sine.out',                       
-                duration: .8,       
-                delay: .5,              
+                ease: 'sine.inOut',                       
+                duration: .6, 
+                delay: 1.,              
             })                       
             .to('#loading__main', {
                 scale: 20,
-                duration: .8,
-                delay: -.8,
+                duration: .6,
+                delay: -.6,
                 ease: 'sine.in',
             })                 
             .to('#loading', {
                 background: '#fff',                
                 ease: 'sine.out',                                                       
-                duration: .5,                  
+                duration: .4,              
                 delay: -0.25        
             })                   
             .to('#loading', {
                 background: '#fff',                
                 ease: 'sine.out',                                                       
                 opacity: 0,
+                delay: .4,
                 delay: -.25,
                 onStart: () => {
                     this.restartVideo(); 
