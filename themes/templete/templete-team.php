@@ -36,7 +36,7 @@ $themeUri = get_template_directory_uri();
                   しかし、その多くは断片的で、真に“ポルシェに迫る”ような深い洞察を持つ情報は限られています。
                 </p>
                 <p>
-                  EBI GROUPは、日本最大のポルシェ正規ディーラーグループとして、
+                  EBI GROUP は、日本最大のポルシェ正規ディーラーグループとして、
                   <br class="pc">
                   25年以上にわたり東京という世界屈指のマーケットでポルシェと向き合い、
                   <br class="pc">
@@ -67,7 +67,7 @@ $themeUri = get_template_directory_uri();
                 </p>                                              
               </div>
               <figure class="team__mv__logo">
-                <img src="<?= $themeUri ?>/assets/img/team/logo.png" alt="EBI DIGITAL STUDIO" loading="lazy">
+                <img src="<?= $themeUri ?>/assets/img/team/logo.png" alt="ポルシェ正規ディーラーである EBI GROUP が運営する EBI DIGITAL STUDIO のロゴ｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
               </figure>
             </div>
           </div>
@@ -159,7 +159,7 @@ $themeUri = get_template_directory_uri();
                   <div class="team__member__itemText">
                     <p class="team__member__itemPosition fontPanchang">Photographer</p>
                     <p class="team__member__itemNameEn fontPanchang">Shizuka Sherry</p>
-                    <h3 class="team__member__itemNameJa">シズカシェリー</h3>                    
+                    <h3 class="team__member__itemNameJa">シズカ シェリー</h3>                    
                     <p class="team__member__itemScope fontPanchang">
                       <span>Scope</span>
                       Photograph

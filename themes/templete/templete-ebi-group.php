@@ -20,7 +20,7 @@ $themeUri = get_template_directory_uri();
       <source type="image/webp" media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/mv_sp.webp">
       <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/mv_sp.png">
       <source type="image/webp" srcset="<?= $themeUri ?>/assets/img/ebigroup/mv.webp">
-      <img src="<?= $themeUri ?>/assets/img/ebigroup/mv.png" alt="">
+      <img src="<?= $themeUri ?>/assets/img/ebigroup/mv.png" alt="EBI GROUP（イー・ビー・アイ・グループ｜イービーアイグループ）ページの写真｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
     </picture>
   </figure>
   <h1 class="ebigroup__mv__title">
@@ -44,7 +44,7 @@ $themeUri = get_template_directory_uri();
       </h3>
       <div class="ebigroup__about__desc">
         <p>
-          EBI GROUPは1998年からボルシェビジネスをスタートし、
+          EBI GROUP は1998年からボルシェビジネスをスタートし、
           <br class="pc">
           25年以上に渡り国内最大市場である東京でポルシェ正規ディーラーを展開してしています。
         </p>
@@ -67,7 +67,7 @@ $themeUri = get_template_directory_uri();
           オーナーさま同士やスタッフとの繋がりを大切にするご提案を続けています。
         </p>
         <p>
-          EBI GROUPだけのエクスクルーシブなポルシェ体験を、
+          EBI GROUP だけのエクスクルーシブなポルシェ体験を、
           <br class="pc">
           これからもぜひお楽しみください。
         </p>
@@ -79,7 +79,7 @@ $themeUri = get_template_directory_uri();
         <source type="image/webp" media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/about_sp.webp">
         <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/about_sp.png">
         <source type="image/webp" srcset="<?= $themeUri ?>/assets/img/ebigroup/about.webp">
-        <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/about.png" alt="" loading="lazy">
+        <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/about.png" alt="EBI GROUP（イー・ビー・アイ・グループ｜イービーアイグループ）が行うポルシェオーナー向けイベント「THE FEST.」の写真｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP" loading="lazy">
       </picture>
     </figure>
   </div>  
@@ -135,7 +135,7 @@ $themeUri = get_template_directory_uri();
       </div>
       <div class="ebigroup__group__parent">
         <h3 class="ebigroup__group__parentHead">株式会社イー・ビー・アイ・マーケティング</h3>
-        <p class="ebigroup__group__parentDesc">EBI GROUP全体のポルシェビジネスサポート、<br class="sp">マーケティング活動、人材開発、レストラン事業など</p>              
+        <p class="ebigroup__group__parentDesc">EBI GROUP 全体のポルシェビジネスサポート、<br class="sp">マーケティング活動、人材開発、レストラン事業など</p>              
       </div>
     </div>
 
@@ -160,7 +160,7 @@ $themeUri = get_template_directory_uri();
       </h3>
       <div class="ebigroup__mission__desc">
         <p>
-          EBI GROUPは日本最大のポルシェ正規ディーラーグループとして、
+          EBI GROUP は日本最大のポルシェ正規ディーラーグループとして、
           <br class="pc">
           お客さまに最高のポルシェライフを謳歌いただくためのご提案を欠かしません。
         </p>
@@ -171,7 +171,7 @@ $themeUri = get_template_directory_uri();
           <source type="image/webp" media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/mission_sp.webp">
           <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/mission_sp.png">
           <source type="image/webp" srcset="<?= $themeUri ?>/assets/img/ebigroup/mission.webp">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/mission.png" alt="" loading="lazy">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/mission.png" alt="EBI GROUP（イー・ビー・アイ・グループ｜イービーアイグループ）が実施するイベントなどの写真｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP" loading="lazy">
         </picture>
       </figure>
 
@@ -230,7 +230,7 @@ $themeUri = get_template_directory_uri();
             <div class="ebigroup__feature__secFigImg">
               <picture>
                 <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/feature_1_sp.png">
-                <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/feature_1.png" alt="" >
+                <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/feature_1.png" alt="EBI GROUP（イー・ビー・アイ・グループ｜イービーアイグループ）のポルシェ累計販売台数グラフ｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP" >
               </picture>
             </div>
             <figcaption class="ebigroup__feature__secFigCaption __right">
@@ -239,7 +239,7 @@ $themeUri = get_template_directory_uri();
           </figure>
           <div class="ebigroup__feature__secDesc">
             <p>
-              EBI GROUPがポルシェビジネスをスタートしてから約25年の間に、お客さまへお届けしてきたポルシェ車両のグループ累計販売台数は31,486台に上ります。(2024年末時点)その1台1台すべてにお客さまとの唯一無二のストーリーがあり、語り尽くせないほどたくさんのユニークなエピソードで彩られています。
+              EBI GROUP がポルシェビジネスをスタートしてから約25年の間に、お客さまへお届けしてきたポルシェ車両のグループ累計販売台数は31,486台に上ります。(2024年末時点)その1台1台すべてにお客さまとの唯一無二のストーリーがあり、語り尽くせないほどたくさんのユニークなエピソードで彩られています。
               <br>
               全拠点のハブストア「ポルシェスタジオ銀座」を起点として、グループ全体で次世代のプレミアムカーディーラーのニュースタンダードを確立し、これから先もさらに多くのお客さまへポルシェの魅力をひとつひとつ丁寧にお伝えしていきます。 
             </p>                
@@ -248,7 +248,7 @@ $themeUri = get_template_directory_uri();
         <figure class="ebigroup__feature__secDeco">
           <picture>
             <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/feature_1_deco_sp.png">
-            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/feature_1_deco.png" alt="">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/feature_1_deco.png" alt="PORSCHE PRO（ポルシェプロ）やセールス、テクニシャンなどEBI GROUP（イー・ビー・アイ・グループ｜イービーアイグループ）のスタッフの方々の写真｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
           </picture>
         </figure>            
         <div class="ebigroup__feature__sec">
@@ -260,7 +260,7 @@ $themeUri = get_template_directory_uri();
             <div class="ebigroup__feature__secFigImg">
               <picture>
                 <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/feature_2_sp.png">
-                <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/feature_2.png" alt="">
+                <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/feature_2.png" alt="PORSCHE AGが定める資格認定プログラムZPT（ポルシェ認定テクニシャン）におけるEBI GROUP（イー・ビー・アイ・グループ｜イービーアイグループ）所属テクニシャンのZPT資格取得率｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
               </picture>
             </div>
             <figcaption class="ebigroup__feature__secFigCaption">
@@ -269,7 +269,7 @@ $themeUri = get_template_directory_uri();
           </figure>              
           <div class="ebigroup__feature__secDesc">
             <p>
-              EBI GROUPが運営する、東京ベイ辰巳 世田谷 目黒 高輪 小石川の5工場には、総勢約70名のテクニシャンが在籍しています。そのほとんどが、ポルシェテクニシャンとしての技術力を問う世界統一資格ZPTの資格を取得しており、さらにその内19名が最難関にして最高位のゴールド資格を保有しています。EV領域においては、ディーラー向けに開放されたHVE資格[ポルシェ独自の世界統一EV資[格]の日本第一号取得者を輩出しました。
+              EBI GROUP が運営する、東京ベイ辰巳 世田谷 目黒 高輪 小石川の5工場には、総勢約70名のテクニシャンが在籍しています。そのほとんどが、ポルシェテクニシャンとしての技術力を問う世界統一資格ZPTの資格を取得しており、さらにその内19名が最難関にして最高位のゴールド資格を保有しています。EV領域においては、ディーラー向けに開放されたHVE資格[ポルシェ独自の世界統一EV資[格]の日本第一号取得者を輩出しました。
               <br>
               2024年2月には、日本初の独立型サービスセンター「ポルシェサービスセンター東京ベイ辰巳」をOPENさせ、クラシックからレーシングマシン、最新EVに至るまで、あらゆるポルシェの整備を完璧にこなす精鋭テクニシャンが集結する最高峰の体制を整えました。
               <br>
@@ -280,7 +280,7 @@ $themeUri = get_template_directory_uri();
         <figure class="ebigroup__feature__secDeco">
           <picture>
             <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/ebigroup/feature_2_deco_sp.png">
-            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/feature_2_deco.png" alt="">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/feature_2_deco.png" alt="PORSCHE PRO（ポルシェプロ）やセールス、テクニシャンなどEBI GROUP（イー・ビー・アイ・グループ｜イービーアイグループ）のスタッフの方々の写真｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
           </picture>
         </figure>            
       </div>
@@ -304,7 +304,7 @@ $themeUri = get_template_directory_uri();
     <ul class="ebigroup__stores__list">
       <li class="ebigroup__stores__item">
         <figure class="ebigroup__stores__itemFig">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_1.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_1.png" alt="EBI GROUP （株式会社エポカルインターナショナル）が運営するポルシェスタジオ銀座の外観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </figure>
         <h3 class="ebigroup__stores__itemTitle">
           ポルシェスタジオ銀座
@@ -342,13 +342,13 @@ $themeUri = get_template_directory_uri();
       </li>
       <li class="ebigroup__stores__item">
         <figure class="ebigroup__stores__itemFig">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_2.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_2.png" alt="EBI GROUP （株式会社ブライトインターナショナル）が運営するポルシェサービスセンター東京ベイ辰巳の外観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </figure>
         <h3 class="ebigroup__stores__itemTitle">
           ポルシェサービスセンター東京ベイ辰巳              
         </h3>
         <p class="ebigroup__stores__itemDesc">
-          東京湾岸の江東区辰巳エリアに位置し、EV専用の作業ペイやダイレクトダイアログペイなど、最先端設備を完備した国内初の独立型大型サービスセンターです。グループ内から最高峰の技術力と経験を有する精鋭のテクニシャンたちが招集された、EBI GROUPが誇るフラッグシップサービスセンターです。
+          東京湾岸の江東区辰巳エリアに位置し、EV専用の作業ペイやダイレクトダイアログペイなど、最先端設備を完備した国内初の独立型大型サービスセンターです。グループ内から最高峰の技術力と経験を有する精鋭のテクニシャンたちが招集された、 EBI GROUP が誇るフラッグシップサービスセンターです。
         </p>
         <div class="ebigroup__stores__itemInfo">
           <p class="ebigroup__stores__itemAddress">
@@ -374,7 +374,7 @@ $themeUri = get_template_directory_uri();
       </li>
       <li class="ebigroup__stores__item">
         <figure class="ebigroup__stores__itemFig">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_3.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_3.png" alt="EBI GROUP （株式会社エクセレンスインターナショナル）が運営するポルシェセンター青山の外観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </figure>
         <h3 class="ebigroup__stores__itemTitle">
           ポルシェセンター青山              
@@ -413,14 +413,14 @@ $themeUri = get_template_directory_uri();
       </li>
       <li class="ebigroup__stores__item">
         <figure class="ebigroup__stores__itemFig">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_4.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_4.png" alt="EBI GROUP （株式会社エクセレンスインターナショナル）が運営するポルシェセンター青山 世田谷認定中古車センターの外観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </figure>
         <h3 class="ebigroup__stores__itemTitle">
           <span>ポルシェセンター青山</span> 世田谷認定中古車センター              
         </h3>
         <p class="ebigroup__stores__itemTitleSub">ポルシェクラシックパートナー</p>
         <p class="ebigroup__stores__itemDesc">
-          常時10台以上の厳選された認定中古車を展示し、17ペイのリフトを備えた大規模なサービスセンターを併設。国内初の「ポルシェクラシックパートナー」として、多彩なクラシックモデルの販売・修理も万全の体制でサポート。世界基準のテクニシャンが、安心のポルシェライフを末長くサポートする体制を整えています。
+          常時10台以上の厳選された認定中古車を展示し、17ペイのリフトを備えた大規模なサービスセンターを併設。国内初の「ポルシェクラシックパートナー」として、多彩なクラシックモデルの販売・修理も万全の体制でサポート。<br class="pc">世界基準のテクニシャンが、安心のポルシェライフを末長くサポートする体制を整えています。
         </p>
         <div class="ebigroup__stores__itemInfo">
           <p class="ebigroup__stores__itemAddress">
@@ -455,7 +455,7 @@ $themeUri = get_template_directory_uri();
       </li>
       <li class="ebigroup__stores__item">
         <figure class="ebigroup__stores__itemFig">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_5.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_5.png" alt="EBI GROUP （株式会社ブライトインターナショナル）が運営するポルシェセンター目黒の外観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </figure>
         <h3 class="ebigroup__stores__itemTitle">
           ポルシェセンター目黒
@@ -496,7 +496,7 @@ $themeUri = get_template_directory_uri();
       </li>
       <li class="ebigroup__stores__item">
         <figure class="ebigroup__stores__itemFig">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_6.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_6.png" alt="EBI GROUP （株式会社ブライトインターナショナル）が運営するポルシェセンター目黒 六本木認定中古車センターの外観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </figure>
         <h3 class="ebigroup__stores__itemTitle">
           <span>ポルシェセンター目黒</span> 六本木認定中古車センター
@@ -534,7 +534,7 @@ $themeUri = get_template_directory_uri();
       </li>
       <li class="ebigroup__stores__item">
         <figure class="ebigroup__stores__itemFig">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_7.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_7.png" alt="EBI GROUP （株式会社エポカルインターナショナル）が運営するポルシェセンター高輪の外観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </figure>
         <h3 class="ebigroup__stores__itemTitle">
           ポルシェセンター高輪
@@ -584,7 +584,7 @@ $themeUri = get_template_directory_uri();
       </li>
       <li class="ebigroup__stores__item">
         <figure class="ebigroup__stores__itemFig">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_8.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/store_8.png" alt="EBI GROUP （株式会社エポカルインターナショナル）が運営するポルシェセンター高輪 小石川認定中古車センターの外観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </figure>
         <h3 class="ebigroup__stores__itemTitle">
           <span>ポルシェセンター高輪</span>
@@ -639,7 +639,7 @@ $themeUri = get_template_directory_uri();
     <ul class="ebigroup__restaurant__list">
       <li class="ebigroup__restaurant__item">
         <figure class="ebigroup__restaurant__itemFig">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_1.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_1.png" alt="EBI GROUP が運営するThe Momentum by Porsche（ザ モメンタム バイ ポルシェ）の内観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </figure>
         <div class="ebigroup__restaurant__itemTitleWrap">
           <h3 class="ebigroup__restaurant__itemTitle">
@@ -647,11 +647,11 @@ $themeUri = get_template_directory_uri();
             <span class="ebigroup__restaurant__itemTitleSub">ザ モメンタム バイ ポルシェ</span>
           </h3>
           <figure class="ebigroup__restaurant__itemLogo">
-            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_1_logo.png" alt="">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_1_logo.png" alt="EBI GROUP が運営するThe Momentum by Porsche（ザ モメンタム バイ ポルシェ）のロゴ｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
           </figure>
         </div>
         <p class="ebigroup__restaurant__itemDesc">
-          ポルシェスタジオ銀座に隣接する、世界初のポルシェ公認のファインダイニング。各国から集めたこだわりのお酒と、シェフ自慢の数々の料理が、心と身体を明日へのエネルギーで満たします。そして、細部までこだわり抜いて設えたスタイリッシュな空間は、車好きの遊び心をくすぐるまさに上質な大人の遊び場です。
+          ポルシェスタジオ銀座に隣接する、世界初のポルシェ公認のファインダイニング。各国から集めたこだわりのお酒と、シェフ自慢の数々の料理が、心と身体を明日へのエネルギーで満たします。細部までこだわり抜いて設えたスタイリッシュな空間は、車好きの遊び心をくすぐるまさに上質な大人の遊び場です。
         </p>
         <div class="ebigroup__restaurant__itemInfo">
           <p class="ebigroup__restaurant__itemAddress">
@@ -674,7 +674,7 @@ $themeUri = get_template_directory_uri();
       </li>
       <li class="ebigroup__restaurant__item">
         <figure class="ebigroup__restaurant__itemFig">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_2.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_2.png" alt="EBI GROUP が運営するTanta Roba（タンタローバ）の内観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </figure>
         <div class="ebigroup__restaurant__itemTitleWrap">
           <h3 class="ebigroup__restaurant__itemTitle">
@@ -682,7 +682,7 @@ $themeUri = get_template_directory_uri();
             <span class="ebigroup__restaurant__itemTitleSub">タンタローバ</span>
           </h3>
           <figure class="ebigroup__restaurant__itemLogo">
-            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_2_logo.png" alt="">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_2_logo.png" alt="EBI GROUP が運営するTanta Roba（タンタローバ）のロゴ｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
           </figure>
         </div>
         <p class="ebigroup__restaurant__itemDesc">
@@ -709,7 +709,7 @@ $themeUri = get_template_directory_uri();
       </li>
       <li class="ebigroup__restaurant__item">
         <figure class="ebigroup__restaurant__itemFig">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_3.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_3.png" alt="EBI GROUP が運営するRistorante 桜鏡（リストランテ 桜鏡）の内観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </figure>
         <div class="ebigroup__restaurant__itemTitleWrap">
           <h3 class="ebigroup__restaurant__itemTitle">
@@ -717,7 +717,7 @@ $themeUri = get_template_directory_uri();
             <span class="ebigroup__restaurant__itemTitleSub">リストランテ 桜鏡</span>
           </h3>
           <figure class="ebigroup__restaurant__itemLogo">
-            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_3_logo.png" alt="">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_3_logo.png" alt="EBI GROUP が運営するRistorante 桜鏡（リストランテ 桜鏡）のロゴ｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
           </figure>
         </div>
         <p class="ebigroup__restaurant__itemDesc">
@@ -725,7 +725,7 @@ $themeUri = get_template_directory_uri();
         </p>
         <div class="ebigroup__restaurant__itemInfo">
           <p class="ebigroup__restaurant__itemAddress">
-            〒412-0026 静岡県御殿場市東田中 3373-20（<a href="https://maps.app.goo.gl/XJC7pLM9F8GunmTR9" target="_blank">Map</a>）
+            〒412-0026 静岡県御殿場市東田中3373-20（<a href="https://maps.app.goo.gl/XJC7pLM9F8GunmTR9" target="_blank">Map</a>）
             <br>
             TEL：0550-70-6255
           </p>
@@ -744,7 +744,7 @@ $themeUri = get_template_directory_uri();
       </li>
       <li class="ebigroup__restaurant__item">
         <figure class="ebigroup__restaurant__itemFig">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_4.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_4.png" alt="EBI GROUP が運営するKitchen MOTOTECH（キッチンモトテック）の内観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </figure>
         <div class="ebigroup__restaurant__itemTitleWrap">
           <h3 class="ebigroup__restaurant__itemTitle">
@@ -752,7 +752,7 @@ $themeUri = get_template_directory_uri();
             <span class="ebigroup__restaurant__itemTitleSub">キッチンモトテック</span>
           </h3>
           <figure class="ebigroup__restaurant__itemLogo">
-            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_4_logo.png" alt="">
+            <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/restaurant_4_logo.png" alt="EBI GROUP が運営するKitchen MOTOTECH（キッチンモトテック）のロゴ｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
           </figure>
         </div>
         <p class="ebigroup__restaurant__itemDesc">
@@ -794,7 +794,7 @@ $themeUri = get_template_directory_uri();
       </figure>
       <div class="ebigroup__kokusai__text">
         <h2 class="ebigroup__kokusai__head">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/group_logo.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/group_logo.png" alt="EBI GROUP のグループ会社であるKOKUSAI GROUP（國際グループ｜国際グループ）のロゴ｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </h2>
         <h3 class="ebigroup__kokusai__heading">
           スマートモビリティ社会の実現をリードし、
@@ -802,14 +802,14 @@ $themeUri = get_template_directory_uri();
           心躍る未来へ
         </h3>
         <p class="ebigroup__kokusai__desc">
-          EBI GROUPは國際グループの一員です。
+          EBI GROUP は國際グループの一員です。
           <br class="pc">
           ポルシェビジネスのほか、ジャガー・ランドローバー、マクラーレンなどの輸入車やレクサスの正規販売店、タクシー、レストラン、イベント施設、バングアンドオルフセンの代理店など様々な事業を展開しています。
           <br class="pc">
           お客さまに寄り添った高いサービスを提供するとともに、関わる全ての人々のライフスタイルがより彩り豊かになるように、グループ全体で努めています。
         </p>
         <a href="https://kokusai.com/" target="_blank" class="ebigroup__kokusai__link">
-          <span>ABOUT KOKUSAI GROUP</span>
+          <span>OFFICIAL WEBSITE</span>
           <span class="ebigroup__kokusai__linkIcon">
             <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
           </span>
