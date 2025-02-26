@@ -205,18 +205,40 @@ $top_page = get_page_by_path('home');
                   $box = get_sub_field('box');
                   $box_body = $box['body'];
                   $box_bg = $box['bg'] ?: null;
+                  $box_text_color = $box_bg ? get_text_color($box_bg) : null;
+                  $box_style = '';
+                  if ($box_bg || $box_text_color) {
+                    $box_style = 'style="';
+                    if ($box_bg) {
+                      $box_style .= 'background-color:' . $box_bg . '; ';
+                    }
+                    if ($box_text_color) {
+                      $box_style .= 'color:' . $box_text_color . '; ';
+                    }
+                    $box_style .= '"';
+                  }
                 ?>
-                  <div class="body__box" <?php if ($box_bg): echo 'style="background-color:' . $box_bg . ';"';
-                                          endif; ?>>
+                  <div class="body__box" <?php echo $box_style; ?>>
                     <?php echo strip_tags($box_body, '<p><a><em><br>'); ?>
                   </div>
                 <?php elseif ($type === 'blockquote'):
                   $blockquote = get_sub_field('blockquote');
                   $blockquote_body = $blockquote['body'];
                   $blockquote_bg = $blockquote['bg'] ?: null;
+                  $blockquote_text_color = $blockquote_bg ? get_text_color($blockquote_bg) : null;
+                  $blockquote_style = '';
+                  if ($blockquote_bg || $blockquote_text_color) {
+                    $blockquote_style = 'style="';
+                    if ($blockquote_bg) {
+                      $blockquote_style .= 'background-color:' . $blockquote_bg . '; ';
+                    }
+                    if ($blockquote_text_color) {
+                      $blockquote_style .= 'color:' . $blockquote_text_color . '; ';
+                    }
+                    $blockquote_style .= '"';
+                  }
                 ?>
-                  <blockquote <?php if ($blockquote_bg): echo 'style="background-color:' . $blockquote_bg . ';"';
-                              endif; ?>>
+                  <blockquote <?php echo $blockquote_style; ?>>
                     <?php echo strip_tags($blockquote_body, '<p><a><em><br>'); ?>
                   </blockquote>
                 <?php elseif ($type === 'columns'):

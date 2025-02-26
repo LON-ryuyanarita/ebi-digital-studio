@@ -409,6 +409,31 @@ function get_ogp_data($url)
 }
 
 
+/* 輝度計算 */
+function get_text_color($hex)
+{
+  // 16進数形式のバリデーション（#付き or 3桁/6桁の16進数）
+  if (!preg_match('/^#?([a-fA-F0-9]{3}|[a-fA-F0-9]{6})$/', $hex)) {
+    return "";
+  }
+  // 16進数をRGBに変換
+  $hex = ltrim($hex, '#');
+  if (strlen($hex) === 3) {
+    $r = hexdec(str_repeat($hex[0], 2));
+    $g = hexdec(str_repeat($hex[1], 2));
+    $b = hexdec(str_repeat($hex[2], 2));
+  } else {
+    $r = hexdec(substr($hex, 0, 2));
+    $g = hexdec(substr($hex, 2, 2));
+    $b = hexdec(substr($hex, 4, 2));
+  }
+
+  $luminance = (0.299 * $r) + (0.587 * $g) + (0.114 * $b);
+  // 128未満なら白、128以上なら黒
+  return ($luminance < 128) ? '#fff' : '';
+}
+
+
 /* 関連記事 */
 function get_related_cposts_by_tags($post_id)
 {
