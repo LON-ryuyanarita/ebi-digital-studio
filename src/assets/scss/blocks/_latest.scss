@@ -165,6 +165,8 @@
       .-tags {
         margin-top: 6px;
         line-height: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
 
         a {
           font-size: 10px;

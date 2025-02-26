@@ -5,12 +5,12 @@ $themeUri = get_template_directory_uri();
 <?php
 $related_posts = get_related_cposts_by_tags(get_the_ID());
 
-if ($related_posts->have_posts()) :
+if ($related_posts->have_posts() && $related_posts->found_posts >= 2) :
 ?>
   <aside class="related section">
     <div class="section__inner">
       <h2 class="related__title fontPanchang">
-        RECOMMEND CONTENTS
+        RELATED CONTENTS
       </h2>
     </div>
     <div class="related__inner">
