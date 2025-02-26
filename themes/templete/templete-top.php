@@ -20,7 +20,7 @@ $top_page = get_page_by_path('home');
           <h2 class="top__title fontPanchang">EBI DIGITAL STUDIO</h2>
           <div class="top__description">
             日本最大のポルシェ正規ディーラー EBI GROUP が提供する<br>
-            ポルシェに惹かれるすべての人たちへ向けたウェブスタジオ
+            ポルシェに惹かれるすべての人たちへ向けたWEBスタジオ
           </div>
         </header>
 
@@ -150,23 +150,23 @@ $top_page = get_page_by_path('home');
           <div class="top__links__inner">
             <div class="top__links__item -fest">
               <a href="https://ebi.marketing/thefest2023/" target="_blank">
-                <div class="-bg"><img src="<?php echo $themeUri; ?>/assets/img/top-fest-img.jpg" alt=""></div>
+                <div class="-bg"><img src="<?php echo $themeUri; ?>/assets/img/top-fest-img.jpg" alt="EBI GROUP が主催するオーナー向けイベント「THE FEST.」の写真｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP"></div>
                 <div class="-name fontPorsche">
-                  <em>The Fest.</em>
+                  <em>THE FEST.</em>
                 </div>
                 <div class="-logo">
-                  <img src="<?php echo $themeUri; ?>/assets/img/top-fest-logo.png" alt="">
+                  <img src="<?php echo $themeUri; ?>/assets/img/top-fest-logo.png" alt="EBI GROUP が主催するオーナー向けイベント「THE FEST.」のロゴ｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
                 </div>
               </a>
             </div>
             <div class="top__links__item -rally">
               <a href="https://therally.jp/" target="_blank">
-                <div class="-bg"><img src="<?php echo $themeUri; ?>/assets/img/top-rally-img.jpg" alt=""></div>
+                <div class="-bg"><img src="<?php echo $themeUri; ?>/assets/img/top-rally-img.jpg" alt="EBI GROUP が主催するオーナー向けイベント「The Rally -Amazing Moment-.」の写真｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP"></div>
                 <div class="-name fontPorsche">
                   <em>The Rally</em> <span>- Amazing Moment -</span>
                 </div>
                 <div class="-logo">
-                  <img src="<?php echo $themeUri; ?>/assets/img/top-rally-logo.png" alt="">
+                  <img src="<?php echo $themeUri; ?>/assets/img/top-rally-logo.png" alt="EBI GROUP が主催するオーナー向けイベント「The Rally -Amazing Moment-.」のロゴ｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
                 </div>
               </a>
             </div>
@@ -222,15 +222,21 @@ $top_page = get_page_by_path('home');
             </h2>
             <div class="top__ds__text">
               <p>
-                日本最大のポルシェディーラー EBI GROUP が企画するポルシェのさまざまなイベントやコンテンツのポータルサイトです。
+                EBI DIGITAL STUDIO<br>ポルシェに惹かれるすべての人へ。
               </p>
               <p>
-                グループのセンターハブストア「ポルシェスタジオ銀座」で企画している<br>
-                10のコンテンツ詳細をはじめ、都心の各ポルシェセンターでの企画も随時アップされていきます。
+                東京のポルシェ正規ディーラー EBI GROUP が提供する、<br>
+                “ポルシェ・エンターテイメント空間”です。
               </p>
               <p>
-                またポルシェライフをより充実させるための<br>
-                さまざまなライフスタイルコンテンツも同時に発信していきます。
+                最新情報の単純な追従ではなく、より本質的なポルシェブランドの真髄を、<br>
+                わかりやすく、心躍る形で発信いたします。<br>
+                様々なカテゴリーの記事を定期的に更新していきながら、<br>
+                グループのイベント情報なども随時お知らせしていきます。
+              </p>
+              <p>
+                私たちはWEBメディアの枠を超え、<br>
+                ポルシェの魅力を心から楽しめる空間を創り上げます。
               </p>
             </div>
           </div>
@@ -239,7 +245,7 @@ $top_page = get_page_by_path('home');
         <section class="top__se">
           <div class="top__se__inner">
             <header class="top__se__header">
-              <div class="-t1">EBI GROUPが提供する特別なポルシェのブランド体験</div>
+              <div class="-t1">EBI GROUP が提供する特別なポルシェのブランド体験</div>
               <h2 class="top__se__title fontPanchang">
                 SPECIAL <br>EXPERIENCE
               </h2>
@@ -248,7 +254,7 @@ $top_page = get_page_by_path('home');
                 ポルシェスタジオ銀座
               </div>
               <div class="top__se__btn ebiButton -small -transparent">
-                <a href="/special-ex/" target="_blank">
+                <a href="/special-ex/">
                   <span class="fontPanchang">VIEW ALL</span>
                 </a>
               </div>
@@ -287,21 +293,21 @@ $top_page = get_page_by_path('home');
                   日本最大のポルシェセンターとして、<br class="pc">お客様にポルシェの魅力をお伝えできるようおもてなしを追求しています。
                 </p>
                 <p>
-                  EBIグループはポルシェジャパンの発足と共に、国内最大市場である東京で20年以上にわたりポルシェビジネスを展開しています。「お客様の歓びの創造者」をモットーに、経験豊富なスタッフによる丁寧な接客と、迅速で質の高いアフターサービスを提供し続けています。全社員がブランドアンバサダーとして積極的に取り組み、将来にわたりかけがえのない信頼関係を築いていきます。
+                  EBI GROUP はポルシェジャパンの発足と共に、国内最大市場である東京で20年以上にわたりポルシェビジネスを展開しています。「お客様の歓びの創造者」をモットーに、経験豊富なスタッフによる丁寧な接客と、迅速で質の高いアフターサービスを提供し続けています。全社員がブランドアンバサダーとして積極的に取り組み、将来にわたりかけがえのない信頼関係を築いていきます。
                 </p>
                 <p>
-                  <span>日本最大級のポルシェセンターの役割として、オーナー様の「ポルシェのある生活」がより豊かになるよう、様々な提案を図っていきます。プロダクトや季節にちなんだイベントをはじめ、店舗スタッフが自ら企画したイベントなどを開催し、オーナー様同士やスタッフとの繋がりを大切にしています。EBIグループだけのエクスクルーシブな体験をこれからもお楽しみください。</span>
+                  <span>日本最大級のポルシェセンターの役割として、オーナー様の「ポルシェのある生活」がより豊かになるよう、様々な提案を図っていきます。プロダクトや季節にちなんだイベントをはじめ、店舗スタッフが自ら企画したイベントなどを開催し、オーナー様同士やスタッフとの繋がりを大切にしています。EBI GROUP だけのエクスクルーシブな体験をこれからもお楽しみください。</span>
                   <img class="sp" src="<?php echo $themeUri; ?>/assets/img/top-group-img.jpg" alt="">
                 </p>
               </div>
               <div class="top__group__btn ebiButton -small">
-                <a href="/ebi-group/" target="_blank">
+                <a href="/ebi-group/">
                   <span class="fontPanchang">VIEW ALL</span>
                 </a>
               </div>
             </div>
             <div class="top__group__img pc">
-              <img src="<?php echo $themeUri; ?>/assets/img/top-group-img.jpg" alt="">
+              <img src="<?php echo $themeUri; ?>/assets/img/top-group-img.jpg" alt="EBI GROUP （株式会社エポカルインターナショナル）が運営するポルシェスタジオ銀座の外観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
             </div>
           </div>
 
@@ -315,15 +321,15 @@ $top_page = get_page_by_path('home');
           </div>
         </section>
 
-        <section class="top__contact">
+        <section class="top__contact">EBI GROUP （株式会社エポカルインターナショナル）が運営するポルシェスタジオ銀座の外観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP
           <div class="top__contact__inner">
             <h2 class="top__contact__title fontPanchang">
               CONTACT
             </h2>
             <div class="top__contact__text">
               <p>
-                ご試乗やご購入に関するご相談など、まずはお気軽にお問い合わせください。<br>
-                グループのハブストア「ポルシェスタジオ銀座」のポルシェプロが対応させていただきます。
+                ご試乗やご購入に関するご相談など、<br class="sp">まずはお気軽にお問い合わせください。<br>
+                グループのハブストア「ポルシェスタジオ銀座」の<br class="sp">ポルシェプロが対応させていただきます。
               </p>
               <p>
                 その後、お客様のご状況やご希望に合わせて、<br>
