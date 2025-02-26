@@ -437,11 +437,11 @@ function get_text_color($hex)
 /* 関連記事 */
 function get_related_cposts_by_tags($post_id)
 {
-  if (!$post_id) return [];
+  if (!$post_id) return new WP_Query();
 
   $tags = wp_get_post_terms($post_id, 'cpost-tag', ['fields' => 'ids']);
 
-  if (empty($tags)) return [];
+  if (empty($tags)) return new WP_Query();
 
   $args = [
     'post_type' => 'cpost',
