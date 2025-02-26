@@ -67,7 +67,7 @@ $themeUri = get_template_directory_uri();
                 </p>                                              
               </div>
               <figure class="team__mv__logo">
-                <img src="<?= $themeUri ?>/assets/img/team/logo.png" alt="EBI DIGITAL STUDIO">
+                <img src="<?= $themeUri ?>/assets/img/team/logo.png" alt="EBI DIGITAL STUDIO" loading="lazy">
               </figure>
             </div>
           </div>
@@ -86,7 +86,7 @@ $themeUri = get_template_directory_uri();
               <ul class="team__member__list">
                 <li class="team__member__item">
                   <figure class="team__member__itemThumb">
-                    
+                  <img src="<?= $themeUri ?>/assets/img/team/member_kanno.png" alt="Tatsuhiko Kanno" loading="lazy">
                   </figure>
                   <div class="team__member__itemText">
                     <p class="team__member__itemPosition fontPanchang">Chief Editor</p>
@@ -103,7 +103,7 @@ $themeUri = get_template_directory_uri();
                 </li>
                 <li class="team__member__item">
                   <figure class="team__member__itemThumb">
-                    
+                  <img src="<?= $themeUri ?>/assets/img/team/member_sasaki.png" alt="Youichi Johannes Sasaki" loading="lazy">
                   </figure>
                   <div class="team__member__itemText">
                     <p class="team__member__itemPosition fontPanchang">Chief Coorinator / PORSCHE PRO</p>
@@ -120,7 +120,7 @@ $themeUri = get_template_directory_uri();
                 </li>                
                 <li class="team__member__item">
                   <figure class="team__member__itemThumb">
-                    
+                    <img src="<?= $themeUri ?>/assets/img/team/member_narita.png" alt="Ryuya Narita" loading="lazy">
                   </figure>
                   <div class="team__member__itemText">
                     <p class="team__member__itemPosition fontPanchang">Director</p>
@@ -137,7 +137,7 @@ $themeUri = get_template_directory_uri();
                 </li>                
                 <li class="team__member__item">
                   <figure class="team__member__itemThumb">
-                    
+                    <img src="<?= $themeUri ?>/assets/img/team/member_kobayashi.png" alt="Yuki Kobayashi" loading="lazy">
                   </figure>
                   <div class="team__member__itemText">
                     <p class="team__member__itemPosition fontPanchang">Editor / Writer</p>
@@ -154,7 +154,7 @@ $themeUri = get_template_directory_uri();
                 </li>                
                 <li class="team__member__item">
                   <figure class="team__member__itemThumb">
-                    
+                    <img src="<?= $themeUri ?>/assets/img/team/member_sherry.png" alt="Shizuka Sherry" loading="lazy">
                   </figure>
                   <div class="team__member__itemText">
                     <p class="team__member__itemPosition fontPanchang">Photographer</p>
