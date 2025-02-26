@@ -80,7 +80,7 @@ $top_page = get_page_by_path('home');
               </div>
               <div class="archive__top__article__body">
                 <time class="-date fontPanchang" datetime="<?php echo get_the_date('c', get_the_ID()); ?>"><?php echo get_the_date('Y/m/d', get_the_ID()); ?></time>
-                <h3 class="-title"><?php echo $title; ?></h3>
+                <h3 class="-title"><?php echo nl2br($title); ?></h3>
               </div>
             </a>
             <div class="-tags">
