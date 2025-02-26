@@ -131,7 +131,7 @@ $themeUri = get_template_directory_uri();
 
       <div class="-c4">
         <div class="footer__stockLink">
-          <a href="#TBD" target="_blank">
+          <a href="https://finder.porsche.com/jp/ja-JP/search?int_ref=carsales&int_medium=email&int_position=search_link&condition=used&dealership=1500001017&dealership=18812&dealership=1500002597&dealership=1500002596&order=newest&int_id=savedsearch" target="_blank">
             <span>EBI GROUP 認定中古車在庫</span>
             <i><img src="<?php echo $themeUri; ?>/assets/img/icon-window-1.svg" alt=""></i>
           </a>
