@@ -14,7 +14,7 @@ class Loading {
                 this.startAnimation();
             },500)            
         }               
-        this.setLocalStorage(); 
+        this.setLocalStorage();         
 
         // gsap.set('#loading', {
         //     backgroundColor: '#000',                
@@ -51,7 +51,7 @@ class Loading {
                 duration: 1.,
                 onStart: () => {
                     const _tl = gsap.timeline({
-                        delay: 0.8,
+                        delay: 0.7,
                     });
                     _tl
                         .to("#loading__logo", { opacity: 1, duration: 0.075})
@@ -65,7 +65,7 @@ class Loading {
                 opacity: 0,
                 ease: 'sine.inOut',                       
                 duration: .6, 
-                delay: 1.,              
+                delay: .4,              
             })                       
             .to('#loading__main', {
                 scale: 20,
@@ -77,14 +77,14 @@ class Loading {
                 background: '#fff',                
                 ease: 'sine.out',                                                       
                 duration: .4,              
-                delay: -0.25        
+                delay: -0.3 
             })                   
             .to('#loading', {
                 background: '#fff',                
                 ease: 'sine.out',                                                       
                 opacity: 0,
-                delay: .4,
-                delay: -.25,
+                duration: .4,
+                delay: -.3,
                 onStart: () => {
                     this.restartVideo(); 
                 }
