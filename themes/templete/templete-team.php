@@ -36,7 +36,7 @@ $themeUri = get_template_directory_uri();
                   しかし、その多くは断片的で、真に“ポルシェに迫る”ような深い洞察を持つ情報は限られています。
                 </p>
                 <p>
-                  EBI GROUPは、日本最大の正規ポルシェディーラーグループとして、
+                  EBI GROUPは、日本最大のポルシェ正規ディーラーグループとして、
                   <br class="pc">
                   25年以上にわたり東京という世界屈指のマーケットでポルシェと向き合い、
                   <br class="pc">
@@ -53,6 +53,8 @@ $themeUri = get_template_directory_uri();
                   このデジタルスタジオでは、最新情報の単純な追従ではなく、
                   <br class="pc">
                   より本質的なポルシェブランドの真髄を、
+                  <br class="pc">
+                  正規ディーラーグループの目線で、
                   <br class="pc">
                   わかりやすく、そして心躍る形で発信します。
                 </p>  
@@ -78,7 +80,7 @@ $themeUri = get_template_directory_uri();
                 MEMBER
               </h2>
               <p class="team__member__desc">
-                EBI DIGITAL STUDIOのコンテンツ、制作に関するお問い合わせは [narita [at] lon-lon.co.jp] までお願いいたします。
+                EBI DIGITAL STUDIOのコンテンツ、制作に関するお問い合わせは [info [at] ebi-digitalstudio.jp] までお願いいたします。
                 <small>※[at]を@に変更のうえご連絡ください。</small>
               </p>
               <ul class="team__member__list">
@@ -92,7 +94,7 @@ $themeUri = get_template_directory_uri();
                     <h3 class="team__member__itemNameJa">菅野 竜彦</h3>                    
                     <p class="team__member__itemScope fontPanchang">
                       <span>Scope</span>
-                      Produce / Direction / Edit / Writing / Photographer
+                      Produce / Direction / Edit / Writing / Photograph
                     </p>
                     <p class="team__member__itemCompany">
                       EBI Marketing Inc. / Sanji international Co.,Ltd.
@@ -160,7 +162,7 @@ $themeUri = get_template_directory_uri();
                     <h3 class="team__member__itemNameJa">シズカシェリー</h3>                    
                     <p class="team__member__itemScope fontPanchang">
                       <span>Scope</span>
-                      Photographer 
+                      Photograph
                     </p>
                     <p class="team__member__itemCompany">
                       CREATOR BOX Inc.
