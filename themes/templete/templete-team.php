@@ -67,7 +67,7 @@ $themeUri = get_template_directory_uri();
                 </p>                                              
               </div>
               <figure class="team__mv__logo">
-                <img src="<?= $themeUri ?>/assets/img/team/logo.png" alt="EBI DIGITAL STUDIO">
+                <img src="<?= $themeUri ?>/assets/img/team/logo.png" alt="ポルシェ正規ディーラーである EBI GROUP が運営する EBI DIGITAL STUDIO のロゴ｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
               </figure>
             </div>
           </div>
