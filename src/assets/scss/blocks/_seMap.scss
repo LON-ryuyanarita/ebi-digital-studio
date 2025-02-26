@@ -500,30 +500,6 @@
 
             a {
               width: 100%;
-              position: relative;
-
-              .-enabledHover & {
-                &:hover {
-                  i.-window {
-                    background-image: url(../img/icon-window-1.svg);
-                    transition-duration: 200ms;
-                  }
-                }
-              }
-            }
-
-            i.-window {
-              width: 9px;
-              height: 8px;
-              display: block;
-              background: url(../img/icon-window-1-black.svg) no-repeat center
-                center transparent;
-              background-size: contain;
-              position: absolute;
-              top: 50%;
-              right: 18px;
-              transform: translateY(-50%);
-              transition: background-image 400ms var(--ease-linear-out-slow-in);
             }
           }
         }
@@ -599,6 +575,33 @@
 
         .ebiButton {
           margin-top: 24px;
+
+          a {
+            position: relative;
+
+            .-enabledHover & {
+              &:hover {
+                i.-window {
+                  background-image: url(../img/icon-window-1.svg);
+                  transition-duration: 200ms;
+                }
+              }
+            }
+          }
+
+          i.-window {
+            width: 9px;
+            height: 8px;
+            display: block;
+            background: url(../img/icon-window-1-black.svg) no-repeat center
+              center transparent;
+            background-size: contain;
+            position: absolute;
+            top: 50%;
+            right: 18px;
+            transform: translateY(-50%);
+            transition: background-image 400ms var(--ease-linear-out-slow-in);
+          }
         }
       }
     }
@@ -950,12 +953,6 @@
               a {
                 padding: 0;
               }
-
-              i.-window {
-                width: cvws(19);
-                height: cvws(16);
-                right: cvws(16);
-              }
             }
           }
         }
@@ -1028,6 +1025,14 @@
 
           .ebiButton {
             margin-top: cvws(56);
+
+            a {
+              i.-window {
+                width: cvws(19);
+                height: cvws(16);
+                right: cvws(16);
+              }
+            }
           }
         }
       }

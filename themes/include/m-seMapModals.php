@@ -35,6 +35,7 @@ $themeUri = get_template_directory_uri();
             <div class="ebiButton -small">
               <a href="https://www.porsche.co.jp/dealersearch/chargingmap/" target="_blank">
                 <span>EV Charging mapはこちら</span>
+                <i class="-window"></i>
               </a>
             </div>
           </div>
