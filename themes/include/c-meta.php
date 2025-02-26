@@ -48,7 +48,9 @@ function get_article_description($post_id)
 	return mb_substr(trim($description), 0, 160) . '...';
 }
 
-if (is_404()) {
+
+if (is_home() || is_front_page()) {
+} elseif (is_404()) {
 	$title = 'ページが見つかりませんでした ー 404エラー ー ' . $_base_title;
 	$description = "EBI DIGITAL STUDIO内で該当ページが見つかりませんでした。EBI DIGITAL STUDIOは日本最大のポルシェ正規ディーラー EBI GROUP が提供する、ポルシェに惹かれるすべての人たちへ向けたWEBスタジオです。";
 } elseif (is_tax('cpost-cat')) {
