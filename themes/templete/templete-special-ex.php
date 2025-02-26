@@ -19,7 +19,7 @@ $themeUri = get_template_directory_uri();
           <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/mv_sp.webp" type="image/webp">
           <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/mv_sp.png">
           <source srcset="<?= $themeUri ?>/assets/img/specialex/mv.webp" type="image/webp">
-          <img src="<?= $themeUri ?>/assets/img/specialex/mv.png" alt="">
+          <img src="<?= $themeUri ?>/assets/img/specialex/mv.png" alt="EBI GROUP （株式会社エポカルインターナショナル）が運営するポルシェスタジオ銀座の外観写真｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </picture>
       </figure>
       <h1 class="specialex__mv__title">
@@ -67,7 +67,7 @@ $themeUri = get_template_directory_uri();
           <figure class="specialex__about__pic">
             <picture>
               <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/about_sp.png">
-              <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/about.png" alt="">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/about.png" alt="EBI GROUP （株式会社エポカルインターナショナル）が運営するポルシェスタジオ銀座の内観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
             </picture>
           </figure>
         </div>
@@ -78,19 +78,19 @@ $themeUri = get_template_directory_uri();
       <figure class="specialex__deco__item">
         <picture>
           <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/deco_1_sp.png">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/deco_1.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/deco_1.png" alt="EBI GROUP （株式会社エポカルインターナショナル）が運営するポルシェスタジオ銀座のPORSCHE PRO（ポルシェプロ）｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </picture>
       </figure>
       <figure class="specialex__deco__item">
         <picture>
           <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/deco_2_sp.png">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/deco_2.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/deco_2.png" alt="EBI GROUP （株式会社エポカルインターナショナル）が運営するポルシェスタジオ銀座の外観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </picture>
       </figure>
       <figure class="specialex__deco__item">
         <picture>
           <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/deco_3_sp.png">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/deco_3.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/deco_3.png" alt="EBI GROUP （株式会社エポカルインターナショナル）が運営するポルシェスタジオ銀座の試乗車Taycan（タイカン）が街を駆け抜ける｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </picture>
       </figure>
     </div>
@@ -153,7 +153,7 @@ $themeUri = get_template_directory_uri();
           <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/deco_4_sp.webp" type="image/webp">
           <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/deco_4_sp.png">
           <source srcset="<?= $themeUri ?>/assets/img/specialex/deco_4.png" type="image/webp">
-          <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/deco_4.png" alt="">
+          <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/deco_4.png" alt="EBI GROUP （株式会社ブライトインターナショナル）が運営するポルシェサービスセンター東京ベイ辰巳の外観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
         </picture>
       </figure>
 
@@ -164,13 +164,13 @@ $themeUri = get_template_directory_uri();
               <figure class="specialex__feature__itemPicItem">
                 <picture>
                   <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/feature_1_sp.png">
-                  <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_1.png" alt="">
+                  <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_1.png" alt="EBI GROUP （株式会社ブライトインターナショナル）が運営するポルシェサービスセンター東京ベイ辰巳のアフターメンテナンスを行うワークベイ｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
                 </picture>
               </figure>
               <figure class="specialex__feature__itemPicItem">
                 <picture>
                   <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/feature_2_sp.png">
-                  <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_2.png" alt="">
+                  <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_2.png" alt="EBI GROUP （株式会社ブライトインターナショナル）が運営するポルシェサービスセンター東京ベイ辰巳内にあるポルシェライフスタイルショップ｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
                 </picture>
               </figure>
             </div>
@@ -189,7 +189,7 @@ $themeUri = get_template_directory_uri();
                 <p>
                   都内最大となる10基のワークベイをはじめ、
                   <br class="pc" />
-                  EV専用の作業ペイやお客様とともに車両を確認できるダイレクトダイアログペイなど、
+                  EV専用の作業ベイやお客様とともに車両を確認できるダイレクトダイアログベイなど、
                   <br class="pc" />
                   最先端の設備を完備した国内初の独立型サービスセンター、
                   <br class="pc" />
@@ -247,7 +247,7 @@ $themeUri = get_template_directory_uri();
             </div>
             <div class="specialex__feature__itemPic __is2">
               <figure class="specialex__feature__itemPicItem">
-                <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_3.png" alt="">
+                <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_3.png" alt="EBI GROUP （株式会社ブライトインターナショナル）が運営するハブストア「ポルシェスタジオ銀座」の図｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
               </figure>
             </div>
           </div>
@@ -255,13 +255,13 @@ $themeUri = get_template_directory_uri();
             <figure class="specialex__feature__galleryItem">
               <picture>
                 <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/feature_4_sp.png">
-                <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_4.png" alt="">
+                <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_4.png" alt="EBI GROUP （株式会社ブライトインターナショナル）が運営する「ポルシェスタジオ銀座」のスペシャルコンテンツ「Sales&Connection（セールス&コネクション）の写真」｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
               </picture>
             </figure>
             <figure class="specialex__feature__galleryItem">
               <picture>
                 <source media="(max-width: 768px)" srcset="<?= $themeUri ?>/assets/img/specialex/feature_5_sp.png">
-                <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_5.png" alt="">
+                <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_5.png" alt="EBI GROUP （株式会社ブライトインターナショナル）が運営する「ポルシェスタジオ銀座」のスペシャルコンテンツ「Sales&Connection（セールス&コネクション）を利用し、ポルシェセンターのセールスと話している写真」｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
               </picture>
             </figure>
           </div>
