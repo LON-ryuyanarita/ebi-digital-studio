@@ -78,13 +78,14 @@
 
       .article__info {
         &.-share {
+          align-items: center;
           position: absolute;
           bottom: 0;
           right: 0;
 
           svg {
             path {
-              fill: var(--color-gray-1) !important;
+              // fill: var(--color-gray-1) !important;
             }
           }
         }
@@ -203,6 +204,7 @@
 
       .article__info {
         font-size: 14px;
+        align-items: center;
 
         dt {
           color: var(--color-black-1);
