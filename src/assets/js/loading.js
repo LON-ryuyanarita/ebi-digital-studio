@@ -15,11 +15,7 @@ class Loading {
             },500)            
         }               
         this.setLocalStorage();         
-
-        // gsap.set('#loading', {
-        //     backgroundColor: '#000',                
-        // })        
-        // this.startAnimation();
+        
     }
 
 
@@ -65,7 +61,7 @@ class Loading {
                 opacity: 0,
                 ease: 'sine.inOut',                       
                 duration: .6, 
-                delay: .4,              
+                delay: 1.,
             })                       
             .to('#loading__main', {
                 scale: 20,
