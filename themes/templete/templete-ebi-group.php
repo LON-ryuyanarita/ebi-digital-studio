@@ -314,13 +314,13 @@ $themeUri = get_template_directory_uri();
         </p>
         <div class="ebigroup__stores__itemInfo">
           <p class="ebigroup__stores__itemAddress">
-            〒105-7101 東京都港区東新橋1-5-2（<a href="">Map</a>）
+            〒105-7101 東京都港区東新橋1-5-2（<a href="https://maps.app.goo.gl/4J6muZh6b61HzH1y7" target="_blank">Map</a>）
             <br>
             TEL：03-6215-9111
           </p>
         </div>
         <div class="ebigroup__stores__itemLinks">
-          <a href="" class="ebigroup__stores__itemLink fontPanchang">
+          <a href="https://dealer.porsche.com/jp/porsche-studio-ginza/ja-JP" target="_blank" class="ebigroup__stores__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -352,7 +352,7 @@ $themeUri = get_template_directory_uri();
         </p>
         <div class="ebigroup__stores__itemInfo">
           <p class="ebigroup__stores__itemAddress">
-            〒135-0053 東京都江東区辰巳2-4-25（<a href="">Map</a>）
+            〒135-0053 東京都江東区辰巳2-4-25（<a href="https://maps.app.goo.gl/ALJ98jzyYz6z9d9m8" target="_blank">Map</a>）
             <br>
             TEL：03-6457-0911
           </p>
@@ -361,7 +361,7 @@ $themeUri = get_template_directory_uri();
           </p>
         </div>
         <div class="ebigroup__stores__itemLinks">
-          <a href="" class="ebigroup__stores__itemLink fontPanchang">
+          <a href="https://www.porsche.co.jp/Service-Center/tatsumi/" target="_blank" class="ebigroup__stores__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -385,13 +385,13 @@ $themeUri = get_template_directory_uri();
         </p>
         <div class="ebigroup__stores__itemInfo">
           <p class="ebigroup__stores__itemAddress">
-            〒156-0053 東京都世田谷区桜3-15-13（<a href="">Map</a>）
+            〒107-0062 東京都港区南青山3-11-13（<a href="https://maps.app.goo.gl/8c2CcW6RvyYb5Uiv9" target="_blank">Map</a>）
             <br>
-            TEL：03-5426-2111
+            TEL：03-3403-0911
           </p>
         </div>
         <div class="ebigroup__stores__itemLinks">
-          <a href="" class="ebigroup__stores__itemLink fontPanchang">
+          <a href="https://www.porsche.co.jp/dealers/aoyama/" target="_blank" class="ebigroup__stores__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -400,7 +400,7 @@ $themeUri = get_template_directory_uri();
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>              
-          <a href="" class="ebigroup__stores__itemLink __ja">
+          <a href="https://www.porsche.co.jp/dealers/aoyama/testdrive" target="_blank" class="ebigroup__stores__itemLink __ja">
             <span>試乗車一覧</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -424,7 +424,7 @@ $themeUri = get_template_directory_uri();
         </p>
         <div class="ebigroup__stores__itemInfo">
           <p class="ebigroup__stores__itemAddress">
-            〒156-0053 東京都世田谷区桜3-15-13（<a href="">Map</a>）
+            〒156-0053 東京都世田谷区桜3-15-13（<a href="https://maps.app.goo.gl/vAv4hCFwXiQZGXmH9" target="_blank">Map</a>）
             <br>
             TEL：03-5426-2111
           </p>
@@ -433,7 +433,7 @@ $themeUri = get_template_directory_uri();
           </p>
         </div>
         <div class="ebigroup__stores__itemLinks">
-          <a href="" class="ebigroup__stores__itemLink fontPanchang">
+          <a href="https://www.porsche.co.jp/dealers/setagaya/" target="_blank" class="ebigroup__stores__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -442,7 +442,7 @@ $themeUri = get_template_directory_uri();
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>
           </a>              
-          <a href="" class="ebigroup__stores__itemLink __ja">
+          <a href="https://finder.porsche.com/jp/ja-JP/search?condition=used&dealership=18812" target="_blank" class="ebigroup__stores__itemLink __ja">
             <span>認定中古車在庫一覧</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -465,7 +465,7 @@ $themeUri = get_template_directory_uri();
         </p>
         <div class="ebigroup__stores__itemInfo">
           <p class="ebigroup__stores__itemAddress">
-            〒153-0061 東京都目黒区中目黒2-8-21（<a href="">Map</a>）
+            〒153-0061 東京都目黒区中目黒2-8-21（<a href="https://maps.app.goo.gl/7RMi5E1xRRFEvAbT8" target="_blank">Map</a>）
             <br>
             TEL：03-3719-6221
           </p>
@@ -474,7 +474,7 @@ $themeUri = get_template_directory_uri();
           </p>
         </div>
         <div class="ebigroup__stores__itemLinks">
-          <a href="" class="ebigroup__stores__itemLink fontPanchang">
+          <a href="https://www.porsche.co.jp/dealers/meguro/" target="_blank" class="ebigroup__stores__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -483,7 +483,7 @@ $themeUri = get_template_directory_uri();
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span> 
           </a>              
-          <a href="" class="ebigroup__stores__itemLink __ja">
+          <a href="https://www.porsche.co.jp/dealers/meguro/testdrive" target="_blank" class="ebigroup__stores__itemLink __ja">
             <span>試乗車一覧</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -506,13 +506,13 @@ $themeUri = get_template_directory_uri();
         </p>
         <div class="ebigroup__stores__itemInfo">
           <p class="ebigroup__stores__itemAddress">
-            〒106-0032 東京都港区六本木4-1-4（<a href="">Map</a>）
+            〒106-0032 東京都港区六本木4-1-4（<a href="https://maps.app.goo.gl/ETtDQ7ibE7y22FHd8" target="_blank">Map</a>）
             <br>
             TEL：03-5545-5250
           </p>
         </div>
         <div class="ebigroup__stores__itemLinks">
-          <a href="" class="ebigroup__stores__itemLink fontPanchang">
+          <a href="https://www.porsche.co.jp/dealers/roppongi_app/" target="_blank" class="ebigroup__stores__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -521,7 +521,7 @@ $themeUri = get_template_directory_uri();
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>              
-          <a href="" class="ebigroup__stores__itemLink __ja">
+          <a href="https://finder.porsche.com/jp/ja-JP/search?condition=used&dealership=1500001017" target="_blank" class="ebigroup__stores__itemLink __ja">
             <span>認定中古車在庫一覧</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -544,7 +544,7 @@ $themeUri = get_template_directory_uri();
         </p>
         <div class="ebigroup__stores__itemInfo">
           <p class="ebigroup__stores__itemAddress">
-            〒108-0074 東京都港区高輪2-15-17（<a href="">Map</a>）
+            〒108-0074 東京都港区高輪2-15-17（<a href="https://maps.app.goo.gl/Fx6upavy8iwKkj7FA" target="_blank">Map</a>）
             <br>
             TEL：03-5791-0911
           </p>
@@ -553,7 +553,7 @@ $themeUri = get_template_directory_uri();
           </p>              
         </div>
         <div class="ebigroup__stores__itemLinks">
-          <a href="" class="ebigroup__stores__itemLink fontPanchang">
+          <a href="https://www.porsche.co.jp/dealers/takanawa/" target="_blank" class="ebigroup__stores__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -562,7 +562,7 @@ $themeUri = get_template_directory_uri();
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>              
-          <a href="" class="ebigroup__stores__itemLink __ja">
+          <a href="https://www.porsche.co.jp/dealers/takanawa/testdrive" target="_blank" class="ebigroup__stores__itemLink __ja">
             <span>試乗車一覧</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -571,7 +571,7 @@ $themeUri = get_template_directory_uri();
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span> 
           </a>              
-          <a href="" class="ebigroup__stores__itemLink __ja">
+          <a href="https://finder.porsche.com/jp/ja-JP/search?condition=used&dealership=1500002596" target="_blank" class="ebigroup__stores__itemLink __ja">
             <span>認定中古車在庫一覧</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -595,7 +595,7 @@ $themeUri = get_template_directory_uri();
         </p>
         <div class="ebigroup__stores__itemInfo">
           <p class="ebigroup__stores__itemAddress">
-            〒112-0006 東京都文京区小日向4-2-13（<a href="">Map</a>）
+            〒112-0006 東京都文京区小日向4-2-13（<a href="https://maps.app.goo.gl/cVUDGEhQNbTmbseT6" target="_blank">Map</a>）
             <br>
             TEL：03-5803-9711
           </p>
@@ -604,7 +604,7 @@ $themeUri = get_template_directory_uri();
           </p> 
         </div>
         <div class="ebigroup__stores__itemLinks">
-          <a href="" class="ebigroup__stores__itemLink fontPanchang">
+          <a href="https://www.porsche.co.jp/dealers/koishikawa/" target="_blank" class="ebigroup__stores__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -613,7 +613,7 @@ $themeUri = get_template_directory_uri();
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>              
-          <a href="" class="ebigroup__stores__itemLink __ja">
+          <a href="https://finder.porsche.com/jp/ja-JP/search?condition=used&dealership=1500002597" target="_blank" class="ebigroup__stores__itemLink __ja">
             <span>認定中古車在庫一覧</span>
             <span class="ebigroup__stores__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -655,13 +655,13 @@ $themeUri = get_template_directory_uri();
         </p>
         <div class="ebigroup__restaurant__itemInfo">
           <p class="ebigroup__restaurant__itemAddress">
-            〒105-7101 東京都港区東新橋1-5-2（<a href="">Map</a>）
+            〒105-7101 東京都港区東新橋1-5-2（<a href="https://maps.app.goo.gl/qeZHVEFw5DRw5JwQA" target="_blank">Map</a>）
             <br>
             TEL：03-6280-6785
           </p>
         </div>
         <div class="ebigroup__restaurant__itemLinks">
-          <a href="" class="ebigroup__restaurant__itemLink fontPanchang">
+          <a href="https://porsche.tokyo/" target="_blank" class="ebigroup__restaurant__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__restaurant__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -690,13 +690,13 @@ $themeUri = get_template_directory_uri();
         </p>
         <div class="ebigroup__restaurant__itemInfo">
           <p class="ebigroup__restaurant__itemAddress">
-            〒112-0002 東京都文京区小石川4-18-7（<a href="">Map</a>）
+            〒112-0002 東京都文京区小石川4-18-7（<a href="https://maps.app.goo.gl/9ee4s6AUBGkNCzvi9" target="_blank">Map</a>）
             <br>
             TEL：03-3815-1122                
           </p>
         </div>
         <div class="ebigroup__restaurant__itemLinks">
-          <a href="" class="ebigroup__restaurant__itemLink fontPanchang">
+          <a href="https://tantaroba.jp/" target="_blank" class="ebigroup__restaurant__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__restaurant__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -725,13 +725,13 @@ $themeUri = get_template_directory_uri();
         </p>
         <div class="ebigroup__restaurant__itemInfo">
           <p class="ebigroup__restaurant__itemAddress">
-            〒412-0026 静岡県御殿場市東田中 3373-20（<a href="">Map</a>）
+            〒412-0026 静岡県御殿場市東田中 3373-20（<a href="https://maps.app.goo.gl/XJC7pLM9F8GunmTR9" target="_blank">Map</a>）
             <br>
             TEL：0550-70-6255
           </p>
         </div>
         <div class="ebigroup__restaurant__itemLinks">
-          <a href="" class="ebigroup__restaurant__itemLink fontPanchang">
+          <a href="https://sakurakagami.com/" target="_blank" class="ebigroup__restaurant__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__restaurant__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -762,13 +762,13 @@ $themeUri = get_template_directory_uri();
           <p class="ebigroup__restaurant__itemAddress">
             〒226-0026 神奈川県横浜市緑区長津田町4259
             <br>
-            東京科学大学すずかけ台キャンパス 大学会館2F（<a href="">Map</a>）
+            東京科学大学すずかけ台キャンパス 大学会館2F（<a href="https://maps.app.goo.gl/jDtHUVEA2yzVH1yA8" target="_blank">Map</a>）
             <br>
             TEL：045-744-9663
           </p>
         </div>
         <div class="ebigroup__restaurant__itemLinks">
-          <a href="" class="ebigroup__restaurant__itemLink fontPanchang">
+          <a href="https://mototech.kitchen/" target="_blank" class="ebigroup__restaurant__itemLink fontPanchang">
             <span>OFFICIAL WEBSITE</span>
             <span class="ebigroup__restaurant__itemLinkIcon">
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
@@ -802,13 +802,13 @@ $themeUri = get_template_directory_uri();
           心躍る未来へ
         </h3>
         <p class="ebigroup__kokusai__desc">
-          EBI GROUPは国際グループの一員です。
+          EBI GROUPは國際グループの一員です。
           <br class="pc">
           ポルシェビジネスのほか、ジャガー・ランドローバー、マクラーレンなどの輸入車やレクサスの正規販売店、タクシー、レストラン、イベント施設、バングアンドオルフセンの代理店など様々な事業を展開しています。
           <br class="pc">
           お客さまに寄り添った高いサービスを提供するとともに、関わる全ての人々のライフスタイルがより彩り豊かになるように、グループ全体で努めています。
         </p>
-        <a href="" class="ebigroup__kokusai__link">
+        <a href="https://kokusai.com/" target="_blank" class="ebigroup__kokusai__link">
           <span>ABOUT KOKUSAI GROUP</span>
           <span class="ebigroup__kokusai__linkIcon">
             <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
