@@ -127,21 +127,19 @@ $themeUri = get_template_directory_uri();
                 ポルシェの最新テクノロジーを味わい尽くす爽快なテストドライブを満喫することができます。
               </p>
             </div>
-            <a href="#" class="specialex__feature__itemLink">
+            <a href="https://ebi-digitalstudio.jp/articles/news1/" class="specialex__feature__itemLink">              
               <figure class="specialex__feature__itemLinkFig">
                 <img loading="lazy" src="<?= $themeUri ?>/assets/img/specialex/feature_link_thumb.png" alt="">
               </figure>
-              <div class="specialex__feature__itemLinkText">
-                <a href="https://ebi-digitalstudio.jp/articles/news1/">
-                  <span class="specialex__feature__itemLinkTitle">
-                    ポルシェの最新テクノロジーを味わい尽くす
-                    <br class="pc">
-                    【E-Paformanceモデル専用】の爽快テストドライブプラン
-                  </span>
-                  <span class="specialex__feature__itemLinkTag">
-                  試乗体験プランの詳細を見る
-                  </span>
-                </a>
+              <div class="specialex__feature__itemLinkText">                
+                <span class="specialex__feature__itemLinkTitle">
+                  ポルシェの最新テクノロジーを味わい尽くす
+                  <br class="pc">
+                  【E-Paformanceモデル専用】の爽快テストドライブプラン
+                </span>
+                <span class="specialex__feature__itemLinkTag">
+                試乗体験プランの詳細を見る
+                </span>                
               </div>
             </a>
           </div>
