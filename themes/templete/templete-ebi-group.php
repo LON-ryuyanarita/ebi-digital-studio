@@ -152,7 +152,7 @@ $themeUri = get_template_directory_uri();
       <h3 class="ebigroup__mission__heading">
         お客さまの人生における
         <br class="sp">
-        Amazing Momentを創出し、
+        Amazing Momentを創出し
         <br>
         真に価値あるポルシェライフの
         <br class="sp">
