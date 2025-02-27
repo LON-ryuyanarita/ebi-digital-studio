@@ -150,13 +150,9 @@ $themeUri = get_template_directory_uri();
         MISSION
       </h2>
       <h3 class="ebigroup__mission__heading">
-        お客さまの人生における
-        <br class="sp">
-        Amazing Momentを創出し
+        お客さまの人生における<br class="sp">Amazing Momentを創出し
         <br>
-        真に価値あるポルシェライフの
-        <br class="sp">
-        実現をサポートする
+        真に価値あるポルシェライフの<br class="sp">実現をサポートする
       </h3>
       <div class="ebigroup__mission__desc">
         <p>
