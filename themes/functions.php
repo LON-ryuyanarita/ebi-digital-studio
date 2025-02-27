@@ -380,11 +380,17 @@ function get_ogp_data($url)
   ];
 
   $graph = OpenGraph::fetch($url);
-  if ($graph) {
-    $detects = ['ASCII', 'EUC-JP', 'SJIS', 'JIS', 'CP51932', 'UTF-16', 'ISO-8859-1'];
-    $post_title = esc_attr($graph->title);
-    $site_name = esc_attr($graph->site_name);
 
+  if (!$graph || !is_object($graph)) {
+    return $ogp_data;
+  }
+
+  $detects = ['ASCII', 'EUC-JP', 'SJIS', 'JIS', 'CP51932', 'UTF-16', 'ISO-8859-1'];
+
+  $post_title = isset($graph->title) ? esc_attr($graph->title) : '';
+  $site_name = isset($graph->site_name) ? esc_attr($graph->site_name) : '';
+
+  if (!empty($post_title)) {
     $title_check = mb_convert_encoding($post_title, 'ISO-8859-1', 'UTF-8');
     if (mb_detect_encoding($title_check) == 'UTF-8') {
       $post_title = $title_check;
@@ -392,7 +398,9 @@ function get_ogp_data($url)
     if (mb_detect_encoding($post_title) != 'UTF-8') {
       $post_title = mb_convert_encoding($post_title, 'UTF-8', mb_detect_encoding($post_title, $detects, true));
     }
+  }
 
+  if (!empty($site_name)) {
     $site_name_check = mb_convert_encoding($site_name, 'ISO-8859-1', 'UTF-8');
     if (mb_detect_encoding($site_name_check) == 'UTF-8') {
       $site_name = $site_name_check;
@@ -402,8 +410,8 @@ function get_ogp_data($url)
     }
   }
 
-  $ogp_data['title'] = $graph->title;
-  $ogp_data['description'] = $graph->description;
+  $ogp_data['title'] = $post_title;
+  $ogp_data['description'] = isset($graph->description) ? $graph->description : '';
 
   return $ogp_data;
 }
