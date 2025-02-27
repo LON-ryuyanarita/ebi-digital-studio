@@ -1,0 +1,101 @@
+/* ==========================================================================
+ *
+ * Blocks - notfound
+ *
+========================================================================== */
+
+@use './variables' as *;
+@use './_utils' as *;
+
+.notfound {
+  & {
+  }
+
+  @at-root {
+    .notfound__inner {
+      padding: 110px 20px 120px;
+      text-align: center;
+    }
+
+    .notfound__title {
+      font-size: 48px;
+      line-height: 1;
+    }
+
+    .notfound__text {
+      margin-top: 70px;
+      font-size: 15px;
+      line-height: 1.6;
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 16px;
+        height: 1px;
+        background-color: var(--color-black-1);
+        position: absolute;
+        top: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      p {
+        & + p {
+          margin-top: 25px;
+        }
+      }
+    }
+
+    .notfound__btn {
+      width: 480px;
+      margin: 40px auto 0;
+    }
+  }
+
+  // SP 以下 (- 768)
+  @media #{$mq-lte-sp} {
+    & {
+    }
+
+    @at-root {
+      .notfound__inner {
+        padding: cvws(105) cvws(20) cvws(120);
+      }
+
+      .notfound__title {
+        font-size: cvws(64);
+      }
+
+      .notfound__text {
+        margin-top: cvws(70);
+        font-size: cvws(24);
+        line-height: cvws(36);
+
+        &::before {
+          width: cvws(24);
+          top: cvws(-35);
+        }
+
+        p {
+          & + p {
+            margin-top: cvws(36);
+          }
+        }
+      }
+
+      .notfound__btn {
+        width: cvws(630);
+        margin-top: cvws(40);
+      }
+    }
+  }
+
+  // PC Max 以上 (1280 +1 - )
+  @media #{$mq-gt-pcmax} {
+    & {
+    }
+
+    @at-root {
+    }
+  }
+}

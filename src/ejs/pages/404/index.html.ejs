@@ -1,12 +1,10 @@
-<?php
-/*
-Template Name: 404
-*/
-?>
-
-<?php get_header(); ?>
-
-<main class="main" role="main">
+<%_
+  const meta = {
+    page: 'notfound',
+    requiredSeMapModals: true,
+  };
+-%>
+<%_ function content (__append) { -%>
   <section class="notfound">
     <div class="notfound__inner">
       <h2 class="notfound__title fontPanchang">
@@ -25,6 +23,5 @@ Template Name: 404
       </div>
     </div>
   </section>
-</main>
-
-<?php get_footer(); ?>
+<%_ }; -%>
+<%- include(`${ejsRelativePath}layouts/default`, { meta, content }) %>
