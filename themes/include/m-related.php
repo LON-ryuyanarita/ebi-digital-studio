@@ -10,7 +10,7 @@ if ($related_posts->have_posts() && $related_posts->found_posts >= 2) :
   <aside class="related section">
     <div class="section__inner">
       <h2 class="related__title fontPanchang">
-        RELATED CONTENTS
+        RECOMMEND CONTENTS
       </h2>
     </div>
     <div class="related__inner">
