@@ -13,7 +13,7 @@
     position: relative;
     z-index: 0;
 
-    .wrapper.-top & {
+    .wrapper.-hasNewsTicker & {
       padding-top: 75px + 24px;
     }
   }
@@ -26,7 +26,7 @@
     & {
       padding-top: cvws(88);
 
-      .wrapper.-top & {
+      .wrapper.-hasNewsTicker & {
         padding-top: cvws(88 + 39);
       }
     }

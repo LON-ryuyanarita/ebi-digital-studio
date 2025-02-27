@@ -10,6 +10,12 @@ if (is_front_page()) {
 } elseif (is_404()) {
 	$pageName = 'notfound';
 }
+
+$news_id = get_field('header_news');
+$has_news_ticker = 0;
+if ($pageName == 'top' && !empty($news_id)) {
+	$has_news_ticker = 1;
+}
 ?>
 
 <!DOCTYPE html>
@@ -57,5 +63,6 @@ if (is_front_page()) {
 			height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
 
-	<div class="wrapper -<?php echo $pageName; ?>" data-ebi-wrapper="<?php echo $pageName; ?>">
+	<div class="wrapper -<?php echo $pageName; ?><?php if ($has_news_ticker): echo ' -hasNewsTicker';
+																								endif; ?>" data-ebi-wrapper="<?php echo $pageName; ?>">
 		<?php get_template_part('include/c-header'); ?>

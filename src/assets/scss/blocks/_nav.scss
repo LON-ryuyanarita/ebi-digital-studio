@@ -112,7 +112,7 @@
       z-index: 1;
       transition: height 200ms var(--ease-fast-out-slow-in);
 
-      .wrapper.-top & {
+      .wrapper.-hasNewsTicker & {
         top: 75px + 24px;
       }
     }
@@ -243,7 +243,7 @@
       overflow: auto;
       overscroll-behavior: contain;
 
-      .wrapper.-top & {
+      .wrapper.-hasNewsTicker & {
         height: calc(var(--vh) * 100 - cvws(88 + 38));
         margin-top: cvws(88 + 38);
       }
@@ -310,7 +310,7 @@
         top: auto;
         left: auto;
 
-        .wrapper.-top & {
+        .wrapper.-hasNewsTicker & {
           top: auto;
         }
       }

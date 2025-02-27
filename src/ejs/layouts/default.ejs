@@ -5,7 +5,7 @@
   </head>
 
   <body>
-    <div class="wrapper -<%- meta.page %>" data-ebi-wrapper="<%- meta.page %>">
+    <div class="wrapper -<%- meta.page %><% if (meta.page === 'top') { %> -hasNewsTicker<% } %>" data-ebi-wrapper="<%- meta.page %>">
       <%- include(`../modules/c-header`); %>
       <main class="main" role="main">
         <% content(__append) %>
