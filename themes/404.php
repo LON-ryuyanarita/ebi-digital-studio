@@ -19,7 +19,7 @@ Template Name: 404
         </p>
       </div>
       <div class="notfound__btn ebiButton -full -black">
-        <a href="/" target="_blank">
+        <a href="/">
           <span>トップページへ戻る</span>
         </a>
       </div>
