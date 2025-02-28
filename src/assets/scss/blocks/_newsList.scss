@@ -34,7 +34,7 @@
         .-enabledHover & {
           &:hover {
             color: var(--color-white-1);
-            background-color: var(--color-red-1);
+            background-color: var(--color-black-1);
             transition-duration: 200ms, 200ms;
 
             .-date,
@@ -55,7 +55,7 @@
 
               svg {
                 path {
-                  fill: var(--color-red-1) !important;
+                  fill: var(--color-black-1) !important;
                 }
               }
             }
@@ -157,12 +157,6 @@
           margin-top: cvws(4);
           padding-right: 0;
           order: 2;
-
-          white-space: normal;
-          word-break: break-word;
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 2;
         }
 
         .-date {
