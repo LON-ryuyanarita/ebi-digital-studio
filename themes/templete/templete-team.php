@@ -106,7 +106,7 @@ $themeUri = get_template_directory_uri();
                   <img src="<?= $themeUri ?>/assets/img/team/member_sasaki.png" alt="Youichi Johannes Sasaki" loading="lazy">
                   </figure>
                   <div class="team__member__itemText">
-                    <p class="team__member__itemPosition fontPanchang">Chief Coorinator / PORSCHE PRO</p>
+                    <p class="team__member__itemPosition fontPanchang">Chief Coordinator / PORSCHE PRO</p>
                     <p class="team__member__itemNameEn fontPanchang">Youichi Johannes Sasaki</p>
                     <h3 class="team__member__itemNameJa">佐々木ヨハネス陽一</h3>                    
                     <p class="team__member__itemScope fontPanchang">
