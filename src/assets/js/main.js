@@ -51,31 +51,31 @@ const DOMContentLoadedCallback = () => {
 
   const windowInfo = {};
 
-  // debug::
-  if (location.search.includes('debug=true')) {
-    var tempX = 0;
-    var tempY = 0;
-    $root.css({
-      'box-shadow': '0 0 1px inset #000',
-      // 'min-width': '1440px',
-    });
-    $(window).on({
-      'mousewheel.temp': function (e) {
-        tempX += e.originalEvent.deltaX * -0.5;
-        tempY += e.originalEvent.deltaY * -0.5;
-        $root.css('transform', 'translate(' + tempX + 'px, ' + tempY + 'px)');
-      }.bind(this),
+  // // debug::
+  // if (location.search.includes('debug=true')) {
+  //   var tempX = 0;
+  //   var tempY = 0;
+  //   $root.css({
+  //     'box-shadow': '0 0 1px inset #000',
+  //     // 'min-width': '1440px',
+  //   });
+  //   $(window).on({
+  //     'mousewheel.temp': function (e) {
+  //       tempX += e.originalEvent.deltaX * -0.5;
+  //       tempY += e.originalEvent.deltaY * -0.5;
+  //       $root.css('transform', 'translate(' + tempX + 'px, ' + tempY + 'px)');
+  //     }.bind(this),
 
-      'keypress.temp': function (e) {
-        if (e.keyCode == 32) {
-          e.preventDefault();
-          $root.css('transform', '');
-          $(window).off('mousewheel.temp').off('keypress.temp');
-        }
-      }.bind(this),
-    });
-  }
-  // ::debug
+  //     'keypress.temp': function (e) {
+  //       if (e.keyCode == 32) {
+  //         e.preventDefault();
+  //         $root.css('transform', '');
+  //         $(window).off('mousewheel.temp').off('keypress.temp');
+  //       }
+  //     }.bind(this),
+  //   });
+  // }
+  // // ::debug
 
   const header = new Header();
   header.init();

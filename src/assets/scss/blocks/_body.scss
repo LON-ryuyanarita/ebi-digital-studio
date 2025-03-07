@@ -252,6 +252,10 @@
         margin-top: 20px;
         margin-bottom: 20px;
       }
+
+      a {
+        @include link;
+      }
     }
 
     .body__index {
@@ -374,6 +378,10 @@
         max-width: $pc-base-width;
         margin: 0 auto;
         padding: 80px 40px 20px;
+      }
+
+      a {
+        @include link;
       }
 
       .-column {
@@ -629,6 +637,10 @@
           bottom: 0;
         }
       }
+
+      a {
+        @include link;
+      }
     }
 
     .body__profile {
@@ -843,7 +855,7 @@
         margin-bottom: cvws(24);
 
         & + p {
-          margin-top: cvws(24);
+          margin-top: cvws(32);
         }
 
         small {
@@ -1006,7 +1018,7 @@
 
               p {
                 & + p {
-                  margin-top: cvws(20);
+                  margin-top: cvws(32);
                 }
               }
             }
@@ -1238,7 +1250,7 @@
       }
 
       .body__credit {
-        margin-top: cvws(40);
+        margin-top: cvws(80);
         padding-top: cvws(70);
 
         // .-title {
@@ -1252,7 +1264,7 @@
 
           p {
             & + p {
-              margin-top: cvws(28);
+              margin-top: cvws(32);
             }
           }
         }

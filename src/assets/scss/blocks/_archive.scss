@@ -243,8 +243,28 @@
 
     @at-root {
       .archive__top {
+        margin-bottom: cvws(80);
         padding-left: cvws(20);
         flex-flow: column nowrap;
+
+        &.-tag,
+        &.-news {
+          max-width: none;
+        }
+
+        &.-tag {
+          margin-bottom: cvws(40);
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            border-bottom: 1px solid rgba($color-black-1, 0.2);
+            left: cvws(20);
+            right: cvws(20);
+            bottom: 0;
+          }
+        }
       }
 
       .archive__header {
@@ -277,7 +297,7 @@
       }
 
       .archive__tag__header {
-        padding: cvws(64) 0 cvws(20);
+        padding: cvws(108) 0;
 
         .-title {
           span {
@@ -366,7 +386,7 @@
       }
 
       .archive__list {
-        margin-top: cvws(80);
+        margin-top: 0;
       }
 
       .archive__pager {
