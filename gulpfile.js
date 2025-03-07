@@ -185,7 +185,7 @@ const imageMinify = (done) => {
   gulp
     .src([
       `${dirs.src.img}/**/*.${imgExt}`,
-      `!${dirs.src.img}/**/fv-img-1.png`,
+      // `!${dirs.src.img}/**/fv-img-1.png`,
       // `!${dirs.src.img}/**/*-no.svg`,
       `${dirs.src.ejs.svg}/**/*.${imgExt}`,
     ])
