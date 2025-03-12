@@ -216,8 +216,8 @@ $top_page = get_page_by_path('home');
 
         <section class="top__ds">
           <div class="top__ds__inner">
-            <h2 class="top__ds__title fontPanchang">
-              <em>EBI DIGITAL STUDIO</em>
+            <h2 class="top__ds__title">
+              <em class="fontPanchang">EBI DIGITAL STUDIO</em>
               <small>ポルシェに惹かれるすべての人へ。</small>
             </h2>
             <div class="top__ds__text">
@@ -252,7 +252,7 @@ $top_page = get_page_by_path('home');
               </div>
               <div class="top__se__btn ebiButton -small -transparent">
                 <a href="/special-ex/">
-                  <span class="fontPanchang">VIEW ALL</span>
+                  <span class="fontPanchang">VIEW MORE</span>
                 </a>
               </div>
               <div class="-t3">
@@ -281,9 +281,9 @@ $top_page = get_page_by_path('home');
         <section class="top__group">
           <div class="top__group__inner">
             <div class="top__group__contents">
-              <h2 class="top__group__title fontPanchang">
+              <h2 class="top__group__title">
                 <small>日本最大 ポルシェディーラーグループ</small>
-                <em>EBI GROUP</em>
+                <em class="fontPanchang">EBI GROUP</em>
               </h2>
               <div class="top__group__text">
                 <p>
@@ -299,7 +299,7 @@ $top_page = get_page_by_path('home');
               </div>
               <div class="top__group__btn ebiButton -small">
                 <a href="/ebi-group/">
-                  <span class="fontPanchang">VIEW ALL</span>
+                  <span class="fontPanchang">VIEW MORE</span>
                 </a>
               </div>
             </div>

@@ -68,7 +68,7 @@
         height: 1px;
         background-color: var(--color-black-1);
         position: absolute;
-        top: 30px + 90px;
+        top: 90px + 26px;
         left: -126px;
       }
     }
@@ -535,7 +535,7 @@
         &.-left {
           .-person {
             &::before {
-              right: -2px;
+              right: -1.5px;
             }
 
             > span {
@@ -559,7 +559,7 @@
             padding-left: 125px - 96px;
 
             &::before {
-              left: -2px;
+              left: -1.5px;
               transform: scaleX(-1);
             }
 
@@ -623,17 +623,17 @@
         &::after {
           content: '';
           width: 1px;
-          background-color: rgba($color-black-1, 0.2);
+          background-color: #ddd;
           position: absolute;
         }
 
         &::before {
-          height: 45px;
+          height: 46px;
           top: 6px;
         }
 
         &::after {
-          top: 6px + 45px + 9px;
+          top: 6px + 44px + 9px;
           bottom: 0;
         }
       }
@@ -1109,7 +1109,7 @@
           &.-left {
             .-person {
               &::before {
-                right: cvws(-2px);
+                right: cvws(-1.5px);
               }
 
               > span {
@@ -1127,7 +1127,7 @@
               padding-left: cvws(125px - 96px);
 
               &::before {
-                left: cvws(-2);
+                left: cvws(-1.5);
               }
 
               > span {
@@ -1148,8 +1148,8 @@
           width: cvws(152);
 
           &::before {
-            width: cvws(16);
-            height: cvws(9);
+            width: cvws(18);
+            height: cvws(12);
             top: cvws(45);
           }
 
@@ -1171,10 +1171,11 @@
 
           &::before,
           &::after {
+            width: cvws(1);
           }
 
           &::before {
-            height: cvws(45);
+            height: cvws(46);
             top: cvws(6);
           }
 
