@@ -37,6 +37,7 @@
       text-decoration-style: solid !important;
       text-decoration-color: var(--color-gray-2) !important;
       text-underline-offset: -2px !important;
+      text-decoration-skip-ink: none !important;
     }
 
     > *:not(.-full) {
@@ -475,8 +476,11 @@
       border: 1px solid rgba($color-black-1, 0.2);
 
       .-ogp {
-        padding: 35px 30px 35px 330px;
-        position: relative;
+        a {
+          padding: 35px 30px 35px 330px;
+          display: block;
+          position: relative;
+        }
       }
 
       .-img {
@@ -543,7 +547,7 @@
             }
           }
 
-          p {
+          .-txt {
             padding-left: 20px;
 
             &::before,
@@ -568,7 +572,7 @@
             }
           }
 
-          p {
+          .-txt {
             order: 1;
             padding-right: 20px;
 
@@ -613,10 +617,8 @@
         }
       }
 
-      p {
+      .-txt {
         margin-top: -6px;
-        font-size: 18px;
-        line-height: 1.667;
         position: relative;
 
         &::before,
@@ -635,6 +637,16 @@
         &::after {
           top: 6px + 44px + 9px;
           bottom: 0;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 1.667;
+          position: relative;
+
+          & + p {
+            margin-top: 14px;
+          }
         }
       }
 
@@ -658,6 +670,10 @@
 
         p {
           margin-top: 12px;
+
+          & + p {
+            margin-top: 12px;
+          }
         }
 
         a {
@@ -761,8 +777,14 @@
         font-weight: bold;
       }
 
-      p {
+      .-txt {
         text-align: justify;
+
+        p {
+          & + p {
+            margin-top: 15px;
+          }
+        }
       }
     }
 
@@ -1075,7 +1097,9 @@
         margin-top: cvws(70);
 
         .-ogp {
-          padding: cvws(34) cvws(40) cvws(34) cvws(268);
+          a {
+            padding: cvws(34) cvws(40) cvws(34) cvws(268);
+          }
         }
 
         .-img {
@@ -1117,7 +1141,7 @@
               }
             }
 
-            p {
+            .-txt {
               padding-left: cvws(20px);
             }
           }
@@ -1134,7 +1158,7 @@
               }
             }
 
-            p {
+            .-txt {
               padding-right: cvws(20);
 
               &::before,
@@ -1164,10 +1188,8 @@
           }
         }
 
-        p {
+        .-txt {
           margin-top: cvws(-6);
-          font-size: cvws(30);
-          line-height: cvws(50);
 
           &::before,
           &::after {
@@ -1182,6 +1204,15 @@
           &::after {
             top: cvws(6 + 45 + 9);
             bottom: 0;
+          }
+
+          p {
+            font-size: cvws(30);
+            line-height: cvws(50);
+
+            & + p {
+              margin-top: cvws(24);
+            }
           }
         }
       }
@@ -1198,6 +1229,10 @@
 
           p {
             margin-top: cvws(12);
+
+            & + p {
+              margin-top: cvws(28);
+            }
           }
         }
 
@@ -1245,6 +1280,14 @@
           &.-right {
             border-left-width: cvws(6);
             border-right-width: cvws(6);
+          }
+        }
+
+        .-txt {
+          p {
+            & + p {
+              margin-top: cvws(30);
+            }
           }
         }
       }

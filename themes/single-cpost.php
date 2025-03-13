@@ -351,13 +351,14 @@ $top_page = get_page_by_path('home');
                 <?php elseif ($type === 'ogp'):
                   $ogp = get_sub_field('ogp');
                   $ogp_link = $ogp['url'];
+                  $ogp_blank = $ogp['blank'];
                   $ogp_data = get_ogp_data($ogp_link);
                   $ogp_img_file = $ogp['img'];
                   $ogp_img_src = wp_get_attachment_image_url($ogp_img_file, 'full') ?? null;
                 ?>
                   <div class="body__link">
                     <article class="-ogp">
-                      <a href="<?php echo esc_url($ogp_link); ?>" target="_blank">
+                      <a href="<?php echo esc_url($ogp_link); ?>" <?php if ($ogp_blank) echo ' target="_blank"'; ?>>
                         <div class="-img">
                           <img src="<?php echo $ogp_img_src; ?>" alt="">
                         </div>
@@ -385,7 +386,9 @@ $top_page = get_page_by_path('home');
                             <img src="<?php echo $img_src; ?>" alt="">
                             <span><?php echo $name; ?></span>
                           </div>
-                          <?php echo $text; ?>
+                          <div class="-txt">
+                            <?php echo $text; ?>
+                          </div>
                         </div>
                     <?php
                       endwhile;
@@ -404,7 +407,9 @@ $top_page = get_page_by_path('home');
                     ?>
                         <div class="-block -<?php echo $position; ?>">
                           <div class="-name"><em><?php echo $name; ?></em></div>
-                          <?php echo $text; ?>
+                          <div class="-txt">
+                            <?php echo $text; ?>
+                          </div>
                         </div>
                     <?php
                       endwhile;
@@ -423,9 +428,9 @@ $top_page = get_page_by_path('home');
                       <div class="-title">
                         <?php echo strip_tags($profile_title, '<a><em><br>'); ?>
                       </div>
-                      <p>
-                        <?php echo strip_tags($profile_text, '<a><em><br>'); ?>
-                      </p>
+                      <div class="-txt">
+                        <?php echo strip_tags($profile_text, '<p><a><em><br>'); ?>
+                      </div>
                     </div>
                     <div class="-img">
                       <img src="<?php echo $profile_img_src; ?>" alt="">
