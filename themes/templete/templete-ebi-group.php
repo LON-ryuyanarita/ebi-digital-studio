@@ -325,6 +325,15 @@ $themeUri = get_template_directory_uri();
               <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
             </span>                
           </a>
+          <a href="https://ebi-digitalstudio.jp/articles/news4/" target="_blank" class="ebigroup__stores__itemLink __ja">
+            <span>試乗車一覧</span>
+            <span class="ebigroup__stores__itemLinkIcon">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank.png" alt="">
+            </span>
+            <span class="ebigroup__stores__itemLinkIconHv">
+              <img loading="lazy" src="<?= $themeUri ?>/assets/img/ebigroup/icon_blank_white.png" alt="">
+            </span> 
+          </a>   
           <a data-ebi-onlineconnection class="ebigroup__stores__itemLink fontPanchang">
             <span>ONLINE CONNECTION</span>
             <span class="ebigroup__stores__itemLinkIcon">
