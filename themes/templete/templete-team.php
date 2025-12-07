@@ -89,7 +89,7 @@ $themeUri = get_template_directory_uri();
                   <img src="<?= $themeUri ?>/assets/img/team/member_kanno.png" alt="Tatsuhiko Kanno" loading="lazy">
                   </figure>
                   <div class="team__member__itemText">
-                    <p class="team__member__itemPosition fontPanchang">Chief Editor</p>
+                    <p class="team__member__itemPosition fontPanchang">Branding Director / Chief Editor</p>
                     <p class="team__member__itemNameEn fontPanchang">Tatsuhiko Kanno</p>
                     <h3 class="team__member__itemNameJa">菅野 竜彦</h3>                    
                     <p class="team__member__itemScope fontPanchang">
