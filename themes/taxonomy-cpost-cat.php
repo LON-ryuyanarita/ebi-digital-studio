@@ -68,14 +68,13 @@ $top_page = get_page_by_path('home');
           <?php
           $title = get_field('title');
           $thumb = get_field('thumbnail') ?? null;
-          $thumb_src = wp_get_attachment_image_url($thumb, 'full');
           $terms = wp_get_post_terms(get_the_ID(), 'cpost-tag');
           ?>
           <article class="archive__top__article__item">
             <a href="<?php the_permalink(); ?>">
               <div class="archive__top__article__img">
-                <?php if ($thumb_src) : ?>
-                  <img src="<?php echo $thumb_src; ?>" alt="">
+                <?php if ($thumb) : ?>
+                  <?php echo ebi_get_attachment_image($thumb, 'medium_large', array('loading' => 'eager', 'fetchpriority' => 'high')); ?>
                 <?php endif; ?>
               </div>
               <div class="archive__top__article__body">

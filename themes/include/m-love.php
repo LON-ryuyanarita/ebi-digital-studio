@@ -5,18 +5,18 @@ $themeUri = get_template_directory_uri();
 <aside class="love">
   <div class="love__imgs">
     <div class="-left">
-      <img src="<?php echo $themeUri; ?>/assets/img/love-img-1.jpg" alt="">
-      <img src="<?php echo $themeUri; ?>/assets/img/love-img-2.jpg" alt="">
-      <img src="<?php echo $themeUri; ?>/assets/img/love-img-3.jpg" alt="">
-      <img src="<?php echo $themeUri; ?>/assets/img/love-img-4.jpg" alt="">
-      <img src="<?php echo $themeUri; ?>/assets/img/love-img-5.jpg" alt="">
+      <img src="<?php echo $themeUri; ?>/assets/img/love-img-1.jpg" alt="" loading="lazy" decoding="async">
+      <img src="<?php echo $themeUri; ?>/assets/img/love-img-2.jpg" alt="" loading="lazy" decoding="async">
+      <img src="<?php echo $themeUri; ?>/assets/img/love-img-3.jpg" alt="" loading="lazy" decoding="async">
+      <img src="<?php echo $themeUri; ?>/assets/img/love-img-4.jpg" alt="" loading="lazy" decoding="async">
+      <img src="<?php echo $themeUri; ?>/assets/img/love-img-5.jpg" alt="" loading="lazy" decoding="async">
     </div>
     <div class="-right">
-      <img src="<?php echo $themeUri; ?>/assets/img/love-img-6.jpg" alt="">
-      <img src="<?php echo $themeUri; ?>/assets/img/love-img-7.jpg" alt="">
-      <img src="<?php echo $themeUri; ?>/assets/img/love-img-8.jpg" alt="">
-      <img src="<?php echo $themeUri; ?>/assets/img/love-img-9.jpg" alt="">
-      <img src="<?php echo $themeUri; ?>/assets/img/love-img-10.jpg" alt="">
+      <img src="<?php echo $themeUri; ?>/assets/img/love-img-6.jpg" alt="" loading="lazy" decoding="async">
+      <img src="<?php echo $themeUri; ?>/assets/img/love-img-7.jpg" alt="" loading="lazy" decoding="async">
+      <img src="<?php echo $themeUri; ?>/assets/img/love-img-8.jpg" alt="" loading="lazy" decoding="async">
+      <img src="<?php echo $themeUri; ?>/assets/img/love-img-9.jpg" alt="" loading="lazy" decoding="async">
+      <img src="<?php echo $themeUri; ?>/assets/img/love-img-10.jpg" alt="" loading="lazy" decoding="async">
     </div>
   </div>
 
@@ -59,12 +59,11 @@ $themeUri = get_template_directory_uri();
         if ($query->have_posts()) :
           while ($query->have_posts()) : $query->the_post();
             $title = get_field('title');
-            $thumb = get_field('thumbnail') ?? null;
-            $thumb_src = wp_get_attachment_image_url($thumb, 'full'); ?>
+            $thumb = get_field('thumbnail') ?? null; ?>
             <a href="<?php echo get_permalink(); ?>">
               <div class="love__article__img">
-                <?php if ($thumb_src) : ?>
-                  <img src="<?php echo $thumb_src; ?>" alt="">
+                <?php if ($thumb) : ?>
+                  <?php echo ebi_get_attachment_image($thumb, 'medium_large'); ?>
                 <?php endif; ?>
               </div>
               <div class="love__article__body">

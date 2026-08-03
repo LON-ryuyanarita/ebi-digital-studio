@@ -8,6 +8,28 @@ function twpp_setup_theme()
 add_action('after_setup_theme', 'twpp_setup_theme');
 
 
+/* 添付画像をレスポンシブ画像として出力 */
+function ebi_get_attachment_image($attachment_id, $size = 'large', $attributes = array())
+{
+  if (!$attachment_id) {
+    return '';
+  }
+
+  $default_attributes = array(
+    'alt' => '',
+    'loading' => 'lazy',
+    'decoding' => 'async',
+  );
+
+  return wp_get_attachment_image(
+    (int) $attachment_id,
+    $size,
+    false,
+    array_merge($default_attributes, $attributes)
+  );
+}
+
+
 /* 絵文字のスクリプトとCSSを無効化 */
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
@@ -230,9 +252,6 @@ add_action('admin_head', 'custom_admin_inline_styles');
 function custom_admin_inline_styles()
 {
   echo '<style>
-      .acf-field-wysiwyg .mce-toolbar .mce-widget:not([aria-label="リンクの挿入/編集 (⌘K)"]):not(.mce-widget.mce-btn.mce-menubtn.mce-first.mce-btn-has-text) {
-        display: none;
-      }
       .client.column-client {
         a {
           margin-right: 1em;
@@ -261,6 +280,21 @@ function tinymce_add_buttons($array)
   return $array;
 }
 add_filter('mce_buttons', 'tinymce_add_buttons');
+
+/* ACFのリッチテキストに必要なボタンだけを表示 */
+function ebi_acf_wysiwyg_toolbars($toolbars)
+{
+  if (!isset($toolbars['Full'])) {
+    return $toolbars;
+  }
+
+  $toolbars['Full'] = array(
+    1 => array('styleselect', 'bullist', 'numlist', 'link', 'unlink'),
+  );
+
+  return $toolbars;
+}
+add_filter('acf/fields/wysiwyg/toolbars', 'ebi_acf_wysiwyg_toolbars');
 
 function customize_tinymce_settings($mceInit)
 {
@@ -369,51 +403,311 @@ function wrap_with_li($text)
 }
 
 
-/* OGP 取得 */
-function get_ogp_data($url)
+/* OGPグループに取得結果の保存欄を追加 */
+function ebi_add_ogp_metadata_fields($field)
 {
-  require_once get_template_directory() . '/include/OpenGraph.php';
-
-  $ogp_data = [
-    'title'       => '',
-    'description' => '',
-  ];
-
-  $graph = OpenGraph::fetch($url);
-
-  if (!$graph || !is_object($graph)) {
-    return $ogp_data;
+  if (($field['key'] ?? '') !== 'field_67aea371bbfac' || ($field['type'] ?? '') !== 'group') {
+    return $field;
   }
 
-  $detects = ['ASCII', 'EUC-JP', 'SJIS', 'JIS', 'CP51932', 'UTF-16', 'ISO-8859-1'];
+  $sub_fields = $field['sub_fields'] ?? array();
+  $field_names = wp_list_pluck($sub_fields, 'name');
 
-  $post_title = isset($graph->title) ? esc_attr($graph->title) : '';
-  $site_name = isset($graph->site_name) ? esc_attr($graph->site_name) : '';
+  if (!in_array('title', $field_names, true)) {
+    $sub_fields[] = array(
+      'key' => 'field_ebi_ogp_title',
+      'label' => 'タイトル',
+      'name' => 'title',
+      '_name' => 'title',
+      'type' => 'text',
+      'instructions' => '「情報取得」を押すとリンク先から取得します。必要に応じて編集できます。',
+      'required' => 0,
+      'wrapper' => array('width' => '', 'class' => '', 'id' => ''),
+      'default_value' => '',
+      'parent' => $field['key'],
+    );
+  }
 
-  if (!empty($post_title)) {
-    $title_check = mb_convert_encoding($post_title, 'ISO-8859-1', 'UTF-8');
-    if (mb_detect_encoding($title_check) == 'UTF-8') {
-      $post_title = $title_check;
-    }
-    if (mb_detect_encoding($post_title) != 'UTF-8') {
-      $post_title = mb_convert_encoding($post_title, 'UTF-8', mb_detect_encoding($post_title, $detects, true));
+  if (!in_array('description', $field_names, true)) {
+    $sub_fields[] = array(
+      'key' => 'field_ebi_ogp_description',
+      'label' => 'ディスクリプション',
+      'name' => 'description',
+      '_name' => 'description',
+      'type' => 'textarea',
+      'instructions' => '「情報取得」を押すとリンク先から取得します。必要に応じて編集できます。',
+      'required' => 0,
+      'wrapper' => array('width' => '', 'class' => '', 'id' => ''),
+      'default_value' => '',
+      'rows' => 4,
+      'new_lines' => '',
+      'parent' => $field['key'],
+    );
+  }
+
+  $field['sub_fields'] = $sub_fields;
+  return $field;
+}
+add_filter('acf/load_field/name=ogp', 'ebi_add_ogp_metadata_fields', 20);
+
+
+/* OGP取得ボタン用の管理画面スクリプト */
+function ebi_enqueue_ogp_admin_script()
+{
+  $screen = function_exists('get_current_screen') ? get_current_screen() : null;
+
+  if (!$screen || $screen->post_type !== 'cpost') {
+    return;
+  }
+
+  $script_path = get_template_directory() . '/assets/js/admin-ogp.js';
+  if (!file_exists($script_path)) {
+    return;
+  }
+
+  wp_enqueue_script(
+    'ebi-admin-ogp',
+    get_template_directory_uri() . '/assets/js/admin-ogp.js',
+    array('jquery', 'acf-input', 'wp-api-fetch'),
+    filemtime($script_path),
+    true
+  );
+}
+add_action('acf/input/admin_enqueue_scripts', 'ebi_enqueue_ogp_admin_script');
+
+
+/* 管理画面からリンク先のOGP情報を取得 */
+function ebi_register_ogp_rest_route()
+{
+  register_rest_route('ebi/v1', '/ogp', array(
+    'methods' => WP_REST_Server::CREATABLE,
+    'permission_callback' => function (WP_REST_Request $request) {
+      $post_id = (int) $request->get_param('post_id');
+
+      if (!current_user_can('edit_posts')) {
+        return false;
+      }
+
+      if ($post_id && !current_user_can('edit_post', $post_id)) {
+        return false;
+      }
+
+      if ($request->get_param('fetch_image') && !current_user_can('upload_files')) {
+        return false;
+      }
+
+      return true;
+    },
+    'args' => array(
+      'url' => array(
+        'required' => true,
+        'type' => 'string',
+        'sanitize_callback' => 'esc_url_raw',
+        'validate_callback' => function ($url) {
+          return (bool) wp_http_validate_url($url);
+        },
+      ),
+      'fetch_image' => array(
+        'type' => 'boolean',
+        'default' => false,
+      ),
+      'post_id' => array(
+        'type' => 'integer',
+        'minimum' => 0,
+        'default' => 0,
+      ),
+    ),
+    'callback' => 'ebi_fetch_ogp_data',
+  ));
+}
+add_action('rest_api_init', 'ebi_register_ogp_rest_route');
+
+function ebi_fetch_ogp_data(WP_REST_Request $request)
+{
+  $url = esc_url_raw($request->get_param('url'));
+  $response = wp_safe_remote_get($url, array(
+    'timeout' => 8,
+    'redirection' => 3,
+    'user-agent' => 'EBI DIGITAL STUDIO OGP Fetcher; ' . home_url('/'),
+    'limit_response_size' => 1048576,
+  ));
+
+  if (is_wp_error($response)) {
+    return new WP_Error('ebi_ogp_fetch_failed', 'OGP情報を取得できませんでした。', array('status' => 502));
+  }
+
+  $status_code = wp_remote_retrieve_response_code($response);
+  $body = wp_remote_retrieve_body($response);
+
+  if ($status_code < 200 || $status_code >= 300 || !$body) {
+    return new WP_Error('ebi_ogp_invalid_response', 'リンク先から有効な応答を取得できませんでした。', array('status' => 502));
+  }
+
+  $data = ebi_extract_ogp_data($body, $url);
+  $image_url = $data['image_url'];
+  unset($data['image_url']);
+
+  $data['image'] = null;
+  $data['image_error'] = '';
+
+  if ($request->get_param('fetch_image')) {
+    if (!$image_url) {
+      $data['image_error'] = 'リンク先にog:imageが設定されていません。';
+    } else {
+      $attachment_id = ebi_sideload_ogp_image(
+        $image_url,
+        (int) $request->get_param('post_id'),
+        $data['title']
+      );
+
+      if (is_wp_error($attachment_id)) {
+        $data['image_error'] = $attachment_id->get_error_message();
+      } else {
+        $data['image'] = wp_prepare_attachment_for_js($attachment_id);
+
+        if (!$data['image']) {
+          $data['image'] = array(
+            'id' => $attachment_id,
+            'url' => wp_get_attachment_url($attachment_id),
+          );
+        }
+      }
     }
   }
 
-  if (!empty($site_name)) {
-    $site_name_check = mb_convert_encoding($site_name, 'ISO-8859-1', 'UTF-8');
-    if (mb_detect_encoding($site_name_check) == 'UTF-8') {
-      $site_name = $site_name_check;
-    }
-    if (mb_detect_encoding($site_name) != 'UTF-8') {
-      $site_name = mb_convert_encoding($site_name, 'UTF-8', mb_detect_encoding($site_name, $detects, true));
+  return rest_ensure_response($data);
+}
+
+function ebi_extract_ogp_data($html, $source_url = '')
+{
+  $data = array('title' => '', 'description' => '', 'image_url' => '');
+
+  if (!class_exists('DOMDocument')) {
+    return $data;
+  }
+
+  $previous_errors = libxml_use_internal_errors(true);
+  $dom = new DOMDocument();
+  $dom->loadHTML('<?xml encoding="utf-8" ?>' . $html);
+  libxml_clear_errors();
+  libxml_use_internal_errors($previous_errors);
+
+  $xpath = new DOMXPath($dom);
+  $data['title'] = ebi_find_meta_content($xpath, 'property', 'og:title');
+  $data['description'] = ebi_find_meta_content($xpath, 'property', 'og:description');
+  $data['image_url'] = ebi_find_meta_content($xpath, 'property', 'og:image:secure_url');
+
+  if (!$data['image_url']) {
+    $data['image_url'] = ebi_find_meta_content($xpath, 'property', 'og:image');
+  }
+
+  if (!$data['image_url']) {
+    $data['image_url'] = ebi_find_meta_content($xpath, 'name', 'twitter:image');
+  }
+
+  if (!$data['title']) {
+    $title_nodes = $xpath->query('//title');
+    if ($title_nodes->length > 0) {
+      $data['title'] = trim($title_nodes->item(0)->textContent);
     }
   }
 
-  $ogp_data['title'] = $post_title;
-  $ogp_data['description'] = isset($graph->description) ? $graph->description : '';
+  if (!$data['description']) {
+    $data['description'] = ebi_find_meta_content($xpath, 'name', 'description');
+  }
 
-  return $ogp_data;
+  $data['title'] = sanitize_text_field($data['title']);
+  $data['description'] = sanitize_text_field($data['description']);
+
+  if ($data['image_url'] && $source_url) {
+    $data['image_url'] = WP_Http::make_absolute_url($data['image_url'], $source_url);
+  }
+  $data['image_url'] = esc_url_raw($data['image_url']);
+
+  return $data;
+}
+
+function ebi_find_meta_content(DOMXPath $xpath, $attribute, $value)
+{
+  $query = sprintf(
+    '//meta[translate(@%1$s, "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "abcdefghijklmnopqrstuvwxyz")="%2$s"]',
+    $attribute,
+    strtolower($value)
+  );
+  $nodes = $xpath->query($query);
+
+  if ($nodes->length < 1) {
+    return '';
+  }
+
+  return trim($nodes->item(0)->getAttribute('content'));
+}
+
+function ebi_sideload_ogp_image($image_url, $post_id = 0, $title = '')
+{
+  $image_url = esc_url_raw($image_url);
+
+  if (!wp_http_validate_url($image_url)) {
+    return new WP_Error('ebi_ogp_invalid_image_url', 'OGP画像のURLが無効です。');
+  }
+
+  $local_attachment_id = attachment_url_to_postid($image_url);
+  if ($local_attachment_id) {
+    return $local_attachment_id;
+  }
+
+  $existing_attachments = get_posts(array(
+    'post_type' => 'attachment',
+    'post_status' => 'inherit',
+    'posts_per_page' => 1,
+    'fields' => 'ids',
+    'meta_key' => '_source_url',
+    'meta_value' => $image_url,
+  ));
+
+  if ($existing_attachments) {
+    return (int) $existing_attachments[0];
+  }
+
+  require_once ABSPATH . 'wp-admin/includes/file.php';
+  require_once ABSPATH . 'wp-admin/includes/media.php';
+  require_once ABSPATH . 'wp-admin/includes/image.php';
+
+  $attachment_id = media_sideload_image(
+    $image_url,
+    $post_id,
+    $title ?: null,
+    'id'
+  );
+
+  if (is_wp_error($attachment_id)) {
+    return new WP_Error('ebi_ogp_image_fetch_failed', 'OGP画像を取得できませんでした。');
+  }
+
+  return (int) $attachment_id;
+}
+
+
+/* 記事モジュールで許可するリッチテキスト */
+function ebi_kses_rich_text($html)
+{
+  $allowed_html = array(
+    'p' => array(),
+    'a' => array(
+      'href' => true,
+      'target' => true,
+      'rel' => true,
+      'class' => true,
+    ),
+    'em' => array('class' => true, 'style' => true),
+    'strong' => array('class' => true),
+    'br' => array(),
+    'ul' => array('class' => true),
+    'ol' => array('class' => true),
+    'li' => array('class' => true),
+  );
+
+  return wp_kses($html, $allowed_html);
 }
 
 

@@ -40,9 +40,9 @@ $themeUri = get_template_directory_uri();
             </div>
           </div>
           <div class="-imgs">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/1-img-1.jpg" alt="">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/1-img-2.jpg" alt="">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/1-img-3.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/1-img-1.jpg" alt="" loading="lazy" decoding="async">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/1-img-2.jpg" alt="" loading="lazy" decoding="async">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/1-img-3.jpg" alt="" loading="lazy" decoding="async">
           </div>
           <div>
           </div>
@@ -86,8 +86,8 @@ $themeUri = get_template_directory_uri();
             </p>
           </div>
           <div class="-imgs">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/2-img-1.jpg" alt="">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/2-img-2.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/2-img-1.jpg" alt="" loading="lazy" decoding="async">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/2-img-2.jpg" alt="" loading="lazy" decoding="async">
           </div>
           <div>
           </div>
@@ -130,8 +130,8 @@ $themeUri = get_template_directory_uri();
             </div>
           </div>
           <div class="-imgs">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/3-img-1.jpg" alt="">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/3-img-2.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/3-img-1.jpg" alt="" loading="lazy" decoding="async">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/3-img-2.jpg" alt="" loading="lazy" decoding="async">
           </div>
           <div>
           </div>
@@ -182,8 +182,8 @@ $themeUri = get_template_directory_uri();
             </div>
           </div>
           <div class="-imgs">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/4-img-1.jpg" alt="">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/4-img-2.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/4-img-1.jpg" alt="" loading="lazy" decoding="async">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/4-img-2.jpg" alt="" loading="lazy" decoding="async">
           </div>
           <div>
           </div>
@@ -205,7 +205,7 @@ $themeUri = get_template_directory_uri();
       <div class="modal__body seMap__modal -so">
         <div class="seMap__modal__body -list">
           <div class="seMap__modal__item">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/5-img-1.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/5-img-1.jpg" alt="" loading="lazy" decoding="async">
             <h4 class="fontPanchang">
               05. <br class="sp">Drive Simulator
             </h4>
@@ -214,7 +214,7 @@ $themeUri = get_template_directory_uri();
             </p>
           </div>
           <div class="seMap__modal__item">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/6-img-1.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/6-img-1.jpg" alt="" loading="lazy" decoding="async">
             <h4 class="fontPanchang">
               06. <br class="sp">Event Information
             </h4>
@@ -223,7 +223,7 @@ $themeUri = get_template_directory_uri();
             </p>
           </div>
           <div class="seMap__modal__item">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/7-img-1.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/7-img-1.jpg" alt="" loading="lazy" decoding="async">
             <h4 class="fontPanchang">
               07. <br class="sp">Drive & Journey
             </h4>
@@ -232,7 +232,7 @@ $themeUri = get_template_directory_uri();
             </p>
           </div>
           <div class="seMap__modal__item">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/8-img-1.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/8-img-1.jpg" alt="" loading="lazy" decoding="async">
             <h4 class="fontPanchang">
               08. <br class="sp">Lifestyle
             </h4>
@@ -241,7 +241,7 @@ $themeUri = get_template_directory_uri();
             </p>
           </div>
           <div class="seMap__modal__item">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/9-img-1.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/9-img-1.jpg" alt="" loading="lazy" decoding="async">
             <h4 class="fontPanchang">
               09. <br class="sp">Books & Academy
             </h4>
@@ -250,7 +250,7 @@ $themeUri = get_template_directory_uri();
             </p>
           </div>
           <div class="seMap__modal__item">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/10-img-1.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/10-img-1.jpg" alt="" loading="lazy" decoding="async">
             <h4 class="fontPanchang">
               10. <br class="sp">Restaurant
             </h4>

@@ -26,7 +26,7 @@ $top_page = get_page_by_path('home');
           <div class="article__header__img">
             <div class="-bg" style="background-image: url(<?php echo $kv_src; ?>);"></div>
             <div class="-img">
-              <img src="<?php echo $kv_src; ?>" alt="">
+              <?php echo ebi_get_attachment_image($kv, 'full', array('loading' => 'eager', 'fetchpriority' => 'high')); ?>
             </div>
           </div>
           <div class="article__header__inner">
@@ -132,26 +132,23 @@ $top_page = get_page_by_path('home');
                 <?php elseif ($type === 'p'):
                   $p = get_sub_field('p');
                 ?>
-                  <?php echo $p; ?>
+                  <?php echo ebi_kses_rich_text($p); ?>
                 <?php elseif ($type === 'note'):
-                  $note = nl2br(strip_tags(get_sub_field('note')));
+                  $note = get_sub_field('note');
                 ?>
-                  <p class="body__note">
-                    <small>
-                      <?php echo $note; ?>
-                    </small>
-                  </p>
+                  <div class="body__note">
+                    <?php echo ebi_kses_rich_text($note); ?>
+                  </div>
                 <?php elseif ($type === 'img'):
                   $img_group = get_sub_field('imgs');
                   $img_full = $img_group['size'];
                   $img_file = $img_group['img'];
-                  $img_src = wp_get_attachment_image_url($img_file, 'full') ?? null;
                   $img_caption = $img_group['caption'];
                   $img_classnames = $img_full == 1 ? 'body__fullimg -full' : 'body__img'
                 ?>
                   <div class="<?php echo $img_classnames; ?>">
                     <figure>
-                      <img src="<?php echo $img_src; ?>" alt="">
+                      <?php echo ebi_get_attachment_image($img_file, $img_full == 1 ? 'full' : 'large'); ?>
                       <?php if ($img_caption) : ?>
                         <figcaption>
                           <?php echo nl2br(strip_tags($img_caption)); ?>
@@ -167,7 +164,7 @@ $top_page = get_page_by_path('home');
                 ?>
                   <div class="body__movie">
                     <div class="-mov">
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/<?php echo $mov_id; ?>?si=qcMLzxJrfcwt2j7m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                      <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/<?php echo $mov_id; ?>?si=qcMLzxJrfcwt2j7m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                     <div class="-caption">
                       <?php echo nl2br(strip_tags($mov_caption)); ?>
@@ -219,7 +216,7 @@ $top_page = get_page_by_path('home');
                   }
                 ?>
                   <div class="body__box" <?php echo $box_style; ?>>
-                    <?php echo strip_tags($box_body, '<p><a><em><br>'); ?>
+                    <?php echo ebi_kses_rich_text($box_body); ?>
                   </div>
                 <?php elseif ($type === 'blockquote'):
                   $blockquote = get_sub_field('blockquote');
@@ -239,7 +236,7 @@ $top_page = get_page_by_path('home');
                   }
                 ?>
                   <blockquote <?php echo $blockquote_style; ?>>
-                    <?php echo strip_tags($blockquote_body, '<p><a><em><br>'); ?>
+                    <?php echo ebi_kses_rich_text($blockquote_body); ?>
                   </blockquote>
                 <?php elseif ($type === 'columns'):
                   $columns = get_sub_field('columns');
@@ -254,7 +251,7 @@ $top_page = get_page_by_path('home');
                         foreach ($contents as $content) :
                           $columns_type = $content['type'];
                           $columns_title = $content['title'];
-                          $columns_text = strip_tags($content['text'], '<p><a><em><br>');
+                          $columns_text = ebi_kses_rich_text($content['text']);
                           $columns_classname = '';
                           $columns_imgs = $content['imgs'];
                           if ($columns_type == 'left') {
@@ -281,11 +278,10 @@ $top_page = get_page_by_path('home');
                                   if ($content && isset($columns_imgs)) :
                                     foreach ($columns_imgs as $img) :
                                       $img_file = $img['img'];
-                                      $img_src = wp_get_attachment_image_url($img_file, 'full') ?? null;
                                       $img_caption = $img['caption'];
                                   ?>
                                       <figure>
-                                        <img src="<?php echo $img_src; ?>" alt="">
+                                        <?php echo ebi_get_attachment_image($img_file, 'medium_large'); ?>
                                         <figcaption>
                                           <?php echo nl2br(strip_tags($img_caption)); ?>
                                         </figcaption>
@@ -301,11 +297,10 @@ $top_page = get_page_by_path('home');
                                   if ($content && isset($columns_imgs)) :
                                     foreach ($columns_imgs as $img) :
                                       $img_file = $img['img'];
-                                      $img_src = wp_get_attachment_image_url($img_file, 'full') ?? null;
                                       $img_caption = $img['caption'];
                                   ?>
                                       <figure>
-                                        <img src="<?php echo $img_src; ?>" alt="">
+                                        <?php echo ebi_get_attachment_image($img_file, 'medium_large'); ?>
                                         <figcaption>
                                           <?php echo nl2br(strip_tags($img_caption)); ?>
                                         </figcaption>
@@ -325,11 +320,10 @@ $top_page = get_page_by_path('home');
                                   if ($content && isset($columns_imgs)) :
                                     foreach ($columns_imgs as $img) :
                                       $img_file = $img['img'];
-                                      $img_src = wp_get_attachment_image_url($img_file, 'full') ?? null;
                                       $img_caption = $img['caption'];
                                   ?>
                                       <figure>
-                                        <img src="<?php echo $img_src; ?>" alt="">
+                                        <?php echo ebi_get_attachment_image($img_file, 'medium'); ?>
                                         <figcaption>
                                           <?php echo nl2br(strip_tags($img_caption)); ?>
                                         </figcaption>
@@ -352,19 +346,19 @@ $top_page = get_page_by_path('home');
                   $ogp = get_sub_field('ogp');
                   $ogp_link = $ogp['url'];
                   $ogp_blank = $ogp['blank'];
-                  $ogp_data = get_ogp_data($ogp_link);
+                  $ogp_title = $ogp['title'] ?? '';
+                  $ogp_description = $ogp['description'] ?? '';
                   $ogp_img_file = $ogp['img'];
-                  $ogp_img_src = wp_get_attachment_image_url($ogp_img_file, 'full') ?? null;
                 ?>
                   <div class="body__link">
                     <article class="-ogp">
                       <a href="<?php echo esc_url($ogp_link); ?>" <?php if ($ogp_blank) echo ' target="_blank"'; ?>>
                         <div class="-img">
-                          <img src="<?php echo $ogp_img_src; ?>" alt="">
+                          <?php echo ebi_get_attachment_image($ogp_img_file, 'medium'); ?>
                         </div>
                         <div class="-txt">
-                          <h2><?php echo $ogp_data['title']; ?></h2>
-                          <p><?php echo $ogp_data['description']; ?></p>
+                          <?php if ($ogp_title) : ?><h2><?php echo esc_html($ogp_title); ?></h2><?php endif; ?>
+                          <?php if ($ogp_description) : ?><p><?php echo esc_html($ogp_description); ?></p><?php endif; ?>
                         </div>
                       </a>
                     </article>
@@ -377,13 +371,12 @@ $top_page = get_page_by_path('home');
                         $group = get_sub_field('dialogues_block');
                         $position = $group['dialogues_position'];
                         $img = $group['dialogues_img'];
-                        $img_src = wp_get_attachment_image_url($img, 'full') ?? null;
                         $name = $group['name'];
-                        $text = strip_tags($group['dialogues_txt'], '<p><a><em><br>');
+                        $text = ebi_kses_rich_text($group['dialogues_txt']);
                     ?>
                         <div class="-block -<?php echo $position; ?>">
                           <div class="-person">
-                            <img src="<?php echo $img_src; ?>" alt="">
+                            <?php echo ebi_get_attachment_image($img, 'thumbnail'); ?>
                             <span><?php echo $name; ?></span>
                           </div>
                           <div class="-txt">
@@ -403,7 +396,7 @@ $top_page = get_page_by_path('home');
                         $group = get_sub_field('comments_block');
                         $position = $group['comments_position'];
                         $name = $group['name'];
-                        $text = strip_tags($group['comments_txt'], '<p><a><em><br>');
+                        $text = ebi_kses_rich_text($group['comments_txt']);
                     ?>
                         <div class="-block -<?php echo $position; ?>">
                           <div class="-name"><em><?php echo $name; ?></em></div>
@@ -421,7 +414,6 @@ $top_page = get_page_by_path('home');
                   $profile_title = $profile_group['title'];
                   $profile_text = $profile_group['text'];
                   $profile_img = $profile_group['img'];
-                  $profile_img_src = wp_get_attachment_image_url($profile_img, 'full') ?? null;
                 ?>
                   <div class="body__profile">
                     <div class="-txt">
@@ -433,7 +425,7 @@ $top_page = get_page_by_path('home');
                       </div>
                     </div>
                     <div class="-img">
-                      <img src="<?php echo $profile_img_src; ?>" alt="">
+                      <?php echo ebi_get_attachment_image($profile_img, 'medium'); ?>
                     </div>
                   </div>
                 <?php elseif ($type === 'index'): ?>
@@ -503,7 +495,7 @@ $top_page = get_page_by_path('home');
               </div>
             </div>
             <div class="lineFriends__img">
-              <img src="<?php echo $themeUri; ?>/assets/img/article-line-img.png" alt="">
+              <img src="<?php echo $themeUri; ?>/assets/img/article-line-img.png" alt="" loading="lazy" decoding="async">
             </div>
           </div>
         </aside>

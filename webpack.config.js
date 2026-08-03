@@ -13,6 +13,7 @@ module.exports = {
 
   entry: {
     bundle: `./assets/js/main.js`,
+    'admin-ogp': `./assets/js/admin-ogp.js`,
   },
 
   output: {

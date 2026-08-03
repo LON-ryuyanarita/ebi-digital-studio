@@ -117,7 +117,8 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          transition: color 400ms var(--ease-linear-out-slow-in),
+          transition:
+            color 400ms var(--ease-linear-out-slow-in),
             background-color 400ms var(--ease-linear-out-slow-in);
 
           .-enabledHover & {
@@ -175,6 +176,7 @@
         line-height: 1;
         overflow: hidden;
         text-overflow: ellipsis;
+        white-space: nowrap;
 
         a {
           font-size: 10px;

@@ -8,7 +8,7 @@ $themeUri = get_template_directory_uri();
       <div class="-c1">
         <div class="footer__logo">
           <a href="/">
-            <img src="<?php echo $themeUri; ?>/assets/img/logo-white.svg" alt="EBI DIGITAL STUDIO">
+            <img src="<?php echo $themeUri; ?>/assets/img/logo-white.svg" alt="EBI DIGITAL STUDIO" loading="lazy" decoding="async">
           </a>
         </div>
       </div>
@@ -92,9 +92,9 @@ $themeUri = get_template_directory_uri();
       <div class="-c4">
         <div class="footer__contact contactBanner">
           <a href="https://ginza.ebi-group.tokyo/digital-s" target="_blank">
-            <img src="<?php echo $themeUri; ?>/assets/img/contact-txt.png" alt="CONTACT">
-            <img src="<?php echo $themeUri; ?>/assets/img/contact-txt.png" alt="CONTACT">
-            <img src="<?php echo $themeUri; ?>/assets/img/contact-txt.png" alt="CONTACT">
+            <img src="<?php echo $themeUri; ?>/assets/img/contact-txt.png" alt="CONTACT" loading="lazy" decoding="async">
+            <img src="<?php echo $themeUri; ?>/assets/img/contact-txt.png" alt="CONTACT" loading="lazy" decoding="async">
+            <img src="<?php echo $themeUri; ?>/assets/img/contact-txt.png" alt="CONTACT" loading="lazy" decoding="async">
           </a>
         </div>
 
@@ -105,7 +105,7 @@ $themeUri = get_template_directory_uri();
             友だち登録募集中!
           </div>
           <div class="-qr">
-            <img src="<?php echo $themeUri; ?>/assets/img/line-qr.png" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/line-qr.png" alt="" loading="lazy" decoding="async">
           </div>
           <div class="-link">
             <a href="https://lin.ee/P29MAc9" target="_blank">
@@ -133,7 +133,7 @@ $themeUri = get_template_directory_uri();
         <div class="footer__stockLink">
           <a href="https://finder.porsche.com/jp/ja-JP/search?int_ref=carsales&int_medium=email&int_position=search_link&condition=used&dealership=1500001017&dealership=18812&dealership=1500002597&dealership=1500002596&order=newest&int_id=savedsearch" target="_blank">
             <span>EBI GROUP 認定中古車在庫</span>
-            <i><img src="<?php echo $themeUri; ?>/assets/img/icon-window-1.svg" alt=""></i>
+            <i><img src="<?php echo $themeUri; ?>/assets/img/icon-window-1.svg" alt="" loading="lazy" decoding="async"></i>
           </a>
         </div>
       </div>

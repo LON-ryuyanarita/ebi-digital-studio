@@ -20,6 +20,47 @@
   }
 }
 
+@mixin rich-list {
+  ul,
+  ol {
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    li {
+      padding-left: 1.2em;
+
+      & + li {
+        margin-top: 8px;
+      }
+    }
+
+    a {
+      @include link;
+    }
+  }
+
+  ul li::before {
+    content: '・';
+    width: 1.2em;
+    margin-left: -1.2em;
+    display: inline-block;
+  }
+
+  ol {
+    counter-reset: listnum;
+    list-style: none;
+
+    li::before {
+      width: 1em;
+      margin-left: -1em;
+      font-weight: bold;
+      display: inline-block;
+      counter-increment: listnum;
+      content: counter(listnum) '.';
+    }
+  }
+}
+
 .body {
   & {
     padding-top: 30px;
@@ -248,6 +289,10 @@
 
   @at-root {
     .body__note {
+      font-size: 12px;
+      color: var(--color-gray-3);
+      line-height: 1.333;
+
       &,
       .body > p + & {
         margin-top: 20px;
@@ -824,6 +869,15 @@
         }
       }
     }
+
+    .body__note,
+    .body__box,
+    .body > blockquote,
+    .body__columns .-txt,
+    .body__dialogue .-txt,
+    .body__comment .-txt {
+      @include rich-list;
+    }
   }
 
   // SP 以下 (- 768)
@@ -952,6 +1006,9 @@
 
     @at-root {
       .body__note {
+        font-size: cvws(22);
+        line-height: cvws(30);
+
         &,
         .body > p + & {
           margin-top: cvws(24);
@@ -1312,6 +1369,21 @@
             & + p {
               margin-top: cvws(32);
             }
+          }
+        }
+      }
+
+
+      .body__note,
+      .body__box,
+      .body > blockquote,
+      .body__columns .-txt,
+      .body__dialogue .-txt,
+      .body__comment .-txt {
+        ul,
+        ol {
+          li + li {
+            margin-top: cvws(15);
           }
         }
       }

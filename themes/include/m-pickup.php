@@ -16,13 +16,12 @@ $themeUri = get_template_directory_uri();
           $post = get_post($post_id);
           $title = get_field('title', $post_id);
           $thumb = get_field('thumbnail', $post_id) ?? null;
-          $thumb_src = wp_get_attachment_image_url($thumb, 'full');
       ?>
           <article class="pickup__item">
             <a href="<?php echo get_permalink($post_id); ?>">
               <div class="pickup__item__img">
-                <?php if ($thumb_src) : ?>
-                  <img src="<?php echo $thumb_src; ?>" alt="">
+                <?php if ($thumb) : ?>
+                  <?php echo ebi_get_attachment_image($thumb, 'medium_large'); ?>
                 <?php endif; ?>
               </div>
               <div class="pickup__item__body">

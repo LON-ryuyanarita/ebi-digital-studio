@@ -150,23 +150,23 @@ $top_page = get_page_by_path('home');
           <div class="top__links__inner">
             <div class="top__links__item -fest">
               <a href="https://ebi.marketing/thefest2023/" target="_blank">
-                <div class="-bg"><img src="<?php echo $themeUri; ?>/assets/img/top-fest-img.jpg" alt="EBI GROUP が主催するオーナー向けイベント「THE FEST.」の写真｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP"></div>
+                <div class="-bg"><img src="<?php echo $themeUri; ?>/assets/img/top-fest-img.jpg" alt="EBI GROUP が主催するオーナー向けイベント「THE FEST.」の写真｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP" loading="lazy" decoding="async"></div>
                 <div class="-name fontPorsche">
                   <em>THE FEST.</em>
                 </div>
                 <div class="-logo">
-                  <img src="<?php echo $themeUri; ?>/assets/img/top-fest-logo.png" alt="EBI GROUP が主催するオーナー向けイベント「THE FEST.」のロゴ｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
+                  <img src="<?php echo $themeUri; ?>/assets/img/top-fest-logo.png" alt="EBI GROUP が主催するオーナー向けイベント「THE FEST.」のロゴ｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP" loading="lazy" decoding="async">
                 </div>
               </a>
             </div>
             <div class="top__links__item -rally">
               <a href="https://therally.jp/" target="_blank">
-                <div class="-bg"><img src="<?php echo $themeUri; ?>/assets/img/top-rally-img.jpg" alt="EBI GROUP が主催するオーナー向けイベント「The Rally -Amazing Moment-.」の写真｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP"></div>
+                <div class="-bg"><img src="<?php echo $themeUri; ?>/assets/img/top-rally-img.jpg" alt="EBI GROUP が主催するオーナー向けイベント「The Rally -Amazing Moment-.」の写真｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP" loading="lazy" decoding="async"></div>
                 <div class="-name fontPorsche">
                   <em>The Rally</em> <span>- Amazing Moment -</span>
                 </div>
                 <div class="-logo">
-                  <img src="<?php echo $themeUri; ?>/assets/img/top-rally-logo.png" alt="EBI GROUP が主催するオーナー向けイベント「The Rally -Amazing Moment-.」のロゴ｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
+                  <img src="<?php echo $themeUri; ?>/assets/img/top-rally-logo.png" alt="EBI GROUP が主催するオーナー向けイベント「The Rally -Amazing Moment-.」のロゴ｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP" loading="lazy" decoding="async">
                 </div>
               </a>
             </div>
@@ -294,7 +294,7 @@ $top_page = get_page_by_path('home');
                 </p>
                 <p>
                   <span>日本最大級のポルシェセンターの役割として、オーナー様の「ポルシェのある生活」がより豊かになるよう、様々な提案を図っていきます。プロダクトや季節にちなんだイベントをはじめ、店舗スタッフが自ら企画したイベントなどを開催し、オーナー様同士やスタッフとの繋がりを大切にしています。EBI GROUP だけのエクスクルーシブな体験をこれからもお楽しみください。</span>
-                  <img class="sp" src="<?php echo $themeUri; ?>/assets/img/top-group-img.jpg" alt="">
+                  <img class="sp" src="<?php echo $themeUri; ?>/assets/img/top-group-img.jpg" alt="" loading="lazy" decoding="async">
                 </p>
               </div>
               <div class="top__group__btn ebiButton -small">
@@ -304,7 +304,7 @@ $top_page = get_page_by_path('home');
               </div>
             </div>
             <div class="top__group__img pc">
-              <img src="<?php echo $themeUri; ?>/assets/img/top-group-img.jpg" alt="EBI GROUP （株式会社エポカルインターナショナル）が運営するポルシェスタジオ銀座の外観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP">
+              <img src="<?php echo $themeUri; ?>/assets/img/top-group-img.jpg" alt="EBI GROUP （株式会社エポカルインターナショナル）が運営するポルシェスタジオ銀座の外観｜EBI DIGITAL STUDIO（イー・ビー・アイ・デジタル・スタジオ）｜ポルシェ正規ディーラー EBI GROUP" loading="lazy" decoding="async">
             </div>
           </div>
 

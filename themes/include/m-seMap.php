@@ -16,7 +16,7 @@ $themeUri = get_template_directory_uri();
     </h3>
     <div class="seMap__map">
       <div class="-map">
-        <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/map.svg" alt="">
+        <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/map.svg" alt="" loading="lazy" decoding="async">
       </div>
       <div class="seMap__pointers">
         <div class="seMap__pointer -p1" data-ebi-semap-pointer="1">
@@ -123,7 +123,7 @@ $themeUri = get_template_directory_uri();
       <li>
         <a href="#mapSection1" data-ebi-semap-thumb="1" data-ebi-modal-opener>
           <div class="-img">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/1-thumb.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/1-thumb.jpg" alt="" loading="lazy" decoding="async">
           </div>
           <div class="-name fontPanchang">
             01.<br>
@@ -135,7 +135,7 @@ $themeUri = get_template_directory_uri();
       <li>
         <a href="#mapSection2" data-ebi-semap-thumb="2" data-ebi-modal-opener>
           <div class="-img">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/2-thumb.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/2-thumb.jpg" alt="" loading="lazy" decoding="async">
           </div>
           <div class="-name fontPanchang">
             02.<br>
@@ -147,7 +147,7 @@ $themeUri = get_template_directory_uri();
       <li>
         <a href="#mapSection3" data-ebi-semap-thumb="3" data-ebi-modal-opener>
           <div class="-img">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/3-thumb.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/3-thumb.jpg" alt="" loading="lazy" decoding="async">
           </div>
           <div class="-name fontPanchang">
             03.<br class="pc">
@@ -159,7 +159,7 @@ $themeUri = get_template_directory_uri();
       <li>
         <a href="#mapSection4" data-ebi-semap-thumb="4" data-ebi-modal-opener>
           <div class="-img">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/4-thumb.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/4-thumb.jpg" alt="" loading="lazy" decoding="async">
           </div>
           <div class="-name fontPanchang">
             04.<br class="pc">
@@ -173,7 +173,7 @@ $themeUri = get_template_directory_uri();
       <li>
         <a href="#mapSectionOthers" data-ebi-semap-thumb="5" data-ebi-modal-opener>
           <div class="-img">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/5-thumb.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/5-thumb.jpg" alt="" loading="lazy" decoding="async">
           </div>
           <div class="-name fontPanchang">
             05.<br class="pc">
@@ -185,7 +185,7 @@ $themeUri = get_template_directory_uri();
       <li>
         <a href="#mapSectionOthers" data-ebi-semap-thumb="6" data-ebi-modal-opener>
           <div class="-img">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/6-thumb.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/6-thumb.jpg" alt="" loading="lazy" decoding="async">
           </div>
           <div class="-name fontPanchang">
             06.<br class="pc">
@@ -197,7 +197,7 @@ $themeUri = get_template_directory_uri();
       <li>
         <a href="#mapSectionOthers" data-ebi-semap-thumb="7" data-ebi-modal-opener>
           <div class="-img">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/7-thumb.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/7-thumb.jpg" alt="" loading="lazy" decoding="async">
           </div>
           <div class="-name fontPanchang">
             07.<br class="pc">
@@ -209,7 +209,7 @@ $themeUri = get_template_directory_uri();
       <li>
         <a href="#mapSectionOthers" data-ebi-semap-thumb="8" data-ebi-modal-opener>
           <div class="-img">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/8-thumb.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/8-thumb.jpg" alt="" loading="lazy" decoding="async">
           </div>
           <div class="-name fontPanchang">
             08.<br>
@@ -221,7 +221,7 @@ $themeUri = get_template_directory_uri();
       <li>
         <a href="#mapSectionOthers" data-ebi-semap-thumb="9" data-ebi-modal-opener>
           <div class="-img">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/9-thumb.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/9-thumb.jpg" alt="" loading="lazy" decoding="async">
           </div>
           <div class="-name fontPanchang">
             09.<br class="pc">
@@ -233,7 +233,7 @@ $themeUri = get_template_directory_uri();
       <li>
         <a href="#mapSectionOthers" data-ebi-semap-thumb="10" data-ebi-modal-opener>
           <div class="-img">
-            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/10-thumb.jpg" alt="">
+            <img src="<?php echo $themeUri; ?>/assets/img/specialex/map/10-thumb.jpg" alt="" loading="lazy" decoding="async">
           </div>
           <div class="-name fontPanchang">
             10.<br>

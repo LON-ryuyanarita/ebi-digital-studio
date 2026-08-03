@@ -20,13 +20,12 @@ if ($related_posts->have_posts() && $related_posts->found_posts >= 2) :
           $post_id = get_the_ID();
           $post = get_post($post_id);
           $title = get_field('title', $post_id);
-          $thumb = get_field('thumbnail', $post_id) ?? null;
-          $thumb_src = wp_get_attachment_image_url($thumb, 'full'); ?>
+          $thumb = get_field('thumbnail', $post_id) ?? null; ?>
           <article class="related__item">
             <a href="<?php echo get_permalink($post_id); ?>">
               <div class="related__item__img">
-                <?php if ($thumb_src) : ?>
-                  <img src="<?php echo $thumb_src; ?>" alt="">
+                <?php if ($thumb) : ?>
+                  <?php echo ebi_get_attachment_image($thumb, 'medium_large'); ?>
                 <?php endif; ?>
               </div>
               <div class="related__item__body">
